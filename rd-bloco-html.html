@@ -1,0 +1,93 @@
+<!-- COLE TUDO ISTO em um bloco "HTML" dentro de uma seção do editor de Páginas de Destino do RD Station -->
+<style>
+@import url('https://use.typekit.net/rns6hja.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+#mme-bf{--primary:#42738f;--secondary:#d0c9b7;--surface:#15181b;--line:rgba(255,255,255,.12);--muted:#aab3ba;--display:"kobenhavn",'Arial Black',system-ui,sans-serif;--body:"kobenhavn",Montserrat,system-ui,sans-serif;--ease:cubic-bezier(.65,0,.35,1);
+ font-family:var(--body);color:#fff;line-height:1.6;box-sizing:border-box;max-width:520px;margin:0 auto;padding:0 12px}
+#mme-bf *{box-sizing:border-box}
+#mme-bf .card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.5);position:relative;overflow:hidden;opacity:0;transform:translateY(36px);transition:opacity .5s ease,transform 1s cubic-bezier(.33,1,.68,1)}
+#mme-bf .card.in{opacity:1;transform:none}
+#mme-bf .card::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary))}
+#mme-bf h3{font:700 1.5rem var(--display);text-transform:uppercase;margin:0 0 4px;color:#fff}
+#mme-bf .hint{color:var(--muted);font-size:.9rem;margin:0 0 20px}
+#mme-bf .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#mme-bf .full{grid-column:1/-1}
+#mme-bf label{display:block;font:600 .78rem var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;transition:color .3s}
+#mme-bf .f:focus-within label{color:var(--secondary)}
+#mme-bf input[type=text],#mme-bf input[type=email],#mme-bf input[type=tel],#mme-bf select{width:100%;background:#0c0e10;color:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;font:400 1rem var(--body);-webkit-appearance:none;appearance:none;margin:0;height:auto;transition:border-color .6s,background-color .3s,box-shadow .3s}
+#mme-bf input::placeholder{color:#5c666d}
+#mme-bf input:focus,#mme-bf select:focus{outline:0;border-color:var(--primary);background:#10151a;box-shadow:0 0 0 4px rgba(66,115,143,.28)}
+#mme-bf select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%23d0c9b7' stroke-width='2'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+#mme-bf select option{background:#15181b}
+#mme-bf .err{border-color:#e5604d!important}
+#mme-bf .msg{color:#ff8b7a;font-size:.8rem;margin-top:4px;display:block}
+#mme-bf .cap{display:flex;align-items:center;gap:14px;background:#0c0e10;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px}
+#mme-bf .cap label{margin:0;white-space:nowrap;color:var(--secondary)}
+#mme-bf .cap input{max-width:100px;padding:10px 12px;text-align:center}
+#mme-bf button{width:100%;margin-top:22px;position:relative;overflow:hidden;background:var(--primary);color:#fff;border:2px solid var(--primary);border-radius:100px;height:56px;font:700 1.15rem var(--display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer;transition:background-color .3s,transform .3s,box-shadow .3s}
+#mme-bf button::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);animation:mmeshine 3.2s var(--ease) infinite}
+@keyframes mmeshine{60%,100%{transform:translateX(120%)}}
+#mme-bf button:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(66,115,143,.5);background:#4f86a6}
+#mme-bf button.loading{pointer-events:none;opacity:.7}
+#mme-bf .privacy{font-size:.75rem;color:var(--muted);margin:14px 0 0;text-align:center}
+#mme-bf .hp{position:absolute;left:-9999px;height:0;width:0;opacity:0}
+@media(max-width:480px){#mme-bf .grid{grid-template-columns:1fr}#mme-bf .cap{flex-wrap:wrap}#mme-bf .card{padding:22px}}
+@media(prefers-reduced-motion:reduce){#mme-bf *{animation:none!important;transition:none!important}#mme-bf .card{opacity:1;transform:none}}
+</style>
+
+<div id="mme-bf">
+ <div class="card">
+  <h3>Cadastre-se</h3>
+  <p class="hint">Leva menos de 1 minuto.</p>
+  <form id="mme-form" novalidate action="https://cta-redirect.rdstation.com/v2/conversions" method="post">
+   <input type="hidden" name="token_rdstation" value="58bcf9d68d38ef6ef9400192f7cc7342">
+   <input type="hidden" name="conversion_identifier" value="blackfriday-2026-mmr">
+   <input type="hidden" name="internal_source" value="2">
+   <input type="hidden" name="traffic_source" value="">
+   <input type="hidden" name="c_utmz" value="">
+   <div class="grid">
+    <div class="f full"><label for="mme-name">Nome*</label><input id="mme-name" name="name" type="text" placeholder="Como você se chama?" required autocomplete="name"></div>
+    <div class="f full"><label for="mme-email">Email*</label><input id="mme-email" name="email" type="email" placeholder="seuemail@exemplo.com" required autocomplete="email"></div>
+    <div class="f full"><label for="mme-tel">Telefone*</label><input id="mme-tel" name="personal_phone" type="tel" placeholder="(82) 99999-9999" required autocomplete="tel"></div>
+    <div class="f"><label for="mme-mes">Mês da viagem*</label>
+     <select id="mme-mes" name="cf_mes_da_viagem" required><option value="">Selecione</option><option>Janeiro</option><option>Fevereiro</option><option>Março</option><option>Abril</option><option>Maio</option><option>Junho</option><option>Julho</option><option>Agosto</option><option>Setembro</option><option>Outubro</option><option>Novembro</option><option>Dezembro</option><option>Ainda não sei</option></select></div>
+    <div class="f"><label for="mme-uf">Estado*</label>
+     <select id="mme-uf" name="uf" required autocomplete="address-level1"><option value="">Estado</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></div>
+    <div class="full cap"><label for="mme-cap">Anti-robô: <span id="mme-q">1 + 1 = ?</span></label><input id="mme-cap" type="text" inputmode="numeric" placeholder="?"></div>
+   </div>
+   <input class="hp" type="text" name="emP7yF13ld" readonly tabindex="-1" autocomplete="off" value="">
+   <input class="hp" type="text" name="sh0uldN07ch4ng3" readonly tabindex="-1" autocomplete="off" value="should_not_change">
+   <button type="submit">Cadastrar</button>
+   <p class="privacy">Seus dados estão seguros. Ao cadastrar, você concorda em receber comunicações do Maceió Mar Resort.</p>
+  </form>
+ </div>
+</div>
+
+<script>
+(function(){
+ var root=document.getElementById('mme-bf'),form=document.getElementById('mme-form'),card=root.querySelector('.card');
+ // entrada suave ao rolar
+ if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){card.classList.add('in');o.disconnect()}})},{threshold:.15}).observe(card)}else card.classList.add('in');
+ // origem / UTMs
+ var q=new URLSearchParams(location.search);
+ form.traffic_source.value=document.referrer||'direct';
+ form.c_utmz.value=['source','medium','campaign','content'].map(function(k){return q.get('utm_'+k)?'utm'+k.slice(0,3)+'='+q.get('utm_'+k):''}).filter(Boolean).join('|');
+ // anti-robô
+ var a=1+Math.floor(Math.random()*8),b=1+Math.floor(Math.random()*8);
+ document.getElementById('mme-q').textContent=a+' + '+b+' = ?';
+ // validação + envio
+ form.addEventListener('submit',function(e){
+  [].forEach.call(form.querySelectorAll('.msg'),function(x){x.remove()});
+  var ok=true;
+  [].forEach.call(form.querySelectorAll('[required]'),function(f){
+   var bad=!f.value.trim()||(f.type==='email'&&!/^\S+@\S+\.\S+$/.test(f.value));
+   f.classList.toggle('err',bad);
+   if(bad){ok=false;var m=document.createElement('span');m.className='msg';m.textContent='Campo obrigatório ou inválido.';f.parentNode.appendChild(m)}
+  });
+  var c=document.getElementById('mme-cap');
+  if(+c.value!==a+b){ok=false;c.classList.add('err')}else c.classList.remove('err');
+  if(!ok){e.preventDefault();var first=form.querySelector('.err');first&&first.focus();return}
+  var btn=form.querySelector('button');btn.classList.add('loading');btn.textContent='Enviando…';
+ });
+})();
+</script>
