@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kappa Beach Resort | All Inclusive pé na areia</title>
+<meta name="description" content="Resort all inclusive pé na areia, com diversão para toda a família e crianças até 12 anos grátis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#FF5C00;--yellow:#F8AB2B;--green:#094111;--sky:#DCF3FF;--sea:#1FA9C9;--sand:#FFF6E6;--ink:#1d2a1f}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3,.btn{font-family:'Baloo 2',sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+section{padding:80px 0}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:14px 30px;border-radius:999px;font-weight:700;font-size:1.05rem;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#e65200}
+.btn.alt{background:var(--yellow);color:var(--green)}
+.eyebrow{color:var(--orange);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
+h2{font-size:clamp(2rem,4vw,3rem);color:var(--green);margin:6px 0 14px}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:10;background:rgba(9,65,17,.92);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Baloo 2';font-weight:800;font-size:1.6rem;color:#fff}
+.logo span{color:var(--yellow)}
+nav{display:flex;gap:26px;color:#fff;font-weight:600}
+nav a:hover{color:var(--yellow)}
+header .btn{padding:8px 22px;font-size:.95rem}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden;
+background:radial-gradient(circle at 80% 18%,var(--yellow) 0 90px,transparent 91px),linear-gradient(180deg,#59c8e6 0%,#1FA9C9 55%,#0e7f9c 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(#f3d9a4,#e8c382)}
+.hero::before{content:"";position:absolute;inset:auto 0 18%;height:60px;background:repeating-radial-gradient(circle at 30px 60px,#fff 0 18px,transparent 19px 60px);opacity:.35;z-index:1}
+.hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:140px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);max-width:760px;text-shadow:0 3px 14px rgba(0,0,0,.2)}
+.hero p{font-size:1.25rem;max-width:520px;margin:18px 0 28px}
+
+/* booking bar */
+.book{position:relative;z-index:5;margin-top:-56px}
+.book form{background:#fff;border-radius:22px;box-shadow:0 14px 40px rgba(0,0,0,.18);padding:22px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:14px;align-items:end}
+.book label{font-size:.8rem;font-weight:700;color:var(--green);display:block}
+.book input,.book select{width:100%;padding:12px;border:2px solid #e6e6e6;border-radius:12px;font:inherit}
+.book input:focus,.book select:focus{outline:0;border-color:var(--orange)}
+
+/* promos */
+.promos{background:var(--sand)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
+.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.07);transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.card .img{height:150px;display:grid;place-items:center;font-size:3.4rem}
+.card .body{padding:20px}
+.card h3{color:var(--green);font-size:1.35rem;margin-bottom:6px}
+.tag{display:inline-block;background:var(--orange);color:#fff;font-size:.75rem;font-weight:700;border-radius:99px;padding:2px 12px;margin-bottom:8px}
+.card a.more{color:var(--orange);font-weight:700}
+
+/* feature split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split .art{aspect-ratio:4/3;border-radius:28px;display:grid;place-items:center;font-size:6rem}
+.split.rev .art{order:2}
+.kids{background:var(--yellow)}
+.kids h2{color:var(--green)}
+.green{background:var(--green);color:#fff}
+.green h2{color:#fff}
+.list{list-style:none;padding:0;margin:18px 0 26px}
+.list li{padding-left:30px;position:relative;margin:8px 0}
+.list li::before{content:"✔";position:absolute;left:0;color:var(--orange);font-weight:800}
+.green .list li::before{color:var(--yellow)}
+
+/* rooms */
+.rooms .grid .card .img{height:190px}
+
+/* newsletter */
+.news{background:var(--orange);color:#fff;text-align:center}
+.news h2{color:#fff}
+.news form{display:flex;gap:10px;max-width:520px;margin:24px auto 0}
+.news input{flex:1;padding:14px 18px;border-radius:999px;border:0;font:inherit}
+
+footer{background:var(--green);color:#cfe3d1;padding:46px 0 26px;font-size:.95rem}
+footer .cols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between}
+footer h4{color:var(--yellow);margin-bottom:8px}
+footer a{display:block;opacity:.85}
+footer a:hover{opacity:1}
+.copy{text-align:center;margin-top:30px;opacity:.6;font-size:.85rem}
+
+@media(max-width:860px){
+ nav{display:none}
+ .book form{grid-template-columns:1fr 1fr}
+ .book form .btn{grid-column:1/-1}
+ .split{grid-template-columns:1fr}
+ .split.rev .art{order:0}
+ section{padding:56px 0}
+ .news form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#">Kappa<span>.</span></a>
+  <nav>
+   <a href="#resort">O Resort</a><a href="#quartos">Acomodações</a><a href="#allinclusive">All Inclusive</a><a href="#criancas">Crianças</a><a href="#promocoes">Promoções</a>
+  </nav>
+  <a class="btn" href="#reserva">Reservar</a>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <p class="eyebrow" style="color:var(--yellow)">Resort All Inclusive · Pé na areia</p>
+  <h1>O destino perfeito pras férias em família!</h1>
+  <p>Mar de águas mornas, diversão o dia todo e tudo incluído, do café da manhã ao drink do pôr do sol.</p>
+  <a class="btn alt" href="#promocoes">Ver promoções</a>
+ </div>
+</section>
+
+<div class="book wrap" id="reserva">
+ <form onsubmit="event.preventDefault();alert('Busca de disponibilidade simulada. Conecte aqui seu motor de reservas.')">
+  <div><label for="in">Check-in</label><input id="in" type="date" required></div>
+  <div><label for="out">Check-out</label><input id="out" type="date" required></div>
+  <div><label for="ad">Adultos</label><select id="ad"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+  <div><label for="ch">Crianças</label><select id="ch"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></div>
+  <button class="btn" type="submit">Faça sua reserva</button>
+ </form>
+</div>
+
+<section class="promos" id="promocoes">
+ <div class="wrap">
+  <p class="eyebrow">Ofertas</p>
+  <h2>Confira nossas promoções</h2>
+  <div class="grid">
+   <article class="card"><div class="img" style="background:linear-gradient(135deg,#ffd27a,#ff9a3c)">🌴</div><div class="body"><span class="tag">últimos quartos</span><h3>Novembro 2026</h3><p>Um mês cheio de sol pra curtir praia e piscinas com a família.</p><a class="more" href="#reserva">Reservar →</a></div></article>
+  <article class="card"><div class="img" style="background:linear-gradient(135deg,#9be3f5,#1FA9C9)">🎄</div><div class="body"><span class="tag">criança grátis</span><h3>Natal 2026</h3><p>Celebre a data mais linda do ano de pés na areia.</p><a class="more" href="#reserva">Reservar →</a></div></article>
+  <article class="card"><div class="img" style="background:linear-gradient(135deg,#ffe08a,#F8AB2B)">🎆</div><div class="body"><span class="tag">criança grátis</span><h3>Réveillon 2027</h3><p>Receba o novo ano num resort all inclusive à beira-mar.</p><a class="more" href="#reserva">Reservar →</a></div></article>
+  <article class="card"><div class="img" style="background:linear-gradient(135deg,#b6e8b0,#3d9a4a)">☀️</div><div class="body"><span class="tag">férias de janeiro</span><h3>Verão 2027</h3><p>Aventura na natureza e muita diversão para todas as idades.</p><a class="more" href="#reserva">Reservar →</a></div></article>
+ </div>
+</section>
+
+<section id="allinclusive">
+ <div class="wrap split">
+  <div class="art" style="background:linear-gradient(135deg,#ffd27a,#FF5C00)">🍹</div>
+  <div>
+   <p class="eyebrow">All inclusive 24 horas</p>
+   <h2>Tudo incluído, sem preocupação</h2>
+   <p>Restaurantes, bares, petiscos e bebidas liberados o dia inteiro. Você só escolhe: rede, piscina ou mar.</p>
+   <ul class="list"><li>Café, almoço e jantar com buffets temáticos</li><li>Bares na praia e na piscina</li><li>Lanches e snacks entre as refeições</li></ul>
+   <a class="btn" href="#reserva">Conheça o all inclusive</a>
+  </div>
+ </div>
+</section>
+
+<section class="kids" id="criancas">
+ <div class="wrap split rev">
+  <div class="art" style="background:#fff">🏖️</div>
+  <div>
+   <p class="eyebrow" style="color:var(--green)">Crianças</p>
+   <h2>Hospedagem gratuita pra crianças de até 12 anos*</h2>
+   <p>Recreação monitorada, piscinas infantis, oficinas e shows. Os pequenos se divertem e os pais descansam.</p>
+   <ul class="list"><li>Kids club com monitores</li><li>Parque aquático</li><li>Programação diária</li></ul>
+   <a class="btn" href="#reserva" style="background:var(--green)">Saiba mais</a>
+   <p style="font-size:.8rem;margin-top:10px">*Sujeito às condições de cada promoção.</p>
+  </div>
+ </div>
+</section>
+
+<section id="resort" class="green">
+ <div class="wrap split">
+  <div>
+   <p class="eyebrow" style="color:var(--yellow)">O resort</p>
+   <h2>Natureza, mar e conforto no mesmo lugar</h2>
+   <p>Piscinas, spa, esportes náuticos e passeios pelas piscinas naturais da região. Um paraíso a poucos passos do seu quarto.</p>
+   <ul class="list"><li>Spa com massagens e terapias</li><li>Passeios de catamarã</li><li>Música ao vivo e shows noturnos</li></ul>
+   <a class="btn alt" href="#reserva">Saiba mais</a>
+  </div>
+  <div class="art" style="background:linear-gradient(135deg,#1FA9C9,#0e5f78)">🌊</div>
+ </div>
+</section>
+
+<section class="rooms" id="quartos">
+ <div class="wrap">
+  <p class="eyebrow">Acomodações</p>
+  <h2>Cinco opções pra todos os tamanhos de família</h2>
+  <div class="grid">
+   <article class="card"><div class="img" style="background:#DCF3FF">🛏️</div><div class="body"><h3>Standard</h3><p>Conforto e praticidade para casais e pequenos grupos.</p></div></article>
+   <article class="card"><div class="img" style="background:#FFF6E6">🌿</div><div class="body"><h3>Praia Jardim</h3><p>Cercado de verde, perto da praia.</p></div></article>
+   <article class="card"><div class="img" style="background:#DCF3FF">🌅</div><div class="body"><h3>Praia Frente Mar</h3><p>Acorde com a vista do oceano da varanda.</p></div></article>
+   <article class="card"><div class="img" style="background:#FFF6E6">👨‍👩‍👧‍👦</div><div class="body"><h3>Suíte Familiar</h3><p>Espaço de sobra para todo mundo junto.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="news">
+ <div class="wrap">
+  <h2>Fique por dentro das nossas promoções</h2>
+  <p>Cadastre seu e-mail e receba ofertas exclusivas.</p>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Cadastrado ✔'">
+   <input type="email" placeholder="Seu melhor e-mail" required aria-label="E-mail">
+   <button class="btn alt" type="submit">Cadastrar</button>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="cols">
+   <div><a class="logo" href="#">Kappa<span>.</span></a><p style="margin-top:8px;max-width:260px">Resort all inclusive pé na areia para toda a família.</p></div>
+   <div><h4>O Resort</h4><a href="#resort">Sobre</a><a href="#allinclusive">All Inclusive</a><a href="#criancas">Crianças</a></div>
+   <div><h4>Reservas</h4><a href="#quartos">Acomodações</a><a href="#promocoes">Promoções</a><a href="#reserva">Reserve agora</a></div>
+   <div><h4>Contato</h4><a href="#">FAQ</a><a href="#">Política de privacidade</a><a href="#">Fale conosco</a></div>
+  </div>
+  <p class="copy">© 2026 Kappa Beach Resort. Página de demonstração inspirada em estruturas de sites de resorts.</p>
+ </div>
+</footer>
+</body>
+</html>
