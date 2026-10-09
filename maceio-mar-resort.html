@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday | Maceió Mar Resort</title>
+<meta name="description" content="Black Friday do Maceió Mar Resort: o melhor preço do ano. Cadastre-se e garanta acesso antecipado às promoções.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://use.typekit.net/rns6hja.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --primary:#42738f;--primary-ink:#fff;--secondary:#d0c9b7;--secondary-ink:#000;
+ --bg:#000;--surface:#15181b;--line:rgba(255,255,255,.12);--text:#fff;--muted:#aab3ba;
+ --display:"kobenhavn",'Arial Black',system-ui,sans-serif;--body:"kobenhavn",Montserrat,system-ui,sans-serif;
+ --ease:cubic-bezier(.65,0,.35,1);--ease-out:cubic-bezier(.33,1,.68,1)
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.08;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+section{padding:84px 0;position:relative}
+h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:18px}
+h2 em{font-style:normal;color:var(--secondary)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .5s ease,transform 1s var(--ease-out)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+.btn{display:inline-block;background:var(--primary);color:var(--primary-ink);padding:15px 34px;border-radius:100px;font:700 1.05rem var(--display);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border:2px solid var(--primary);cursor:pointer;transition:background-color .3s ease,color .3s ease,transform .3s ease,box-shadow .3s}
+.btn:hover{background:transparent;transform:translateY(-3px);box-shadow:0 10px 30px rgba(66,115,143,.45)}
+.btn.sec{background:var(--secondary);border-color:var(--secondary);color:var(--secondary-ink)}
+.btn.sec:hover{background:transparent;color:var(--secondary)}
+
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;isolation:isolate;padding:60px 0 100px;overflow:hidden}
+.hero .bg{position:absolute;inset:-5%;z-index:-2;background:url('https://i.imgur.com/QyiLp7M.jpeg') center/cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,#000)}
+.hero h1{font-size:clamp(2.4rem,7vw,5.4rem);max-width:900px;margin:0 auto 34px;text-shadow:0 4px 24px rgba(0,0,0,.5)}
+.hero h1 b{color:var(--secondary);font-weight:700}
+.count{display:flex;gap:12px;justify-content:center}
+.count div{background:rgba(0,0,0,.45);border:1px solid var(--line);border-radius:16px;min-width:88px;padding:14px 8px;backdrop-filter:blur(8px)}
+.count strong{display:block;font:700 2.6rem/1 var(--display)}
+.count small{color:var(--muted);text-transform:uppercase;font-size:.7rem;letter-spacing:.14em}
+.count strong.tick{animation:tick .35s var(--ease)}
+@keyframes tick{50%{transform:translateY(-6px);color:var(--secondary)}}
+.arrow{position:absolute;bottom:28px;left:50%;margin-left:-14px;width:28px;height:28px;border-right:4px solid var(--secondary);border-bottom:4px solid var(--secondary);transform:rotate(45deg);animation:arrow .8s cubic-bezier(.32,0,.67,0) infinite alternate}
+@keyframes arrow{to{transform:translateY(14px) rotate(45deg)}}
+
+/* ticker */
+.ticker{overflow:hidden;white-space:nowrap;background:var(--secondary);color:var(--secondary-ink);padding:10px 0;font:700 1.1rem var(--display);text-transform:uppercase}
+.ticker.alt{background:var(--primary);color:#fff}
+.ticker span{display:inline-block;animation:mq 26s linear infinite}
+.ticker.alt span{animation-direction:reverse}
+.ticker i{font-style:normal;margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* signup */
+.signup{background:radial-gradient(circle at 85% 20%,rgba(66,115,143,.35),transparent 55%),var(--bg)}
+.signup .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.signup p.lead{color:var(--muted);font-size:1.1rem}
+.signup p.lead b{color:#fff}
+.perks{list-style:none;padding:0;margin-top:22px;display:grid;gap:10px}
+.perks li{padding-left:34px;position:relative}
+.perks li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--primary);display:grid;place-items:center;font-size:.8rem;font-weight:800}
+
+/* ===== RD Station form, restyled ===== */
+.formcard{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:34px;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative;overflow:hidden}
+.formcard::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary))}
+.formcard h3{font-size:1.5rem;margin-bottom:4px}
+.formcard .hint{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+.bricks-form__fieldset{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bricks-form__field{position:relative}
+.bricks-form__field:nth-of-type(1),.bricks-form__field:nth-of-type(2),.bricks-form__field:nth-of-type(3){grid-column:1/-1}
+.bricks-form__label{display:block;font:600 .78rem var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;transition:color .3s}
+.bricks-form__field:focus-within .bricks-form__label{color:var(--secondary)}
+.bricks-form__input{width:100%;background:#0c0e10;color:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;font:400 1rem var(--body);appearance:none;-webkit-appearance:none;transition:border-color .6s,background-color .3s,box-shadow .3s}
+.bricks-form__input::placeholder{color:#5c666d}
+.bricks-form__input:hover{border-color:rgba(255,255,255,.28)}
+.bricks-form__input:focus{outline:0;border-color:var(--primary);background:#10151a;box-shadow:0 0 0 4px rgba(66,115,143,.28)}
+select.bricks-form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%23d0c9b7' stroke-width='2'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+select.bricks-form__input option{background:#15181b}
+.bricks-form__input.error,.bricks-form__input:user-invalid{border-color:#e5604d}
+label.error,.error-msg{color:#ff8b7a;font-size:.8rem;margin-top:4px;display:block}
+.phone-input-group{display:flex;gap:8px}
+.phone-input-group .phone-country{flex:0 0 auto}
+.captcha-row{grid-column:1/-1;display:flex;align-items:center;gap:14px;background:#0c0e10;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px}
+.captcha-row .bricks-form__label{margin:0;white-space:nowrap;color:var(--secondary)}
+.captcha-row .bricks-form__input{max-width:110px;padding:10px 12px;text-align:center}
+.captcha-row small{color:var(--muted);font-size:.75rem}
+.bricks-form__submit{margin-top:22px}
+.bricks-form__submit button{width:100%;position:relative;overflow:hidden;background:var(--primary);color:#fff;border:2px solid var(--primary);border-radius:100px;height:56px;font:700 1.15rem var(--display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer;transition:background-color .3s,color .3s,transform .3s,box-shadow .3s}
+.bricks-form__submit button::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s var(--ease) infinite}
+@keyframes shine{60%,100%{transform:translateX(120%)}}
+.bricks-form__submit button:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(66,115,143,.5);background:#4f86a6}
+.bricks-form__submit button.loading{pointer-events:none;opacity:.7}
+.privacy{font-size:.75rem;color:var(--muted);margin-top:14px;text-align:center}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+@media(max-width:480px){.bricks-form__fieldset{grid-template-columns:1fr}.captcha-row{flex-wrap:wrap}}
+
+/* features */
+.feat{background:var(--surface)}
+.feat ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.feat li{border:1px solid var(--line);border-radius:20px;padding:26px 22px;font:700 1.2rem var(--display);text-transform:uppercase;background:linear-gradient(160deg,rgba(66,115,143,.2),transparent);transition:transform .3s ease,border-color .6s,background-color .3s}
+.feat li:hover{transform:translateY(-8px);border-color:var(--secondary)}
+.feat li::before{content:"★";display:block;color:var(--secondary);margin-bottom:6px}
+
+/* highlights */
+.hl{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.hl article{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;display:flex;align-items:flex-end;isolation:isolate}
+.hl article img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease-out)}
+.hl article:hover img{transform:scale(1.08)}
+.hl article::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}
+.hl .txt{padding:26px}
+.hl small{color:var(--secondary);text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+.hl h3{font-size:1.5rem;margin-top:4px}
+
+/* gallery */
+.gal .row{display:flex;gap:14px;width:max-content;animation:mq 60s linear infinite}
+.gal .row:hover{animation-play-state:paused}
+.gal-wrap{overflow:hidden;margin-top:26px}
+.gal img{height:260px;width:auto;border-radius:18px;object-fit:cover;transition:transform .6s var(--ease)}
+.gal img:hover{transform:scale(1.04)}
+
+/* about */
+.about{background:var(--surface)}
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.nums{display:flex;gap:40px;margin:18px 0}
+.nums b{display:block;font:700 3.4rem/1 var(--display);color:var(--secondary)}
+.nums span{text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-size:.8rem}
+.about p{color:var(--muted);margin-bottom:12px}
+.about img.logo{max-width:100%;border-radius:20px}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:700 1.15rem var(--display);text-transform:uppercase;list-style:none;display:flex;justify-content:space-between;gap:16px;transition:color .3s}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--secondary)}
+summary::after{content:"+";font-size:1.7rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding-top:10px}
+details a{color:var(--secondary)}
+.notes{font-size:.8rem;color:var(--muted);margin-top:24px}
+footer{text-align:center;padding:36px 20px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+
+@media(max-width:860px){
+ .signup .grid,.about .grid{grid-template-columns:1fr}
+ section{padding:58px 0}
+ .count div{min-width:70px}.count strong{font-size:1.9rem}
+ .formcard{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="bg"></div>
+ <div class="wrap">
+  <h1 class="rv">O <b>melhor preço</b> do ano para você!</h1>
+  <div class="count rv d1" id="count">
+   <div><strong data-u="d">00</strong><small>dias</small></div>
+   <div><strong data-u="h">00</strong><small>horas</small></div>
+   <div><strong data-u="m">00</strong><small>minutos</small></div>
+   <div><strong data-u="s">00</strong><small>segundos</small></div>
+  </div>
+  <p class="rv d2" style="margin-top:34px"><a class="btn sec" href="#cadastro">Quero acesso antecipado</a></p>
+ </div>
+ <span class="arrow" aria-hidden="true"></span>
+</header>
+
+<div class="ticker" aria-hidden="true"><span id="t1"></span></div>
+
+<section class="signup" id="cadastro">
+ <div class="wrap grid">
+  <div>
+   <h2 class="rv">Cadastre-se e garanta <em>acesso antecipado</em> às promoções Black Friday!</h2>
+   <p class="lead rv d1">A Black Friday do Maceió Mar Resort está chegando! No dia <b>27 de novembro</b> vamos liberar um super desconto exclusivo para os clientes MME Fidelidade. Participar do programa é completamente gratuito, inscreva-se agora e garanta seu desconto.</p>
+   <ul class="perks rv d2"><li>Cadastro gratuito</li><li>Acesso antes de todo mundo</li><li>Desconto exclusivo para clientes MME Fidelidade</li></ul>
+  </div>
+
+  <div class="formcard rv d1">
+   <h3>Cadastre-se</h3>
+   <p class="hint">Leva menos de 1 minuto.</p>
+
+   <!-- Formulário RD Station: mesmos campos, nomes e token; só o visual mudou -->
+   <form id="conversion-form" novalidate="novalidate" action="https://cta-redirect.rdstation.com/v2/conversions" method="post" data-typed-fields="1" data-lang="pt-BR" data-asset-action="aHR0cHM6Ly9tbWVob3RlaXMuY29tLmJyL21hY2Vpby1tYXItcmVzb3J0Lw==" data-ga-ua-id="UA-151236892-1" data-recaptcha-public-token="">
+    <input type="hidden" name="token_rdstation" value="58bcf9d68d38ef6ef9400192f7cc7342">
+    <input type="hidden" name="conversion_identifier" value="blackfriday-2026-mmr">
+    <input type="hidden" name="internal_source" value="2">
+    <input type="hidden" name="_rd_experiment_content_id" value="">
+    <input type="hidden" name="_rd_dynamic_content_id" value="">
+    <input type="hidden" name="c_utmz" value="">
+    <input type="hidden" name="traffic_source" value="">
+    <input type="hidden" name="privacy_data[browser]" id="privacy_data_browser">
+
+    <div class="bricks-form__fieldset" data-progressive-profiling="" data-multi-step="false">
+     <div class="bricks-form__field" data-step="1">
+      <label for="rd-text_field-muh6njln" class="bricks-form__label">Nome*</label>
+      <input id="rd-text_field-muh6njln" class="bricks-form__input required js-text js-field-name" name="name" type="text" data-use-type="STRING" placeholder="Como você se chama?" required autocomplete="name">
+     </div>
+     <div class="bricks-form__field" data-step="1">
+      <label for="rd-email_field-muh6njlo" class="bricks-form__label">Email*</label>
+      <input id="rd-email_field-muh6njlo" class="bricks-form__input required js-email js-field-email" name="email" type="email" data-use-type="STRING" data-always-visible="true" data-input-mask="" placeholder="seuemail@exemplo.com" required autocomplete="email">
+     </div>
+     <div class="bricks-form__field with-select-flags" data-step="1">
+      <label for="rd-phone_field-muh6njlp" class="bricks-form__label">Telefone*</label>
+      <div class="phone-input-group">
+       <div class="form-control phone-country" data-type="countries"></div>
+       <div class="country-field" value="BR"></div>
+       <input id="rd-phone_field-muh6njlp" class="bricks-form__input required phone js-phone js-field-personal_phone" name="personal_phone" data-input-mask="INTERNATIONAL_MASK" data-use-type="STRING" type="tel" placeholder="(82) 99999-9999" required autocomplete="tel">
+      </div>
+     </div>
+     <div class="bricks-form__field" data-step="1">
+      <label for="rd-select_field-muh6njlq" class="bricks-form__label">Mês da viagem*</label>
+      <select id="rd-select_field-muh6njlq" class="bricks-form__input required js-field-cf_mes_da_viagem" data-use-type="STRING" name="cf_mes_da_viagem" required>
+       <option value="">Em que mês pretende vir?</option>
+       <option value="Janeiro">Janeiro</option><option value="Fevereiro">Fevereiro</option><option value="Março">Março</option><option value="Abril">Abril</option><option value="Maio">Maio</option><option value="Junho">Junho</option><option value="Julho">Julho</option><option value="Agosto">Agosto</option><option value="Setembro">Setembro</option><option value="Outubro">Outubro</option><option value="Novembro">Novembro</option><option value="Dezembro">Dezembro</option><option value="Ainda não sei">Ainda não sei</option>
+      </select>
+     </div>
+     <div class="bricks-form__field" data-step="1">
+      <label for="rd-select_field-muh6njlr" class="bricks-form__label">Estado*</label>
+      <select id="rd-select_field-muh6njlr" class="bricks-form__input required js-field-uf" data-use-type="STRING" name="uf" required autocomplete="address-level1">
+       <option value="">Estado</option>
+       <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+      </select>
+     </div>
+     <div class="captcha-row" data-step="1">
+      <label for="captcha" class="bricks-form__label">Anti-robô: <span id="math_expression">1 + 1 = ?</span></label>
+      <input id="captcha" class="bricks-form__input math rd-bricks-captcha" name="captcha" type="text" inputmode="numeric" placeholder="?">
+      <small>Resolva a conta</small>
+     </div>
+    </div>
+
+    <!-- campos armadilha do RD (não remover) -->
+    <input class="hp" type="text" name="emP7yF13ld" readonly autocomplete="false" tabindex="-1" value="">
+    <input class="hp" type="text" name="sh0uldN07ch4ng3" readonly autocomplete="false" tabindex="-1" value="should_not_change">
+
+    <div class="bricks-form__submit"><button type="submit" id="rd-button-joq3m2m7">Cadastrar</button></div>
+    <p class="privacy">Seus dados estão seguros. Ao cadastrar, você concorda em receber comunicações do Maceió Mar Resort.</p>
+   </form>
+  </div>
+ </div>
+</section>
+
+<div class="ticker alt" aria-hidden="true"><span id="t2"></span></div>
+
+<section class="feat">
+ <div class="wrap">
+  <h2 class="rv">No Maceió Mar Resort você vai <em>encontrar</em></h2>
+  <ul>
+   <li class="rv">Até 2 crianças grátis*</li><li class="rv d1">All inclusive</li><li class="rv d2">Parcele em até 10x*</li><li class="rv d3">Pé na areia</li>
+  </ul>
+ </div>
+</section>
+
+<section>
+ <div class="wrap hl">
+  <article class="rv"><img src="https://i.imgur.com/UJr53g9.jpeg" alt="" loading="lazy"><div class="txt"><small>Gastronomia</small><h3>7 pontos gastronômicos para você provar de tudo</h3></div></article>
+  <article class="rv d1"><img src="https://i.imgur.com/jq4Bx5s.jpeg" alt="" loading="lazy"><div class="txt"><small>Recreação</small><h3>Diversão o tempo todo</h3></div></article>
+  <article class="rv d2"><img src="https://i.imgur.com/QyiLp7M.jpeg" alt="" loading="lazy"><div class="txt"><small>Localização</small><h3>À beira-mar, em frente às piscinas naturais de Ipioca</h3></div></article>
+ </div>
+</section>
+
+<section class="gal" style="padding-top:0">
+ <div class="wrap"><h2 class="rv">Conheça o <em>resort</em></h2></div>
+ <div class="gal-wrap"><div class="row" id="row"></div></div>
+</section>
+
+<div class="ticker" aria-hidden="true"><span id="t3"></span></div>
+
+<section class="about">
+ <div class="wrap grid">
+  <div>
+   <h2 class="rv">Conheça a <em>MME Hotéis</em></h2>
+   <div class="nums rv d1"><div><b>1</b><span>destino</span></div><div><b>6</b><span>hotéis</span></div></div>
+   <p class="rv"><b style="color:#fff">E diversas maneiras de viver Alagoas.</b></p>
+   <p class="rv">Na MME Hotéis, a gente acredita que viajar é muito mais do que se hospedar. É descobrir, experimentar, relaxar e criar memórias que ficam.</p>
+   <p class="rv">De experiências econômicas a resorts completos à beira-mar, reunimos diferentes formas de viver o melhor de Alagoas, sempre com um jeito especial de receber.</p>
+   <p class="rv">E na Black Friday MME, essas experiências chegam com os menores preços do ano!</p>
+   <a class="btn rv" href="https://mmehoteis.com.br/" target="_blank" rel="noopener">Conheça os hotéis MME</a>
+  </div>
+  <div class="rv d1"><img class="logo" src="https://i.imgur.com/3M3UA1p.png" alt="MME Hotéis" loading="lazy"></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 class="rv">Perguntas <em>frequentes</em></h2>
+  <details class="rv"><summary>Posso pagar minha reserva por Pix?</summary><p>Sim. Para pagar via Pix, faça sua reserva pela nossa central: <a href="tel:+558231420406">(82) 3142-0406</a>.</p></details>
+  <details class="rv"><summary>Posso cancelar minha reserva?</summary><p>Sim. O cancelamento é gratuito até 30 dias antes da data da hospedagem.</p></details>
+  <details class="rv"><summary>Posso alterar a data da minha reserva?</summary><p>Não. Reservas feitas na Black Friday não podem ter a data alterada. Você pode cancelar sem custo até 30 dias antes da hospedagem ou manter a data original.</p></details>
+  <p class="notes">*Parcela mínima de R$150,00<br>*Crianças de até 12 anos</p>
+ </div>
+</section>
+
+<footer>© Todos os direitos reservados.</footer>
+
+<!-- Scripts do RD Station (validação, máscara e rastreamento) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/lead-tracking/stable/plugins/jquery.cookie.v1.4.1.min.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/lead-tracking/stable/plugins/math.uuid.v1.4.min.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/b4a5a217-d71b-4e72-bec3-0a74b8b75da6-loader.js"></script>
+
+<script>
+// ticker text
+const msg='<i>★</i>BLACK FRIDAY ';
+['t1','t2','t3'].forEach(id=>document.getElementById(id).innerHTML=msg.repeat(24));
+
+// gallery (duplicated for seamless loop)
+const imgs=['LiCU8nM','Xlpf1x8','4H95bEp','GTJ2pz8','C7s0YMl','ti4M8iC','7lOyf2V','ACLYZKE','Av05dAv','iK9eEOH','s680miG','S9kddLd','yl2XhLd','HoMaBlz','FFgENc2','C4yJqQ6'];
+document.getElementById('row').innerHTML=[...imgs,...imgs].map(n=>`<img loading="lazy" alt="" src="https://i.imgur.com/${n}.jpeg">`).join('');
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// countdown to Nov 27
+const n=new Date();let end=new Date(n.getFullYear(),10,27,0,0,0);if(end<n)end=new Date(n.getFullYear()+1,10,27);
+const els={};document.querySelectorAll('#count strong').forEach(s=>els[s.dataset.u]=s);
+function tick(){const t=Math.max(0,end-new Date())/1000,v={d:Math.floor(t/86400),h:Math.floor(t%86400/3600),m:Math.floor(t%3600/60),s:Math.floor(t%60)};
+ for(const k in v){const s=String(v[k]).padStart(2,'0');if(els[k].textContent!==s){els[k].textContent=s;els[k].classList.remove('tick');void els[k].offsetWidth;els[k].classList.add('tick')}}}
+tick();setInterval(tick,1000);
+
+// UTM / origem para o RD
+const q=new URLSearchParams(location.search);
+document.querySelector('[name=traffic_source]').value=document.referrer||'direct';
+document.querySelector('[name=c_utmz]').value=['source','medium','campaign','content'].map(k=>q.get('utm_'+k)?'utm'+k.slice(0,3)+'='+q.get('utm_'+k):'').filter(Boolean).join('|');
+
+// captcha aleatório (a validação real fica por conta do RD)
+(function(){const a=1+Math.floor(Math.random()*8),b=1+Math.floor(Math.random()*8);
+ document.getElementById('math_expression').textContent=a+' + '+b+' = ?';window._cap=a+b})();
+
+// validação amigável + envio
+const form=document.getElementById('conversion-form');
+form.addEventListener('submit',e=>{
+ form.querySelectorAll('.error-msg').forEach(x=>x.remove());
+ let ok=true;
+ form.querySelectorAll('[required]').forEach(f=>{
+  const bad=!f.value.trim()||(f.type==='email'&&!/^\S+@\S+\.\S+$/.test(f.value));
+  f.classList.toggle('error',bad);
+  if(bad){ok=false;const m=document.createElement('span');m.className='error-msg';m.textContent=f.type==='email'&&f.value?'Digite um e-mail válido.':'Campo obrigatório.';f.closest('.bricks-form__field').appendChild(m)}
+ });
+ const c=form.querySelector('#captcha');
+ if(+c.value!==window._cap){ok=false;c.classList.add('error')}else c.classList.remove('error');
+ if(!ok){e.preventDefault();e.stopImmediatePropagation();const first=form.querySelector('.error');first&&first.focus();return}
+ const b=form.querySelector('button');b.classList.add('loading');b.textContent='Enviando…';
+},true);
+</script>
+</body>
+</html>
