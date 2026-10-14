@@ -1,0 +1,242 @@
+<style>
+	/* ============================================================================ */
+	/* TEMPORADA MME · ENVELOPE DO MOTOR DE RESERVAS · faixa petróleo + cartão       */
+	/* Cola no lugar do bloco atual. Só estilo: não renomeia nem remove nada do      */
+	/* que o motor (Stays) usa (#datesRange, name="from|to|persons|city", submit).   */
+	/* ============================================================================ */
+
+	#{{uniq}} {
+		padding-top: {{pt}}px;
+		padding-bottom: {{pb}}px;
+		background-color: #043A58;
+		background-image: linear-gradient(180deg, #043A58 0%, #032B42 100%);
+	}
+
+	#{{uniq}} .search-box {
+		padding: 22px 24px;
+	}
+
+	/* ---- Cartão flutuante que envolve os campos ---- */
+	#{{uniq}} #block-simple-search form > .row {
+		max-width: 1180px;
+		margin: 0 auto !important;
+		padding: 10px 6px;
+		border-radius: 20px;
+		background: rgba(255,255,255,0.07);
+		border: 1px solid rgba(255,255,255,0.14);
+		box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+		flex-wrap: wrap;
+	}
+
+	/* ---- Campos internos ---- */
+	#{{uniq}} input,
+	#{{uniq}} select,
+	#{{uniq}} .form-control {
+		border-radius: 12px !important;
+		border: 1px solid rgba(4,58,88,0.14) !important;
+		min-height: 52px !important;
+		font-size: 15px !important;
+		color: #16242b !important;
+		background-color: #ffffff !important;
+		box-shadow: none !important;
+		padding-left: 18px !important;
+		transition: border-color 0.2s cubic-bezier(0.22,1,0.36,1),
+			box-shadow 0.2s cubic-bezier(0.22,1,0.36,1) !important;
+	}
+
+	/* ---- Ícones à esquerda dos campos: escondidos ---- */
+	#{{uniq}} .input-group-prepend,
+	#{{uniq}} .input-group-addon:first-child,
+	#{{uniq}} .input-group-text:first-child {
+		display: none !important;
+	}
+	#{{uniq}} .fa-calendar,
+	#{{uniq}} .fa-calendar-o,
+	#{{uniq}} .fa-user,
+	#{{uniq}} .fa-users,
+	#{{uniq}} .fa-user-o,
+	#{{uniq}} .fa-map-marker,
+	#{{uniq}} .fa-map-pin,
+	#{{uniq}} .fa-map-signs,
+	#{{uniq}} .fa-location-arrow,
+	#{{uniq}} .fa-sliders {
+		display: none !important;
+	}
+
+	#{{uniq}} .input-group {
+		display: flex !important;
+		align-items: center !important;
+	}
+	#{{uniq}} .input-group input,
+	#{{uniq}} .input-group select,
+	#{{uniq}} .input-group .form-control {
+		border: none !important;
+		box-shadow: none !important;
+	}
+
+	/* ---- Foco: anel verde-água (campo de datas, dropdown aberto/focado) ---- */
+	#{{uniq}} input:focus,
+	#{{uniq}} select:focus,
+	#{{uniq}} .form-control:focus,
+	#{{uniq}} .bootstrap-select.open > .dropdown-toggle,
+	#{{uniq}} .bootstrap-select > .dropdown-toggle:focus {
+		border-color: #2E9088 !important;
+		box-shadow: 0 0 0 3px rgba(46,144,136,0.28) !important;
+		outline: none !important;
+	}
+
+	#{{uniq}} input::placeholder { color: #7a8a90 !important; opacity: 1; }
+
+	/* ---- Alinhamento vertical: mesma altura em todos os campos ---- */
+	#{{uniq}} .search-box input,
+	#{{uniq}} .search-box select,
+	#{{uniq}} .search-box button,
+	#{{uniq}} .search-box .form-control,
+	#{{uniq}} .search-box .dropdown-toggle {
+		display: inline-flex !important;
+		align-items: center !important;
+		min-height: 52px !important;
+		height: 52px !important;
+		line-height: normal !important;
+		vertical-align: middle !important;
+		box-sizing: border-box !important;
+	}
+
+	#{{uniq}} .search-box .row,
+	#{{uniq}} .search-box [class*="col-"] {
+		display: flex !important;
+		align-items: stretch !important;
+	}
+	#{{uniq}} .search-box [class*="col-"] > * {
+		width: 100% !important;
+	}
+
+	/* ---- Botão Buscar ---- */
+	#{{uniq}} button[type="submit"],
+	#{{uniq}} .btn-primary {
+		border-radius: 12px !important;
+		min-height: 52px !important;
+		background-color: #2E9088 !important;
+		background-image: linear-gradient(135deg, #38A79C, #1F726D) !important;
+		border: none !important;
+		color: #ffffff !important;
+		font-weight: 800 !important;
+		font-size: 15px !important;
+		letter-spacing: 0.01em !important;
+		justify-content: center !important;
+		gap: 8px !important;
+		box-shadow: 0 8px 22px rgba(46,144,136,0.38) !important;
+		transition: transform 0.2s cubic-bezier(0.22,1,0.36,1),
+			filter 0.2s cubic-bezier(0.22,1,0.36,1),
+			box-shadow 0.2s cubic-bezier(0.22,1,0.36,1) !important;
+	}
+	#{{uniq}} button[type="submit"]:active,
+	#{{uniq}} .btn-primary:active { transform: scale(0.98) !important; }
+
+	@media (hover: hover) and (pointer: fine) {
+		#{{uniq}} button[type="submit"]:hover,
+		#{{uniq}} .btn-primary:hover {
+			filter: brightness(1.07) !important;
+			transform: translateY(-1px) !important;
+			box-shadow: 0 12px 26px rgba(46,144,136,0.5) !important;
+		}
+	}
+
+	#{{uniq}} label {
+		color: #ffffff !important;
+		font-size: 12px !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.04em !important;
+		text-transform: uppercase !important;
+	}
+
+	/* ---- Dropdowns Hóspedes / Cidade (bootstrap-select) ---- */
+	#{{uniq}} .bootstrap-select {
+		padding: 0 !important;
+		width: 100% !important;
+	}
+	#{{uniq}} .bootstrap-select > .dropdown-toggle {
+		justify-content: flex-start !important;
+		padding: 0 40px 0 18px !important;
+		background-color: #ffffff !important;
+		background-image: none !important;
+		color: #16242b !important;
+		border: 1px solid rgba(4,58,88,0.14) !important;
+		box-shadow: none !important;
+		font-weight: 600 !important;
+		position: relative !important;
+	}
+	#{{uniq}} .bootstrap-select .filter-option {
+		position: static !important;
+		display: flex !important;
+		align-items: center !important;
+		height: auto !important;
+		width: auto !important;
+		padding: 0 !important;
+		flex: 1 1 auto !important;
+		min-width: 0 !important;
+	}
+	#{{uniq}} .bootstrap-select .filter-option-inner,
+	#{{uniq}} .bootstrap-select .filter-option-inner-inner {
+		padding: 0 !important;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	#{{uniq}} .bootstrap-select > .dropdown-toggle::after,
+	#{{uniq}} .bootstrap-select .bs-caret {
+		position: absolute !important;
+		right: 16px !important;
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+		margin: 0 !important;
+	}
+	#{{uniq}} .bootstrap-select .caret { border-top-color: #2E9088 !important; }
+	@media (hover: hover) and (pointer: fine) {
+		#{{uniq}} .bootstrap-select > .dropdown-toggle:hover {
+			background-color: #f3f8f7 !important;
+			transform: none !important;
+			filter: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+	/* ---- Celular: um campo por linha ---- */
+	@media (max-width: 767px) {
+		#{{uniq}} .search-box { padding: 14px 10px; }
+		#{{uniq}} #block-simple-search form > .row { padding: 8px 4px; border-radius: 16px; }
+		#{{uniq}} .search-box [class*="col-"] { flex: 0 0 100%; max-width: 100%; }
+	}
+
+	/* ---- Sticky / affix (mantido do original) ---- */
+	#{{uniq}}.affix {
+		position: relative;
+	}
+	@media (min-width: 769px) {
+		#{{uniq}} {
+			top: -150px;
+			transition: top 0.5s;
+		}
+		#{{uniq}}.affix {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 99999;
+			border: none;
+			box-shadow: 0 6px 24px rgba(3,43,66,0.35);
+			background-color: #032B42;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#{{uniq}} *, #{{uniq}} { transition-duration: 0.01ms !important; }
+	}
+</style>
+
+<div id="{{uniq}}" {{#sticky=="true"}}data-spy="affix" data-offset-top="500"{{/sticky}} class="{{visible}}">
+	<div id="block-simple-search" class="{{#cw=="1"}}container{{/cw}}{{#cw=="2"}}container-fluid{{/cw}} search-box">
+		{{{search_rent_box}}}
+	</div>
+</div>
+<script>
+</script>
