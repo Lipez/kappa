@@ -1,0 +1,106 @@
+/* Temporada MME — barra de busca da home (Stays)
+   Escopo: #block-simple-search. Só estilo: não altera ids/names/classes usados pelo motor. */
+
+#block-simple-search {
+  --mme-navy: #043a58;
+  --mme-navy-2: #032b43;
+  --mme-teal: #2f948b;
+  --mme-teal-dark: #1f726d;
+  --mme-ink: #0f2a3a;
+  --mme-muted: #6b7f8c;
+  --mme-radius: 14px;
+}
+
+/* faixa */
+#block-simple-search,
+#block-simple-search.search-box {
+  background: linear-gradient(180deg, var(--mme-navy) 0%, var(--mme-navy-2) 100%);
+  padding: 22px 0;
+}
+#block-simple-search form > .row {
+  max-width: 1180px;
+  margin: 0 auto !important;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .28);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* campos */
+#block-simple-search .frontSearchItem { margin-bottom: 0; padding: 4px; float: none; }
+#block-simple-search .input-group { display: flex; width: 100%; position: relative; }
+#block-simple-search .input-group-addon {
+  display: flex !important;              /* ícones voltam a aparecer */
+  align-items: center;
+  background: #fff;
+  border: 0;
+  border-radius: var(--mme-radius) 0 0 var(--mme-radius);
+  padding: 0 4px 0 16px;
+  color: var(--mme-teal);
+  width: auto;
+}
+#block-simple-search .input-group-addon .fa { font-size: 16px; }
+#block-simple-search input.form-control,
+#block-simple-search .bootstrap-select > .dropdown-toggle {
+  height: 54px;
+  border: 1px solid transparent;
+  border-radius: 0 var(--mme-radius) var(--mme-radius) 0;
+  background: #fff !important;
+  color: var(--mme-ink);
+  font-weight: 600;
+  font-size: 15px;
+  padding-left: 10px;
+  box-shadow: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+#block-simple-search input.form-control::placeholder { color: var(--mme-muted); font-weight: 500; }
+#block-simple-search input.form-control:focus,
+#block-simple-search .bootstrap-select.open > .dropdown-toggle,
+#block-simple-search .bootstrap-select > .dropdown-toggle:focus {
+  border-color: var(--mme-teal);
+  box-shadow: 0 0 0 3px rgba(47, 148, 139, .28);
+  outline: 0 !important;
+}
+#block-simple-search .bootstrap-select { width: 100% !important; }
+#block-simple-search .bootstrap-select .caret { border-top-color: var(--mme-teal); }
+
+/* botão buscar */
+#block-simple-search button[type="submit"].btn-primary {
+  height: 54px;
+  border: 0;
+  border-radius: var(--mme-radius);
+  background: linear-gradient(135deg, #38a79c, var(--mme-teal-dark));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .02em;
+  box-shadow: 0 8px 20px rgba(47, 148, 139, .4);
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+#block-simple-search button[type="submit"].btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 12px 26px rgba(47, 148, 139, .5);
+}
+#block-simple-search button[type="submit"].btn-primary:active { transform: translateY(0); }
+#block-simple-search button[type="submit"] .fa-search { margin-right: 6px; }
+
+/* listas suspensas (bootstrap-select) */
+.bootstrap-select .dropdown-menu {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(3, 43, 67, .25);
+  overflow: hidden;
+}
+.bootstrap-select .dropdown-menu li.selected a,
+.bootstrap-select .dropdown-menu li a:hover { background: rgba(47, 148, 139, .12); color: var(--mme-teal-dark); }
+
+/* celular: um campo por linha */
+@media (max-width: 767px) {
+  #block-simple-search { padding: 14px 10px; }
+  #block-simple-search form > .row { padding: 8px; border-radius: 16px; }
+  #block-simple-search .frontSearchItem { width: 100%; flex: 0 0 100%; max-width: 100%; }
+}
