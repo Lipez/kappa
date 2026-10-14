@@ -1,0 +1,210 @@
+<!-- ============================================================================ -->
+<!-- TEMPORADA MME · HERO · texto centralizado + carrossel de fundo                -->
+<!-- Substitui o Bloco HTML nº 1. Para trocar as fotos, edite só os <img> dentro   -->
+<!-- de .mmehero__slides (a 1ª carrega na hora; as demais, sob demanda).           -->
+<!-- ============================================================================ -->
+<section class="mmehero" aria-label="Aluguel por temporada em Alagoas" aria-roledescription="carrossel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500;1,600&display=swap">
+
+  <style>
+    .mmehero, .mmehero * { box-sizing: border-box; }
+    .mmehero {
+      position: relative;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      width: auto;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #185d59;
+      --brand: #1F726D;
+      --aqua: #6fd0c6;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --serif: 'Newsreader', Georgia, serif;
+    }
+
+    /* ---- Carrossel de fundo (crossfade) ---- */
+    .mmehero__slides { position: absolute; inset: 0; z-index: 0; }
+    .mmehero__slide {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      opacity: 0; transform: scale(1.04);
+      transition: opacity 1.1s var(--ease), transform 7s linear;
+      filter: saturate(1.06) contrast(1.02);
+    }
+    .mmehero__slide.is-active { opacity: 1; transform: scale(1); }
+
+    /* overlay uniforme: o texto agora fica no centro, então escurece o miolo */
+    .mmehero__shade {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 80% at 50% 48%, rgba(14,58,56,0.78) 0%, rgba(14,58,56,0.55) 55%, rgba(14,58,56,0.30) 100%),
+        linear-gradient(180deg, rgba(20,70,67,0) 60%, rgba(20,70,67,0.55) 100%);
+    }
+
+    /* ---- Texto centralizado ---- */
+    .mmehero__inner {
+      position: relative; z-index: 2;
+      width: 100%; max-width: 860px; margin: 0 auto;
+      padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 32px) clamp(72px, 9vw, 108px);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+
+    .mmehero__tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-bottom: 22px; padding: 8px 16px 8px 13px;
+      border-radius: 999px;
+      background: rgba(20,70,67,0.55); border: 1px solid rgba(168,230,221,0.45);
+      color: #cdeeea; font-size: 12px; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2;
+    }
+    .mmehero__tag svg { width: 14px; height: 14px; flex: 0 0 auto; fill: #a8e6dd; }
+
+    .mmehero__title {
+      margin: 0 0 22px; color: #fff;
+      font-size: clamp(38px, 5.6vw, 72px);
+      line-height: 1.06; font-weight: 500; letter-spacing: -0.02em;
+      text-shadow: 0 2px 28px rgba(16,48,46,0.7), 0 1px 4px rgba(16,48,46,0.6);
+      text-wrap: balance;
+    }
+    .mmehero__title em {
+      display: block; margin-top: 4px;
+      font-family: var(--serif); font-style: italic; font-weight: 500;
+      font-size: 1.04em; color: #a8e6dd; letter-spacing: -0.005em; line-height: 1.02;
+      text-shadow: 0 2px 24px rgba(16,48,46,0.8), 0 1px 4px rgba(16,48,46,0.7);
+    }
+
+    .mmehero__sub {
+      max-width: 52ch; margin: 0 auto 30px;
+      color: #f4fbfa; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.6;
+      text-wrap: pretty;
+      text-shadow: 0 1px 18px rgba(16,48,46,0.8), 0 1px 3px rgba(16,48,46,0.6);
+    }
+
+    .mmehero__trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-top: 4px; }
+    .mmehero__trust span { display: inline-flex; align-items: center; gap: 7px; color: #e3f2f0; font-size: 13.5px; font-weight: 700; text-shadow: 0 1px 10px rgba(16,48,46,0.7); }
+    .mmehero__trust svg { width: 15px; height: 15px; flex: 0 0 auto; stroke: #a8e6dd; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ---- Controles do carrossel ---- */
+    .mmehero__dots {
+      position: absolute; z-index: 3; left: 50%; bottom: 26px; transform: translateX(-50%);
+      display: flex; gap: 8px;
+    }
+    .mmehero__dot {
+      width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
+      background: rgba(255,255,255,0.5); transition: width .3s var(--ease), background .3s var(--ease);
+    }
+    .mmehero__dot.is-active { width: 26px; background: #a8e6dd; }
+    .mmehero__dot:focus-visible, .mmehero__arrow:focus-visible { outline: 3px solid var(--aqua); outline-offset: 3px; }
+
+    .mmehero__arrow {
+      position: absolute; z-index: 3; top: 50%; transform: translateY(-50%);
+      width: 46px; height: 46px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(14,58,56,0.45); color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      transition: background .2s var(--ease), transform .2s var(--ease);
+    }
+    .mmehero__arrow svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .mmehero__arrow--prev { left: 22px; }
+    .mmehero__arrow--next { right: 22px; }
+    @media (hover: hover) and (pointer: fine) {
+      .mmehero__arrow:hover { background: rgba(31,114,109,0.85); }
+    }
+    .mmehero__arrow:active { transform: translateY(-50%) scale(0.94); }
+
+    /* ---- RESPONSIVO ---- */
+    @media (max-width: 860px) {
+      .mmehero { min-height: auto; }
+      .mmehero__shade { background: linear-gradient(180deg, rgba(20,70,67,0.78) 0%, rgba(20,70,67,0.92) 100%); }
+      .mmehero__arrow { display: none; }
+      .mmehero__trust { display: none; }
+      .mmehero__inner { padding: 52px 20px 72px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mmehero * { transition-duration: .01ms !important; }
+      .mmehero__slide { transform: none; }
+    }
+  </style>
+
+  <!-- fotos do carrossel: troque aqui. A 1ª carrega na hora (é a que aparece primeiro). -->
+  <div class="mmehero__slides" id="mmeSlides">
+    <img class="mmehero__slide is-active" src="https://www.temporadamme.com.br/image/d235/6a1882123e712cbf0c3a1ccd/azuk-patacho-6p-prox-a-praia-do-patacho-by-mme?width=1920" alt="Piscina com jardim tropical em condomínio da Temporada MME" width="1920" height="1080" fetchpriority="high" decoding="async">
+    <img class="mmehero__slide" src="https://www.temporadamme.com.br/image/d235/6a76231b9c3a010f726b9eb9/studio-com-varanda-villas-manatee-patacho-by-mme?width=1920" alt="Piscina e fachadas de condomínio à beira-mar" width="1920" height="1080" loading="lazy" decoding="async">
+    <img class="mmehero__slide" src="https://www.temporadamme.com.br/image/d235/69d3e31fe16e465fd2d738f8/apto-duplex-acesso-a-praia-para-5-pessoas-by-mme?width=1920" alt="Piscina com espreguiçadeiras em condomínio na Rota dos Milagres" width="1920" height="1080" loading="lazy" decoding="async">
+    <img class="mmehero__slide" src="https://www.temporadamme.com.br/image/d235/6a184f8acc54658d6b96be69/oka-milagres-cond.-beira-mar-p-06-pessoas-by-mme?width=1920" alt="Casa com piscina privativa e varanda" width="1920" height="1080" loading="lazy" decoding="async">
+  </div>
+  <div class="mmehero__shade"></div>
+
+  <button type="button" class="mmehero__arrow mmehero__arrow--prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="mmehero__arrow mmehero__arrow--next" aria-label="Próxima foto"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="mmehero__dots" id="mmeDots" role="tablist" aria-label="Escolher foto"></div>
+
+  <div class="mmehero__inner">
+    <span class="mmehero__tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6z"/></svg>
+      Operado pelo Grupo MME · 30 anos de hotelaria
+    </span>
+    <h1 class="mmehero__title">Sua casa em Alagoas,<em>com serviço de hotel.</em></h1>
+    <p class="mmehero__sub">
+      Casas e apartamentos inspecionados um a um na Rota dos Milagres e em todo o litoral alagoano.
+      Você reserva com segurança e a gente cuida do resto.
+    </p>
+    <div class="mmehero__trust">
+      <span><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Padrão hoteleiro</span>
+      <span><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Imóveis verificados</span>
+      <span><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>Confirmação imediata</span>
+      <span><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-3v-5h3a2 2 0 0 1 2 2zM3 19a2 2 0 0 0 2 2h3v-5H5a2 2 0 0 0-2 2z"/></svg>Suporte 7 dias</span>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var root = document.querySelector('.mmehero'); if (!root) return;
+    var slides = root.querySelectorAll('.mmehero__slide');
+    var dotsBox = root.querySelector('#mmeDots');
+    if (slides.length < 2) return;
+    var i = 0, timer = null, INTERVAL = 6000;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var dots = [];
+    for (var k = 0; k < slides.length; k++) (function (n) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'mmehero__dot' + (n === 0 ? ' is-active' : '');
+      b.setAttribute('aria-label', 'Foto ' + (n + 1));
+      b.addEventListener('click', function () { go(n); restart(); });
+      dotsBox.appendChild(b); dots.push(b);
+    })(k);
+
+    function go(n) {
+      slides[i].classList.remove('is-active'); dots[i].classList.remove('is-active');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('is-active'); dots[i].classList.add('is-active');
+    }
+    function start() { if (!reduce && !timer) timer = setInterval(function () { go(i + 1); }, INTERVAL); }
+    function stop() { clearInterval(timer); timer = null; }
+    function restart() { stop(); start(); }
+
+    root.querySelector('.mmehero__arrow--prev').addEventListener('click', function () { go(i - 1); restart(); });
+    root.querySelector('.mmehero__arrow--next').addEventListener('click', function () { go(i + 1); restart(); });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+
+    // deslizar no celular
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 48) { go(dx < 0 ? i + 1 : i - 1); restart(); }
+    }, { passive: true });
+
+    start();
+  })();
+  </script>
+</section>
