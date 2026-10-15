@@ -1,2911 +1,3033 @@
-# Temporada MME — Textos para copiar e colar na Stays
+# Temporada MME — Textos para colar na Stays (padrão do PDF de auditoria)
 
-Os textos estão na mesma ordem dos campos da tela **Conteúdo descritivo** da Stays:
+Versão 2. Esta versão segue o PDF **"Site Temporada MME: auditoria e plano de correções"** (13/10/2026) e substitui a versão anterior deste arquivo.
 
-1. **Título** → Título do anúncio (o Nome interno não muda)
-2. **Descrição** → Descrição resumida · Observações gerais · Sobre o espaço · Sobre o acesso ao espaço · Sobre interação com anfitrião · Sobre a vizinhança · Como chegar
+## O que mudou com o PDF
+- **Padrão de texto do PDF:** abertura de até 250 caracteres → Destaques (5 fatos com número) → Ideal para → Os quartos → Localização → Serviço Temporada MME → Perguntas frequentes.
+- **Formato:** só texto, com títulos em linha própria e "•" nos itens. Sem negrito, sem listas com hífen e sem links, porque a Stays não exibe formatação.
+- **Bloco de serviço igual em todas as unidades:** "Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte)."
+- **Marca:** só "Temporada MME", sem "MME Hospitalidade", "MME Hotéis" ou "Grupo MME". Saiu o parágrafo institucional repetido.
+- **Sem códigos internos** no texto ("Casa 16", "Azuk F01", "bloco S" etc.).
+- **O texto do condomínio não se repete na unidade.** Ele fica uma vez só no campo do empreendimento (seção no fim deste arquivo).
+- **Localização no formato praia + município:** Marceneiro = Passo de Camaragibe; Tatuamunha (Naay, Villas do Rio, Villa Kanui) e Patacho = Porto de Pedras.
+- **Títulos no formato do PDF** (tipo + diferencial + condomínio/praia + lugar + "· N pessoas"). Para HS36J, HS31J, HS10J, PB02J e NF02J usei exatamente as propostas do PDF. As de HS31J e NF02J passam um pouco dos 60 caracteres.
+- **HS36J:** usei o "Exemplo pronto" do PDF.
 
-**Como usar**
-- Cada caixa cinza é o conteúdo inteiro de um campo. Copie e cole substituindo o texto atual. Não deixe o texto antigo no campo.
-- Preencha só a aba **PT**. Depois de salvar, use o botão **Traduzir/Reescrever** da Stays para EN e ES e revise a tradução.
-- Os trechos entre **⟦ ⟧** precisam ser confirmados. Ajuste e apague os colchetes antes de salvar. Cada unidade lista as pendências no topo.
-- A **Descrição resumida** tem limite de 500 caracteres. Todas estão dentro do limite (a contagem aparece ao lado do nome do campo).
-- "Ajustes de cadastro" ficam em outras telas (Amenities, Cômodos, Regras). Não são para colar.
-- Diagnóstico completo, palavras-chave e perguntas frequentes: arquivo `descritivos-seo-geo.md`.
+## Como colar
+Os campos estão na mesma ordem da tela **Conteúdo descritivo** e da página do site:
+
+| Campo na Stays | O que vai nele |
+|---|---|
+| Título do anúncio | título novo |
+| Descrição resumida | abertura de até 250 caracteres. A Stays usa o começo dela como descrição no Google |
+| Observações gerais | Destaques + Ideal para |
+| Sobre o espaço | Os quartos |
+| Sobre o acesso ao espaço | uma frase curta (o texto do condomínio vai no empreendimento) |
+| Sobre interação com anfitrião | Serviço Temporada MME |
+| Sobre a vizinhança | Localização |
+| Como chegar | aeroporto e carro + Perguntas frequentes (último campo, assim as perguntas ficam no fim da página) |
+
+- Apague o conteúdo atual de cada campo antes de colar.
+- Cole só na aba PT. Depois traduza e revise EN e ES.
+- **⟦ ⟧ = confirmar ou preencher** antes de salvar. As pendências de cada unidade estão listadas no topo dela.
+- Os campos que você não vê na tela de Conteúdo descritivo estão em "Fora desta tela".
 
 <a id="indice"></a>
 ## Índice (por código da Stays)
 
-| Código | Nome interno na Stays | Novo título | Pendências |
+| Código | Nome interno | Título novo | Itens ⟦ ⟧ |
 |---|---|---|---|
-| [HS01J](#hs01j) | MCZ Corais do Mar 904 | Apto em Jatiúca a 500 m da Praia, até 4 Hóspedes | 2 |
-| [HS03J](#hs03j) | BSM Barra Bali A2 - 222 | Apto Pé na Areia com Vista Mar na Barra de São Miguel | 3 |
-| [HS05J](#hs05j) | SMM Villas do Rio C3 - 01 | Casa 3 Suítes de Casal a 300 m da Praia de Tatuamunha | 3 |
-| [HS06J](#hs06j) | SMM Casa OKA C3 - 03 | Casa Pé na Areia no Oka Milagres para 8 Pessoas | 4 |
-| [HS07J](#hs07j) | BSM Barra Bali A2 - 326 | Apto Nascente Pé na Areia na Barra de São Miguel, 5 Hósp. | 2 |
-| [HS09J](#hs09j) | SMM Casa Kanui C3 - 106 | Casa 3 Suítes com Piscina para 9 em São Miguel dos Milagres | 4 |
-| [HS10J](#hs10j) | MCZ Smart Stay A2 - 1008 | Apto 2 Quartos em Ponta Verde a 200 m da Praia | 1 |
-| [HS12J](#hs12j) | SMM Casa Kanui C3 - 101 | Casa Triplex para 12 com Piscina e Hidro em Milagres | 6 |
-| [HS13J](#hs13j) | MCZ IBL EST A2 - 010 | Apto Pé na Areia com Piscina Privativa em Ipioca, Maceió | 2 |
-| [HS16J](#hs16j) | SMM Naay Ocean A2 - 006 | Apto 2 Quartos a 100 m da Praia de Tatuamunha, 5 Hósp. | 1 |
-| [HS18J](#hs18j) | SMM Naay River A1 - 007 | Studio a 100 m da Praia de Tatuamunha, até 4 Hóspedes | 2 |
-| [HS20J](#hs20j) | MCZ IBL EST A2 - 003 | Apto Pé na Areia com Piscina Privativa e Vista Lateral do Mar | 3 |
-| [HS22J](#hs22j) | SMM Naay Nature A2 - 103 | Duplex com 2 Camas King e Rooftop em Tatuamunha | 1 |
-| [HS26J](#hs26j) | SMM Morada do Toque 30 | Casa 2 Suítes no Centro de Milagres, 2 km da Praia do Toque | 3 |
-| [HS27J](#hs27j) | MCZ IBL EST A3 008 | Apto 3 Quartos Pé na Areia com Piscina Privativa em Maceió | 1 |
-| [HS29J](#hs29j) | SMM Naay Palms A2 - 110 | Duplex com Jacuzzi no Rooftop a 100 m da Praia, Tatuamunha | 2 |
-| [HS31J](#hs31j) | SMM Vila Atauá C5 - 03 | Casa Beira-Mar com 5 Suítes e Piscina em São Miguel dos Milagres | 2 |
-| [HS35J](#hs35j) | SMM Villas do Rio C3 - 02 | Casa para Família a 300 m da Praia de Tatuamunha, 3 Suítes | 3 |
-| [HS36J](#hs36j) | SMM Casa OKA C3 - 27 | Casa 3 Quartos no Oka Milagres com Acesso à Praia, 7 Hósp. | 4 |
-| [HS37J](#hs37j) | SMM Villas do Rio C3 - 03 | Casa 130 m² com 3 Suítes e Piscina, 300 m da Praia | 3 |
-| [HS38J](#hs38j) | SMM Casa OKA C3 - 16 | Casa no Oka Milagres com 4 Banheiros, Pé na Areia, 7 Hósp. | 4 |
-| [HS39J](#hs39j) | BSM Iloa Residence A2 - 105 S | Apto no Iloa Residence com Café da Manhã Opcional, 4 Hósp. | 2 |
-| [HS41J](#hs41j) | SMM Morada do Toque C3 - 28 | Casa 3 Quartos de Casal no Centro de Milagres, 6 Hósp. | 2 |
-| [II02J](#ii02j) | Mansão Velho Chico | Casa com 11 Suítes e Equipe às Margens do Rio São Francisco | 5 |
-| [IM01J](#im01j) | SMM Naay Ocean A2 - 106 | Duplex com Rooftop a 150 m da Praia de Tatuamunha | 1 |
-| [IW01J](#iw01j) | MCZ Versa A3 - 802 | Apto 3 Quartos em Ponta Verde, 200 m da Praia, 6 Hósp. | 2 |
-| [IW02J](#iw02j) | MCZ MF A3 - 601 | Apto 3 Quartos em Ponta Verde com Lava e Seca, 5 Hósp. | 4 |
-| [JI01J](#ji01j) | SMM Casa Azuk Patacho A2 - A02 | Apto 2 Quartos para 6 no Azuk, Perto da Praia do Patacho | 4 |
-| [KM01J](#km01j) | SMM Casa OKA C2 - 02 | Casa no Oka Milagres com 3 Camas de Casal, 6 Hóspedes | 5 |
-| [LO02J](#lo02j) | MCZ MF B A2 - 609 | Apto 2 Quartos e 2 Banheiros a 350 m da Praia de Ponta Verde | 2 |
-| [MI02J](#mi02j) | SMM Casa Azuk Patacho A2 - B03 | Apto 82 m² para 6 no Azuk Patacho com Banheiro Adaptado | 5 |
-| [MY02J](#my02j) | MCZ IBL COQ A3 - 005 | Apto 3 Quartos para 8 com Piscina Privativa em Ipioca | 5 |
-| [NF02J](#nf02j) | SMM Azuk Patacho A1 - F01 | Studio Térreo no Azuk Patacho, Perto da Praia, 4 Hósp. | 3 |
-| [NF04J](#nf04j) | SMM Studio Villas Manatee A1 - 104 | Studio para Casal com Varanda no Patacho, Porto de Pedras | 6 |
-| [PB02J](#pb02j) | SMM Villa Maui A2 - 105 | Apto 2 Suítes a 250 m da Praia do Marceneiro, 4 Hósp. | 5 |
-| [PJ01J](#pj01j) | SMM Villa Anahi A2 - 004 | Apto 2 Quartos com Piscina Privativa a 300 m da Praia | 0 |
+| [HS01J](#hs01j) | MCZ Corais do Mar 904 | Apto em Jatiúca a 500 m da praia, Maceió · 4 pessoas | 1 |
+| [HS03J](#hs03j) | BSM Barra Bali A2 - 222 | Apto com varanda vista mar no Barra Bali · 6 pessoas | 3 |
+| [HS05J](#hs05j) | SMM Villas do Rio C3 - 01 | Casa 3 suítes de casal no Villas do Rio · 6 pessoas | 4 |
+| [HS06J](#hs06j) | SMM Casa OKA C3 - 03 | Casa para 8 no Oka Milagres, acesso à praia · 8 pessoas | 10 |
+| [HS07J](#hs07j) | BSM Barra Bali A2 - 326 | Apto nascente com suíte queen no Barra Bali · 5 pessoas | 2 |
+| [HS09J](#hs09j) | SMM Casa Kanui C3 - 106 | Casa 3 suítes com piscina no Villa Kanui · 9 pessoas | 5 |
+| [HS10J](#hs10j) | MCZ Smart Stay A2 - 1008 | Apto a 200 m da praia de Ponta Verde, Maceió · 5 pessoas | 1 |
+| [HS12J](#hs12j) | SMM Casa Kanui C3 - 101 | Casa triplex com hidro no Villa Kanui · 12 pessoas | 6 |
+| [HS13J](#hs13j) | MCZ IBL EST A2 - 010 | Apto com piscina privativa no Ipioca Beach Life · 5 pessoas | 4 |
+| [HS16J](#hs16j) | SMM Naay Ocean A2 - 006 | Apto 2 quartos no Naay Villas, Tatuamunha · 5 pessoas | 3 |
+| [HS18J](#hs18j) | SMM Naay River A1 - 007 | Studio no Naay Villas, perto da praia · 4 pessoas | 4 |
+| [HS20J](#hs20j) | MCZ IBL EST A2 - 003 | Apto com piscina privativa e vista mar, Ipioca · 6 pessoas | 4 |
+| [HS22J](#hs22j) | SMM Naay Nature A2 - 103 | Duplex 2 camas king com rooftop no Naay Villas · 6 pessoas | 5 |
+| [HS26J](#hs26j) | SMM Morada do Toque 30 | Casa 2 suítes no centro de Milagres, condomínio · 6 pessoas | 4 |
+| [HS27J](#hs27j) | MCZ IBL EST A3 008 | Apto 3 quartos com piscina privativa em Ipioca · 6 pessoas | 2 |
+| [HS29J](#hs29j) | SMM Naay Palms A2 - 110 | Duplex com jacuzzi no rooftop, Naay Villas · 6 pessoas | 6 |
+| [HS31J](#hs31j) | SMM Vila Atauá C5 - 03 | Casa beira-mar com piscina na Vila Atauá, Milagres · 12 pessoas | 2 |
+| [HS35J](#hs35j) | SMM Villas do Rio C3 - 02 | Casa para família no Villas do Rio, Tatuamunha · 6 pessoas | 4 |
+| [HS36J](#hs36j) | SMM Casa OKA C3 - 27 | Casa com piscina no Oka Milagres, acesso à praia · 7 pessoas | 13 |
+| [HS37J](#hs37j) | SMM Villas do Rio C3 - 03 | Casa de 130 m² com 3 suítes no Villas do Rio · 6 pessoas | 5 |
+| [HS38J](#hs38j) | SMM Casa OKA C3 - 16 | Casa 4 banheiros no Oka Milagres, acesso à praia · 7 pessoas | 7 |
+| [HS39J](#hs39j) | BSM Iloa Residence A2 - 105 S | Apto no Iloa Residence com café opcional · 4 pessoas | 2 |
+| [HS41J](#hs41j) | SMM Morada do Toque C3 - 28 | Casa 3 quartos de casal no centro de Milagres · 6 pessoas | 3 |
+| [II02J](#ii02j) | Mansão Velho Chico | Casa com 11 suítes no Rio São Francisco · 21 pessoas | 6 |
+| [IM01J](#im01j) | SMM Naay Ocean A2 - 106 | Duplex com rooftop no Naay Villas, Tatuamunha · 5 pessoas | 1 |
+| [IW01J](#iw01j) | MCZ Versa A3 - 802 | Apto 3 quartos a 200 m da praia de Ponta Verde · 6 pessoas | 2 |
+| [IW02J](#iw02j) | MCZ MF A3 - 601 | Apto 3 quartos com lava e seca em Ponta Verde · 5 pessoas | 1 |
+| [JI01J](#ji01j) | SMM Casa Azuk Patacho A2 - A02 | Apto 2 quartos no Azuk Patacho, Porto de Pedras · 6 pessoas | 6 |
+| [KM01J](#km01j) | SMM Casa OKA C2 - 02 | Casa com 3 camas de casal no Oka Milagres · 6 pessoas | 9 |
+| [LO02J](#lo02j) | MCZ MF B A2 - 609 | Apto 2 quartos e 2 banheiros em Ponta Verde · 4 pessoas | 2 |
+| [MI02J](#mi02j) | SMM Casa Azuk Patacho A2 - B03 | Apto 82 m² com banheiro adaptado no Azuk Patacho · 6 pessoas | 5 |
+| [MY02J](#my02j) | MCZ IBL COQ A3 - 005 | Apto 3 quartos para 8 com piscina privativa em Ipioca | 7 |
+| [NF02J](#nf02j) | SMM Azuk Patacho A1 - F01 | Studio no Azuk Patacho, perto da Praia do Patacho · 4 pessoas | 6 |
+| [NF04J](#nf04j) | SMM Studio Villas Manatee A1 - 104 | Studio para casal no Villas Manatee, Patacho · 2 pessoas | 7 |
+| [PB02J](#pb02j) | SMM Villa Maui A2 - 105 | Apto 2 quartos no Villa Mauí, a 250 m da praia · 4 pessoas | 6 |
+| [PJ01J](#pj01j) | SMM Villa Anahi A2 - 004 | Apto com piscina privativa no Villa Anahí, a 300 m da praia | 1 |
+
+[Textos dos condomínios (campo do empreendimento)](#condominios)
 
 ---
 
 <a id="hs01j"></a>
 ## HS01J · MCZ Corais do Mar 904
 
-Na Stays: busque **HS01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS01J
+Página: https://www.temporadamme.com.br/pt/apartment/HS01J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o acesso ao espaço: ⟦Portaria/recepção: 24 horas ou remota — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Recepção do prédio: 24 horas ou remota?
+> - Andar e vista do apartamento
 
-### TÍTULO
-**Título do anúncio (PT)** · 48 caracteres
+**Título do anúncio** · 52 caracteres
 ```text
-Apto em Jatiúca a 500 m da Praia, até 4 Hóspedes
+Apto em Jatiúca a 500 m da praia, Maceió · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 317/500 caracteres
+**Descrição resumida** · 173 caracteres
 ```text
-Apartamento de 35 m² no Edifício Corais do Mar, no bairro de Jatiúca, em Maceió. Fica a 500 m da Praia de Jatiúca e na região da antiga Avenida Amélia Rosa, conhecida pelos bares e restaurantes. É indicado para casais ou famílias pequenas que querem resolver tudo a pé, sem depender de carro para comer ou ir à praia.
+Apartamento de 1 quarto para até 4 pessoas no Edifício Corais do Mar, em Jatiúca, Maceió, a 500 m da praia e a 120 m de restaurantes. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar no apartamento.
+Destaques
+• 500 m da Praia de Jatiúca, 120 m de restaurantes e 300 m de supermercado
+• 35 m², 1 quarto e 1 banheiro, com cozinha completa
+• Piscina do prédio com área rasa, espaço kids e área gourmet
+• 1 vaga de garagem gratuita e elevador
+• Roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Casal ou família de até 4 pessoas que quer fazer tudo a pé. O sofá-cama fica na sala, então os 4 hóspedes dividem dois ambientes. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- 1 quarto com cama de casal, guarda-roupa e ar-condicionado
-- Sala de estar com sofá-cama de casal, TV e ar-condicionado, integrada à sala de jantar
-- Cozinha completa com fogão, geladeira, freezer, micro-ondas e torradeira
-- 1 banheiro com água quente e secador de cabelo
-- Roupa de cama e banho e Wi-Fi incluídos
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Casal ou família de até 4 pessoas que prioriza localização e praticidade. O sofá-cama fica na sala, então os 4 hóspedes dividem dois ambientes.
+Os quartos
+• Quarto: 1 cama de casal, ar-condicionado e guarda-roupa
+• Sala: 1 sofá-cama de casal, ar-condicionado e TV
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Prédio: elevador, piscina com área rasa, espaço kids, home office, sala de descanso e área gourmet. ⟦Portaria/recepção: 24 horas ou remota — confirmar⟧.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Jatiúca: 500 m
-- Restaurantes: 120 m
-- Supermercado: 300 m
+Localização
+Jatiúca é um bairro de orla de Maceió, na região da antiga Avenida Amélia Rosa.
+• Praia de Jatiúca: 500 m
+• Restaurantes: 120 m
+• Supermercado: 300 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 23 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir comodidades: desmarcar "Piscina Privada", "Academia (privativa)" e "Acesso à Praia"; marcar piscina e academia de área comum.
-- Confirmar o tipo de recepção e ajustar o módulo do edifício.
-- Fotos: incluir a foto da fachada e uma da rua mostrando a proximidade com os restaurantes, além da piscina do prédio.
-- Link interno: criar uma página/post "Onde ficar em Maceió: Ponta Verde x Jatiúca" que leve para HS01J, HS10J, IW01J, IW02J e LO02J.
+• Aeroporto de Maceió: 23 km, ⟦cerca de X min de carro⟧
+• Praia, restaurantes e mercado ficam a pé; o carro só é necessário para passeios.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 1 quarto para até 4 hóspedes em Jatiúca, Maceió, a 500 m da praia. Prédio com piscina, elevador e vaga. Temporada MME.
+Perguntas frequentes
+Tem piscina?
+Sim, a piscina do prédio, com área rasa.
+Tem estacionamento?
+Sim, 1 vaga gratuita.
+Quantas pessoas cabem?
+Até 4: 2 na cama de casal do quarto e 2 no sofá-cama da sala.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" (manter "Piscina"), trocar "Academia (privativa)" por "Academia (área comum)" e desmarcar "Acesso à praia"
+- Trocar a capa (hoje é um close de taças) e tirar fotos repetidas
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs03j"></a>
 ## HS03J · BSM Barra Bali A2 - 222
 
-Na Stays: busque **HS03J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS03J
+Página: https://www.temporadamme.com.br/pt/apartment/HS03J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: ⟦1 ou 2 vagas — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Supermercados, farmácias e restaurantes nas proximidades ⟦informar distâncias⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Número de vagas (texto diz 2, cadastro diz 1)
+> - Distância de supermercado e farmácia
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 52 caracteres
 ```text
-Apto Pé na Areia com Vista Mar na Barra de São Miguel
+Apto com varanda vista mar no Barra Bali · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 316/500 caracteres
+**Descrição resumida** · 188 caracteres
 ```text
-Apartamento de 79 m² no Condomínio Barra Bali, à beira-mar na Barra de São Miguel, litoral sul de Alagoas, a 29 km de Maceió. A varanda tem mesa, cadeiras e vista para o mar da Praia da Barra de São Miguel. Acomoda até 6 hóspedes e o condomínio tem acesso direto à praia e estrutura de lazer para adultos e crianças.
+Apartamento com varanda vista mar para até 6 pessoas no Condomínio Barra Bali, com acesso direto à praia, em Barra de São Miguel, a 29 km de Maceió. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- O responsável pela reserva precisa ter pelo menos 18 anos.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 20h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Varanda com mesa, cadeiras e vista para o mar
+• Condomínio com acesso direto à praia e piscina de borda infinita com área rasa
+• 79 m², 2 quartos (1 suíte) e 2 banheiros
+• 300 m do Praêro Beach Club
+• Roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias com crianças e casais que querem vista para o mar. O responsável pela reserva precisa ter 18 anos ou mais. Silêncio das 20h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto com cama de casal
-- Sofá-cama de casal na sala
-- 2 banheiros
-- Sala de estar e jantar integradas
-- Cozinha completa (americana) com forno, micro-ondas, liquidificador e cafeteira
-- Varanda com vista para o mar
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- ⟦1 ou 2 vagas — confirmar⟧
-
-Para quem é:
-Famílias com crianças, que aproveitam a área rasa da piscina, o parquinho e o campo de futebol, e casais que querem vista para o mar.
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 1 cama de casal
+• Sala: 1 sofá-cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Barra Bali: acesso direto à praia, piscina de borda infinita com área rasa, jardins, campo de futebol, sala de jogos com sinuca e pingue-pongue, academia, sauna, parquinho, elevador e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia da Barra de São Miguel: pé na areia
-- Praêro Beach Club: 300 m
-- Supermercados, farmácias e restaurantes nas proximidades ⟦informar distâncias⟧
+Localização
+Barra de São Miguel fica no litoral sul de Alagoas, a 29 km de Maceió.
+• Praia da Barra de São Miguel: acesso direto pelo condomínio
+• Praêro Beach Club: 300 m
+• Supermercado e farmácia: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Maceió: 29 km · Aeroporto Internacional Zumbi dos Palmares: 54 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Desmarcar "Piscina Privada" e "Academia (privativa)". Elas são do condomínio.
-- Corrigir o texto "Roupa de cama — serviço opcional — incluído".
-- "Restaurante" aparece no módulo do condomínio. Se existir, cite no texto; se não, desmarque.
+• Aeroporto de Maceió: 54 km, ⟦cerca de X min de carro⟧
+• Maceió: 29 km
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento pé na areia com varanda vista mar no Condomínio Barra Bali, Barra de São Miguel. 2 quartos para até 6 hóspedes e piscina de borda infinita.
+Perguntas frequentes
+Tem vista para o mar?
+Sim, da varanda.
+Qual a distância de Maceió?
+29 km.
+Tem estacionamento?
+⟦1 ou 2 vagas — confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Capa repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs05j"></a>
 ## HS05J · SMM Villas do Rio C3 - 01
 
-Na Stays: busque **HS05J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS05J
+Página: https://www.temporadamme.com.br/pt/apartment/HS05J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar⟧.
-> - Sobre o espaço: Piscina ⟦privativa — confirmar⟧ e varanda
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Piscina privativa?
+> - Metragem
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 51 caracteres
 ```text
-Casa 3 Suítes de Casal a 300 m da Praia de Tatuamunha
+Casa 3 suítes de casal no Villas do Rio · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 387/500 caracteres
+**Descrição resumida** · 186 caracteres
 ```text
-A Casa 01 fica no condomínio Villas do Rio, em Tatuamunha, na Rota Ecológica dos Milagres, entre o rio e o mar. A Praia de Tatuamunha fica a 300 m (cerca de 4 minutos a pé), e a Praia de Porto da Rua, com restaurantes à beira-mar e passeios de jangada, a 1 km. A casa tem arquitetura rústica, 3 suítes com cama de casal e área gourmet com piscina e churrasqueira. Acomoda até 6 hóspedes.
+Casa térrea com 3 suítes de casal, piscina e área gourmet para até 6 pessoas no Villas do Rio, a 300 m da Praia de Tatuamunha, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 3 suítes, todas com cama de casal
+• 300 m da Praia de Tatuamunha, cerca de 4 min a pé
+• Área gourmet com churrasqueira e piscina ⟦privativa⟧
+• Casa térrea, sem escadas, com lavabo
+• Roupa de cama e banho, kit de amenities, Wi-Fi e TV inclusos
+
+Ideal para
+Três casais, ou casal com filhos adultos, que querem uma suíte de casal para cada um. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1 com cama de casal
-- Suíte 2 com cama de casal
-- Suíte 3 com cama de casal
-- 3 banheiros nas suítes + lavabo
-- Sala de estar integrada à cozinha e sala de jantar
-- Cozinha completa com forno, torradeira e freezer
-- Área gourmet com churrasqueira
-- Piscina ⟦privativa — confirmar⟧ e varanda
-- Ar-condicionado em todas as suítes, TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- Casa térrea com entrada privativa
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Três casais, ou casal com filhos adultos, que querem uma suíte de casal para cada um e uma casa térrea, sem escadas.
+Os quartos
+• Suíte 1: 1 cama de casal
+• Suíte 2: 1 cama de casal
+• Suíte 3: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: 300 m (≈4 min a pé)
-- Praia de Porto da Rua: 1 km
+Localização
+O Villas do Rio fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, entre o rio e o mar.
+• Praia de Tatuamunha: 300 m, cerca de 4 min a pé
+• Praia de Porto da Rua: 1 km
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: ~108 km · Aeroporto do Recife: ~187 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Trocar "Villa Kanui" por "Villas do Rio" no campo "Como se locomover".
-- Usar fotos diferentes das casas 02 e 03 na capa.
+• Aeroporto de Maceió: cerca de 108 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 187 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa rústica com 3 suítes de casal, piscina e área gourmet a 300 m da Praia de Tatuamunha, na Rota dos Milagres. Até 6 hóspedes.
+Perguntas frequentes
+A casa tem escadas?
+Não, é térrea.
+Dá para ir a pé à praia?
+Sim, são 300 m.
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Villa Kanui" por "Villas do Rio" no campo de transporte
+- Tirar o código "casa 01" e o texto automático do Booking
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs06j"></a>
 ## HS06J · SMM Casa OKA C3 - 03
 
-Na Stays: busque **HS06J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS06J
+Página: https://www.temporadamme.com.br/pt/apartment/HS06J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar regras e limite de convidados⟧.
-> - Sobre o espaço: ⟦Piscina privativa da casa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Como chegar / Como se locomover: Aeroporto Internacional Zumbi dos Palmares (Maceió): ⟦~127 km — confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Piscina: privativa da casa ou do condomínio
+> - Metros até a areia
+> - Vagas
+> - Distâncias da região e tempo até o aeroporto
 
-### TÍTULO
-**Título do anúncio (PT)** · 47 caracteres
+**Título do anúncio** · 55 caracteres
 ```text
-Casa Pé na Areia no Oka Milagres para 8 Pessoas
+Casa para 8 no Oka Milagres, acesso à praia · 8 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 359/500 caracteres
+**Descrição resumida** · 198 caracteres
 ```text
-A Casa 03 fica no Oka Morada dos Milagres, condomínio à beira-mar na Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres (litoral norte de Alagoas). Na maré baixa formam-se piscinas naturais em frente ao condomínio, que tem acesso direto à praia e área gourmet pé na areia. A casa acomoda até 8 hóspedes em 3 quartos e tem 3 banheiros.
+Casa para até 8 pessoas no condomínio Oka Morada dos Milagres, com acesso direto à Praia do Marceneiro, na Rota dos Milagres, em Alagoas. Aluguel por temporada com serviço de hotel da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar regras e limite de convidados⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Até 8 pessoas, a maior capacidade entre as casas do Oka Morada dos Milagres
+• Acesso direto à Praia do Marceneiro pelo condomínio, a ⟦X m⟧ da casa
+• ⟦Piscina privativa⟧, churrasqueira e jardim
+• 3 quartos e 3 banheiros, com ar-condicionado
+• Enxoval de hotel, kit de amenities, Wi-Fi, TV e artigos de praia inclusos
+
+Ideal para
+Famílias com vários filhos e grupos de amigos de até 8 pessoas. Há só uma cama de casal; as demais são de solteiro. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte master com cama de casal
-- Suíte superior com 2 camas de solteiro + 1 cama auxiliar
-- Quarto térreo com 2 camas de solteiro + 1 cama auxiliar
-- 3 banheiros
-- Cozinha completa com forno, micro-ondas, cafeteira e freezer
-- Churrasqueira e jardim
-- ⟦Piscina privativa da casa — confirmar⟧
-- Ar-condicionado, TV e Wi-Fi
-- Roupa de cama e banho e artigos de praia
-- Estacionamento gratuito
-
-Para quem é:
-Famílias com 3 ou mais filhos e grupos de amigos de até 8 pessoas. A maior parte das camas é de solteiro, então a casa funciona melhor para quem não precisa de vários quartos de casal.
+Os quartos
+• Suíte master: 1 cama de casal
+• Suíte superior: 2 camas de solteiro e 1 cama auxiliar
+• Quarto térreo: 2 camas de solteiro e 1 cama auxiliar
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Oka: acesso direto à praia, área gourmet pé na areia, academia, redário, lavanderia compartilhada, parquinho e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom podem ser contratados conforme a necessidade, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: acesso direto pelo condomínio
-- Passeios de jangada às piscinas naturais e restaurantes da Rota dos Milagres nos arredores
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Centro de São Miguel dos Milagres: ⟦X km⟧
+• Praia do Patacho: ⟦X km⟧
+• Santuário do Peixe-Boi, em Porto de Pedras: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares (Maceió): ⟦~127 km — confirmar⟧
-- Aeroporto Internacional do Recife: ~208 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Tirar a repetição do bloco "O condomínio OKA fica na praia do Marceneiro…" (aparece 3 vezes).
-- Desmarcar "Academia (privativa)".
-- Foto: vista aérea do condomínio mostrando a praia e as piscinas naturais na maré baixa.
+• Aeroporto de Maceió: ⟦127 km — conferir⟧, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 208 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa com 3 quartos e 3 banheiros para até 8 hóspedes no Oka Milagres, condomínio com acesso direto à Praia do Marceneiro, na Rota dos Milagres.
+Perguntas frequentes
+A piscina é privativa?
+⟦Sim, de uso exclusivo da casa — confirmar⟧
+Quantos metros até a areia?
+⟦X m, pelo acesso do condomínio⟧
+Tem estacionamento?
+Sim, ⟦X vagas⟧ gratuitas.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- Mostrar a praia nas primeiras fotos (hoje 8 das 10 primeiras são quartos)
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs07j"></a>
 ## HS07J · BSM Barra Bali A2 - 326
 
-Na Stays: busque **HS07J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS07J
+Página: https://www.temporadamme.com.br/pt/apartment/HS07J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: Varanda nascente ⟦com vista para o mar/jardim — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - A varanda tem vista para o mar?
+> - Horário de silêncio do condomínio: 20h ou 21h (HS03J diz 20h)
 
-### TÍTULO
-**Título do anúncio (PT)** · 57 caracteres
+**Título do anúncio** · 55 caracteres
 ```text
-Apto Nascente Pé na Areia na Barra de São Miguel, 5 Hósp.
+Apto nascente com suíte queen no Barra Bali · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 291/500 caracteres
+**Descrição resumida** · 191 caracteres
 ```text
-Apartamento de 70 m² no Condomínio Barra Bali, à beira-mar na Barra de São Miguel, a 29 km de Maceió. A unidade é nascente: a varanda recebe o sol da manhã e é bem ventilada. Acomoda até 5 hóspedes, com suíte de cama queen. O condomínio tem acesso direto à praia e piscina de borda infinita.
+Apartamento nascente com suíte queen para até 5 pessoas no Condomínio Barra Bali, com acesso direto à praia, em Barra de São Miguel, a 29 km de Maceió. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 21h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Varanda nascente, com sol da manhã
+• Suíte com cama queen
+• 70 m², 2 quartos e 2 banheiros
+• Condomínio com acesso direto à praia e piscina de borda infinita
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias de até 5 pessoas que preferem uma suíte com cama maior. Silêncio das 21h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama queen
-- Quarto com 2 camas de solteiro
-- Sofá-cama de solteiro na sala
-- 2 banheiros
-- Sala de estar e jantar integradas
-- Cozinha completa (americana) com forno, micro-ondas, liquidificador e cafeteira
-- Varanda nascente ⟦com vista para o mar/jardim — confirmar⟧
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias de até 5 pessoas ou casais com filhos que preferem uma suíte com cama maior e manhãs na varanda.
+Os quartos
+• Suíte: 1 cama queen
+• Quarto 2: 2 camas de solteiro
+• Sala: 1 sofá-cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Barra Bali: acesso direto à praia, piscina de borda infinita com área rasa, campo de futebol, sala de jogos, academia, sauna, parquinho, elevador e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia da Barra de São Miguel: pé na areia
-- Praêro Beach Club: 300 m
+Localização
+Barra de São Miguel fica no litoral sul de Alagoas, a 29 km de Maceió.
+• Praia da Barra de São Miguel: acesso direto pelo condomínio
+• Praêro Beach Club: 300 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Maceió: 29 km · Aeroporto: 54 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir os nomes no quadro de camas.
-- Padronizar o horário de silêncio do condomínio (20h ou 21h) nas duas unidades.
-- Foto da varanda pela manhã, para sustentar o diferencial "nascente".
+• Aeroporto de Maceió: 54 km, ⟦cerca de X min de carro⟧
+• Maceió: 29 km
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento nascente no Condomínio Barra Bali, pé na areia na Barra de São Miguel. Suíte queen, 2 quartos e piscina de borda infinita. Até 5 hóspedes.
+Perguntas frequentes
+O apartamento pega sol?
+Sim, é nascente, com sol da manhã na varanda.
+Tem vista para o mar?
+⟦Confirmar⟧
+Quantos banheiros?
+Dois.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Corrigir os nomes no quadro de camas ("Individual" e "Duplo" estão trocados)
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs09j"></a>
 ## HS09J · SMM Casa Kanui C3 - 106
 
-Na Stays: busque **HS09J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS09J
+Página: https://www.temporadamme.com.br/pt/apartment/HS09J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: Piscina com área rasa ⟦privativa — confirmar⟧, varanda, terraço, jardim e churrasqueira
-> - Sobre o espaço: ⟦Hidromassagem: privativa ou do condomínio — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: ⟦Praia mais próxima e distância — confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a Praia de Tatuamunha
+> - Hidromassagem: da casa ou do condomínio
+> - Piscina privativa?
+> - O pino do mapa na Stays está ~6,5 km ao sul de Tatuamunha: conferir
 
-### TÍTULO
-**Título do anúncio (PT)** · 59 caracteres
+**Título do anúncio** · 52 caracteres
 ```text
-Casa 3 Suítes com Piscina para 9 em São Miguel dos Milagres
+Casa 3 suítes com piscina no Villa Kanui · 9 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 285/500 caracteres
+**Descrição resumida** · 173 caracteres
 ```text
-A Casa 106 fica no condomínio Vila Kanui, em São Miguel dos Milagres, na Rota Ecológica dos Milagres. Tem 200 m², 3 suítes com a mesma configuração (cama de casal + cama auxiliar) e piscina com área rasa. É uma boa opção para três famílias pequenas, que ficam com quartos equivalentes.
+Casa de 200 m² com 3 suítes iguais e piscina para até 9 pessoas no Villa Kanui, em Tatuamunha, Porto de Pedras, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 20h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 3 suítes iguais, cada uma com cama de casal e cama auxiliar
+• 200 m², 3 banheiros nas suítes e lavabo
+• Piscina com área rasa ⟦privativa⟧, varanda, terraço e churrasqueira
+• Máquina de lavar e secar
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Três famílias pequenas que querem quartos equivalentes, ou grupos de até 9 pessoas. Silêncio das 20h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1: cama de casal + cama auxiliar
-- Suíte 2: cama de casal + cama auxiliar
-- Suíte 3: cama de casal + cama auxiliar
-- 3 banheiros nas suítes + lavabo
-- Cozinha completa com forno, micro-ondas, torradeira e cafeteira
-- Piscina com área rasa ⟦privativa — confirmar⟧, varanda, terraço, jardim e churrasqueira
-- ⟦Hidromassagem: privativa ou do condomínio — confirmar⟧
-- Máquina de lavar e secar
-- Ar-condicionado, TV, Wi-Fi, roupa de cama e banho e secador de cabelo
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Três casais com 1 filho cada, ou famílias de até 9 pessoas que querem suítes iguais.
+Os quartos
+• Suíte 1: 1 cama de casal e 1 cama auxiliar
+• Suíte 2: 1 cama de casal e 1 cama auxiliar
+• Suíte 3: 1 cama de casal e 1 cama auxiliar
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- ⟦Praia mais próxima e distância — confirmar⟧
+Localização
+O Villa Kanui fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres.
+• Praia de Tatuamunha: ⟦X m⟧
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Porto de Pedras e demais praias da Costa dos Corais acessíveis de carro
-- Aeroporto Internacional Zumbi dos Palmares: ~108 km · Aeroporto do Recife: ~187 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir a referência à Praia de Tatuamunha.
-- Tirar "Hidro" do título se a hidromassagem for do condomínio.
-- Padronizar o nome "Vila Kanui".
-- O endereço "Rural 1" e o bairro "Beverly Hills" são pouco úteis para GEO. Use o nome do condomínio + a praia.
+• Aeroporto de Maceió: cerca de 108 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 187 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa de 200 m² com 3 suítes, piscina e churrasqueira para até 9 hóspedes no Vila Kanui, em São Miguel dos Milagres, na Rota dos Milagres.
+Perguntas frequentes
+As suítes são iguais?
+Sim, as 3 têm cama de casal e cama auxiliar.
+A hidromassagem é da casa?
+⟦Confirmar: o cadastro marca jacuzzi de uso comum⟧
+Tem máquina de lavar?
+Sim, de lavar e secar.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir o bairro "Beverly Hills" para Tatuamunha, Porto de Pedras
+- Tirar "Hidro" do título se a hidromassagem for do condomínio
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs10j"></a>
 ## HS10J · MCZ Smart Stay A2 - 1008
 
-Na Stays: busque **HS10J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS10J
+Página: https://www.temporadamme.com.br/pt/apartment/HS10J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Andar e metragem
 
-### TÍTULO
-**Título do anúncio (PT)** · 46 caracteres
+**Título do anúncio** · 56 caracteres
 ```text
-Apto 2 Quartos em Ponta Verde a 200 m da Praia
+Apto a 200 m da praia de Ponta Verde, Maceió · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 323/500 caracteres
+**Descrição resumida** · 177 caracteres
 ```text
-Apartamento no Edifício Smart Stays, na Rua Durval Guimarães, em Ponta Verde, um dos bairros de orla mais procurados de Maceió. A Praia de Ponta Verde fica a 200 m e há supermercado e restaurantes a cerca de 50 m. A sala tem vista parcial para o mar. Acomoda até 5 hóspedes e atende bem famílias que querem fazer tudo a pé.
+Apartamento com suíte para até 5 pessoas no Edifício Smart Stays, em Ponta Verde, Maceió, a 200 m da praia, com vista parcial para o mar. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 200 m da Praia de Ponta Verde; supermercado e restaurantes a 50 m
+• 2 quartos (1 suíte) e 2 banheiros
+• Sala com vista parcial para o mar e varanda
+• Prédio com recepção 24 horas, piscina com área rasa, academia e sala de jogos
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Famílias de até 5 pessoas que querem ficar perto da praia e do comércio de Ponta Verde. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal, guarda-roupa e ar-condicionado
-- Quarto com 2 camas de solteiro e ar-condicionado
-- Sala com sofá-cama de solteiro, TV, ar-condicionado e vista parcial para o mar
-- Cozinha completa integrada à área de serviço, com forno, micro-ondas e cafeteira
-- 2 banheiros, varanda, Wi-Fi e roupa de cama e banho
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias de até 5 pessoas, ou dois casais com uma criança, que querem ficar perto da praia e do comércio de Ponta Verde.
+Os quartos
+• Suíte: 1 cama de casal, ar-condicionado e guarda-roupa
+• Quarto: 2 camas de solteiro e ar-condicionado
+• Sala: 1 sofá-cama de solteiro, ar-condicionado e TV
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Prédio: recepção 24 horas, elevador, piscina com área rasa, sala de jogos, academia e espaço kids.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ponta Verde: 200 m
-- Supermercado: 50 m
-- Restaurantes: 50 m
+Localização
+Ponta Verde é um dos bairros de orla mais procurados de Maceió.
+• Praia de Ponta Verde: 200 m
+• Supermercado: 50 m
+• Restaurantes: 50 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 24 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Desmarcar "Piscina Privada" e "Academia (privativa)".
-- Informar metragem e andar.
-- Foto da vista parcial do mar a partir da sala. É o diferencial do título alternativo e precisa de prova visual.
+• Aeroporto de Maceió: 24 km, ⟦cerca de X min de carro⟧
+• Praia, restaurantes e mercado ficam a pé.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento com suíte em Ponta Verde, Maceió, a 200 m da praia, para até 5 hóspedes. Supermercado a 50 m, piscina e academia no prédio.
+Perguntas frequentes
+A que distância fica da praia?
+200 m da Praia de Ponta Verde.
+Tem vista para o mar?
+A sala tem vista parcial para o mar.
+Tem estacionamento?
+Sim, 1 vaga gratuita.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Capa: usar a foto da piscina com vista para o mar; galeria tem só 17 fotos
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs12j"></a>
 ## HS12J · SMM Casa Kanui C3 - 101
 
-Na Stays: busque **HS12J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS12J
+Página: https://www.temporadamme.com.br/pt/apartment/HS12J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: A casa tem câmeras de segurança nas áreas comuns internas. Quartos e banheiros não são monitorados ⟦confirmar⟧.
-> - Observações gerais: Eventos permitidos ⟦confirmar regras⟧.
-> - Sobre o espaço: Piscina ⟦privativa — confirmar⟧, varanda e churrasqueira
-> - Sobre o espaço: ⟦Estacionamento: confirmar vagas⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: ⟦Praia mais próxima e distância — confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a praia
+> - Vagas
+> - Câmeras não ficam em quartos e banheiros
 
-### TÍTULO
-**Título do anúncio (PT)** · 52 caracteres
+**Título do anúncio** · 50 caracteres
 ```text
-Casa Triplex para 12 com Piscina e Hidro em Milagres
+Casa triplex com hidro no Villa Kanui · 12 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 284/500 caracteres
+**Descrição resumida** · 191 caracteres
 ```text
-A Casa 101 é um triplex de 255 m² no condomínio Vila Kanui, em São Miguel dos Milagres, na Rota Ecológica dos Milagres. Tem piscina, hidromassagem no terraço e 3 suítes que acomodam até 12 hóspedes. Atende grupos grandes de amigos ou famílias que querem dividir o custo da hospedagem.
+Casa triplex de 255 m² com piscina e hidromassagem no terraço para até 12 pessoas no Villa Kanui, em Tatuamunha, Porto de Pedras, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- A casa tem câmeras de segurança nas áreas comuns internas. Quartos e banheiros não são monitorados ⟦confirmar⟧.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar regras⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Até 12 pessoas em 3 suítes
+• Hidromassagem no terraço
+• 255 m² em 3 andares, com lavabo
+• Piscina ⟦privativa⟧, varanda e churrasqueira
+• Roupa de cama e banho, Wi-Fi e ar-condicionado inclusos
+
+Ideal para
+Grupos de até 12 pessoas. Cada suíte recebe 4 pessoas com camas auxiliares. A casa tem escadas (3 andares) e câmeras de segurança nas áreas comuns internas. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1: cama de casal + cama auxiliar de casal
-- Suíte 2: cama de casal + cama auxiliar de casal
-- Suíte 3: cama de casal + 2 camas auxiliares de solteiro
-- 3 banheiros nas suítes + lavabo
-- Cozinha completa com forno, micro-ondas, torradeira e freezer
-- Piscina ⟦privativa — confirmar⟧, varanda e churrasqueira
-- Hidromassagem no terraço
-- Ar-condicionado, Wi-Fi e roupa de cama e banho
-- ⟦Estacionamento: confirmar vagas⟧
-
-Para quem é:
-Grupos de até 12 pessoas. Como cada suíte recebe 4 pessoas com camas auxiliares, funciona melhor para famílias com crianças ou amigos que não se importam em dividir quarto.
+Os quartos
+• Suíte 1: 1 cama de casal e 1 cama auxiliar de casal
+• Suíte 2: 1 cama de casal e 1 cama auxiliar de casal
+• Suíte 3: 1 cama de casal e 2 camas auxiliares de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- ⟦Praia mais próxima e distância — confirmar⟧
+Localização
+O Villa Kanui fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres.
+• Praia de Tatuamunha: ⟦X m⟧
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~108 km · Aeroporto do Recife: ~187 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Manter o aviso de câmeras em destaque (exigência do Airbnb e questão de confiança).
-- Avisar que é triplex (há escadas) para grupos com idosos.
+• Aeroporto de Maceió: cerca de 108 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 187 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa triplex de 255 m² com 3 suítes, piscina e hidromassagem no terraço para até 12 hóspedes no Vila Kanui, em São Miguel dos Milagres.
+Perguntas frequentes
+Tem câmeras?
+Sim, nas áreas comuns internas. Quartos e banheiros não são monitorados ⟦confirmar⟧.
+A hidromassagem é da casa?
+Sim, fica no terraço.
+Tem estacionamento?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir o bairro "Beverly Hills" para Tatuamunha, Porto de Pedras
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs13j"></a>
 ## HS13J · MCZ IBL EST A2 - 010
 
-Na Stays: busque **HS13J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS13J
+Página: https://www.temporadamme.com.br/pt/apartment/HS13J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Boulevard Gastronômico com restaurantes, café e sorveteria ⟦distância a confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Vaga de garagem (cadastro mostra 0)
+> - Metros da unidade até a areia
 
-### TÍTULO
-**Título do anúncio (PT)** · 56 caracteres
+**Título do anúncio** · 59 caracteres
 ```text
-Apto Pé na Areia com Piscina Privativa em Ipioca, Maceió
+Apto com piscina privativa no Ipioca Beach Life · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 338/500 caracteres
+**Descrição resumida** · 188 caracteres
 ```text
-Apartamento de 50 m² no Ipioca Beach Life, condomínio pé na areia na Praia de Ipioca, no litoral norte de Maceió. A varanda tem piscina privativa e churrasqueira, de uso exclusivo da unidade. Acomoda até 5 hóspedes em 2 quartos. É indicado para quem quer praia na porta e uma área de lazer própria, sem dividir a piscina com o condomínio.
+Apartamento de 2 quartos com piscina e churrasqueira privativas na varanda, para até 5 pessoas, no Ipioca Beach Life, na Praia de Ipioca, em Maceió. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Piscina e churrasqueira de uso exclusivo na varanda
+• Condomínio com acesso direto à Praia de Ipioca
+• 50 m², 2 quartos (1 suíte) e 2 banheiros
+• Máquina de lavar e secar
+• Roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Casais ou famílias de até 5 pessoas que querem praia na porta e piscina própria. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto com cama de casal
-- Sofá-cama de solteiro na sala
-- 2 banheiros com chuveiro elétrico
-- Sala de estar e jantar integradas
-- Cozinha completa com forno, micro-ondas, chaleira e torradeira
-- Varanda com piscina privativa, churrasqueira, mesa e cadeiras
-- Máquina de lavar e secar
-- Ar-condicionado nos quartos, TV aberta e Wi-Fi
-- Roupa de cama e banho incluídas
-
-Para quem é:
-Casais ou famílias de até 5 pessoas que querem ficar no litoral norte, mais tranquilo, com piscina própria e serviços dentro do condomínio.
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 1 cama de casal
+• Sala: 1 sofá-cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Complexo Ipioca Beach Life: acesso à praia, piscina compartilhada, academia, salão de jogos, parquinho, bar, restaurante, lojas de conveniência, aluguel de bicicletas e recepção 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ipioca: pé na areia
-- Centro de Maceió: ~20 km
-- Boulevard Gastronômico com restaurantes, café e sorveteria ⟦distância a confirmar⟧
+Localização
+A Praia de Ipioca fica no litoral norte de Maceió, a cerca de 20 km do centro. O Ipioca Beach Life tem restaurante, bar e lojas de conveniência.
+• Praia de Ipioca: acesso pelo condomínio, ⟦X m⟧
+• Boulevard Gastronômico: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: ~39 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Primeira foto: a piscina privativa da varanda.
-- Confirmar o estacionamento.
-- Link interno entre as 4 unidades do Ipioca ("Precisa de mais quartos? Veja HS27J e MY02J").
+• Aeroporto de Maceió: cerca de 39 km, ⟦cerca de X min de carro⟧
+• Centro de Maceió: cerca de 20 km. Para sair do condomínio, o carro é a melhor opção.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento pé na areia em Ipioca, Maceió, com piscina e churrasqueira privativas na varanda. 2 quartos para até 5 hóspedes no Ipioca Beach Life.
+Perguntas frequentes
+A piscina é só do apartamento?
+Sim, a piscina da varanda é de uso exclusivo.
+É longe do centro de Maceió?
+Cerca de 20 km, no litoral norte.
+Tem estacionamento?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Primeira foto: a piscina privativa da varanda
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs16j"></a>
 ## HS16J · SMM Naay Ocean A2 - 006
 
-Na Stays: busque **HS16J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS16J
+Página: https://www.temporadamme.com.br/pt/apartment/HS16J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a praia
+> - Metragem real e andar
 
-### TÍTULO
-**Título do anúncio (PT)** · 54 caracteres
+**Título do anúncio** · 53 caracteres
 ```text
-Apto 2 Quartos a 100 m da Praia de Tatuamunha, 5 Hósp.
+Apto 2 quartos no Naay Villas, Tatuamunha · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 263/500 caracteres
+**Descrição resumida** · 204 caracteres
 ```text
-Apartamento no Naay Villas Boutique, condomínio a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. Tem 2 quartos com cama de casal, 2 banheiros e sala climatizada com sofá-cama para 1 pessoa, para até 5 hóspedes. A varanda tem churrasqueira.
+Apartamento com 2 quartos de casal e 2 banheiros para até 5 pessoas no Naay Villas Boutique, perto da Praia de Tatuamunha, em Porto de Pedras, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 2 quartos com cama de casal e ar-condicionado
+• 2 banheiros
+• Praia de Tatuamunha a ⟦100 m⟧ e ponte do peixe-boi a 500 m
+• Varanda com churrasqueira; condomínio com piscina e academia
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Dois casais ou família de até 5 pessoas. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama de casal e ar-condicionado
-- Quarto 2 com cama de casal e ar-condicionado
-- Sala climatizada com sofá-cama de solteiro
-- 2 banheiros
-- Cozinha completa com forno, micro-ondas e freezer
-- Varanda com churrasqueira e jardim
-- Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Dois casais, ou família de até 5 pessoas.
+Os quartos
+• Quarto 1: 1 cama de casal
+• Quarto 2: 1 cama de casal
+• Sala: 1 sofá-cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, área de churrasco, jardim e parquinho.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: ~100 m
-- Praia de Lages: ~4,5 km
-- Na região: observação do peixe-boi, jangada às piscinas naturais e beach clubs
+Localização
+O Naay Villas Boutique fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, perto do Rio Tatuamunha, onde é feita a observação do peixe-boi.
+• Praia de Tatuamunha: ⟦100 m ou 150 m — padronizar⟧
+• Ponte do Peixe-Boi: 500 m
+• Farmácia: 750 m
+• Restaurantes: 1 km
+• Supermercado: 5,9 km
+• Praia de Lages: cerca de 4,5 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~120 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Informar o número da unidade, a metragem e o andar.
-- Desmarcar "Piscina Privada" e "Academia (privativa)".
+• Aeroporto de Maceió: cerca de 120 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento com 2 quartos de casal e 2 banheiros para até 5 hóspedes no Naay Villas Boutique, a 100 m da Praia de Tatuamunha.
+Perguntas frequentes
+Quantos quartos de casal?
+Dois.
+Tem piscina?
+Sim, a do condomínio.
+Tem supermercado perto?
+O mais próximo fica a 5,9 km.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Apagar "Praia de São Miguel dos Milagres: cerca de 12 km"; etiqueta Tatuamunha, Porto de Pedras
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs18j"></a>
 ## HS18J · SMM Naay River A1 - 007
 
-Na Stays: busque **HS18J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS18J
+Página: https://www.temporadamme.com.br/pt/apartment/HS18J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: Sofá-cama ⟦para 1 ou 2 pessoas — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Sofá-cama para 1 ou 2 pessoas
+> - Distância até a praia (100 ou 150 m)
+> - Metragem real (todas as unidades mostram 117,98 m²)
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 49 caracteres
 ```text
-Studio a 100 m da Praia de Tatuamunha, até 4 Hóspedes
+Studio no Naay Villas, perto da praia · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 383/500 caracteres
+**Descrição resumida** · 200 caracteres
 ```text
-Studio no Naay Villas Boutique, condomínio a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. A região é conhecida pela observação do peixe-boi no Rio Tatuamunha e pelos passeios de jangada às piscinas naturais. O studio tem ambiente único climatizado, cozinha equipada e acomoda até 4 hóspedes. É a opção mais econômica da Temporada MME perto da praia na Rota.
+Studio climatizado para até 4 pessoas no Naay Villas Boutique, perto da Praia de Tatuamunha e do passeio do peixe-boi, em Porto de Pedras, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Praia de Tatuamunha a ⟦100 m⟧
+• 500 m da ponte de onde saem os passeios do peixe-boi
+• Studio com cama de casal, sofá-cama e cama auxiliar
+• Condomínio com piscina, academia e área de churrasco
+• Roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Casais e famílias pequenas que passam o dia fora e querem uma base prática perto do mar. Todos dormem no mesmo ambiente. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Cama de casal
-- Sofá-cama ⟦para 1 ou 2 pessoas — confirmar⟧
-- Cama auxiliar
-- 1 banheiro
-- Cozinha equipada para refeições rápidas, com micro-ondas e freezer
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- Estacionamento no condomínio
-
-Para quem é:
-Casais e famílias pequenas que passam o dia fora (praia, jangada, peixe-boi) e precisam de uma base prática perto do mar.
+Os quartos
+• Ambiente único: 1 cama de casal, 1 sofá-cama ⟦para 1 ou 2 pessoas⟧ e 1 cama auxiliar
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, churrasqueira, jardim e parquinho.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: ~100 m
-- Praia de Lages: ~4,5 km
+Localização
+O Naay Villas Boutique fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, perto do Rio Tatuamunha, onde é feita a observação do peixe-boi.
+• Praia de Tatuamunha: ⟦100 m ou 150 m — padronizar⟧
+• Ponte do Peixe-Boi: 500 m
+• Farmácia: 750 m
+• Restaurantes: 1 km
+• Supermercado: 5,9 km
+• Praia de Lages: cerca de 4,5 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: ~120 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Desmarcar "Piscina Privada" e "Academia (privativa)".
-- Informar a metragem real do studio.
+• Aeroporto de Maceió: cerca de 120 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Studio climatizado para até 4 hóspedes no Naay Villas Boutique, a 100 m da Praia de Tatuamunha, na Rota dos Milagres. Piscina e academia no condomínio.
+Perguntas frequentes
+Cabem 4 adultos?
+Sim, no mesmo ambiente: cama de casal, sofá-cama e cama auxiliar.
+Tem piscina?
+Sim, a do condomínio.
+Tem supermercado perto?
+O mais próximo fica a 5,9 km; farmácia a 750 m.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Etiqueta: Tatuamunha, Porto de Pedras
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs20j"></a>
 ## HS20J · MCZ IBL EST A2 - 003
 
-Na Stays: busque **HS20J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS20J
+Página: https://www.temporadamme.com.br/pt/apartment/HS20J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦O acesso é sem degraus e com porta ampla, o que facilita a estadia de hóspedes com mobilidade reduzida — confirmar⟧
-> - Sobre o espaço: Famílias de até 6 pessoas que querem vista para o mar e piscina própria. ⟦Também atende hóspedes que precisam de acesso sem degraus.⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Acessibilidade (sem degraus, porta ampla)
+> - Metragem e vaga
 
-### TÍTULO
-**Título do anúncio (PT)** · 61 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Apto Pé na Areia com Piscina Privativa e Vista Lateral do Mar
+Apto com piscina privativa e vista mar, Ipioca · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 356/500 caracteres
+**Descrição resumida** · 174 caracteres
 ```text
-Apartamento no Ipioca Beach Life, condomínio pé na areia na Praia de Ipioca, litoral norte de Maceió. A varanda tem piscina privativa, churrasqueira e vista lateral para o mar. Acomoda até 6 hóspedes em suíte, quarto e sofá-cama de casal. ⟦O acesso é sem degraus e com porta ampla, o que facilita a estadia de hóspedes com mobilidade reduzida — confirmar⟧.
+Apartamento com piscina privativa e vista lateral para o mar, para até 6 pessoas, no Ipioca Beach Life, na Praia de Ipioca, em Maceió. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Vista lateral para o mar da varanda
+• Piscina e churrasqueira de uso exclusivo
+• 2 quartos (1 suíte) e 2 banheiros, com água quente a gás
+• Ar-condicionado nos quartos e na sala; máquina de lavar e secar
+• ⟦Acesso sem degraus e porta ampla⟧
+
+Ideal para
+Famílias de até 6 pessoas que querem vista para o mar e piscina própria. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto com 2 camas de solteiro
-- Sofá-cama de casal na sala
-- 2 banheiros com chuveiro aquecido a gás
-- Sala de estar e jantar integradas
-- Cozinha completa com forno, micro-ondas, liquidificador e cafeteira
-- Varanda com piscina privativa, churrasqueira, mesa e cadeiras
-- Máquina de lavar e secar
-- Ar-condicionado nos quartos e na sala, TV aberta e Wi-Fi
-- Roupa de cama e banho incluídas
-
-Para quem é:
-Famílias de até 6 pessoas que querem vista para o mar e piscina própria. ⟦Também atende hóspedes que precisam de acesso sem degraus.⟧
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 2 camas de solteiro
+• Sala: 1 sofá-cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Complexo: acesso à praia, piscina compartilhada, academia, bar, restaurante, lojas, salão de jogos, parquinho, aluguel de bicicletas e recepção 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ipioca: pé na areia
+Localização
+A Praia de Ipioca fica no litoral norte de Maceió, a cerca de 20 km do centro. O Ipioca Beach Life tem restaurante, bar e lojas de conveniência.
+• Praia de Ipioca: acesso pelo condomínio, ⟦X m⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Centro de Maceió: ~20 km · Aeroporto: ~39 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Tirar "Resort" do título ou confirmar que o condomínio se apresenta assim.
-- Se a acessibilidade for confirmada, fotografar a entrada e o banheiro e marcar as comodidades de acessibilidade completas.
-- Desmarcar "Academia (privativa)".
+• Aeroporto de Maceió: cerca de 39 km, ⟦cerca de X min de carro⟧
+• Centro de Maceió: cerca de 20 km. Para sair do condomínio, o carro é a melhor opção.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento pé na areia em Ipioca, Maceió, para até 6 hóspedes, com piscina privativa, churrasqueira e vista lateral para o mar.
+Perguntas frequentes
+Tem vista para o mar?
+Sim, vista lateral.
+A piscina é privativa?
+Sim, de uso exclusivo da unidade.
+É acessível para cadeira de rodas?
+⟦Confirmar acesso, porta do banheiro e box⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- Tirar "Resort" do título atual
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs22j"></a>
 ## HS22J · SMM Naay Nature A2 - 103
 
-Na Stays: busque **HS22J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS22J
+Página: https://www.temporadamme.com.br/pt/apartment/HS22J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Sofá-cama para 1 ou 2 pessoas (o texto atual diz as duas coisas)
+> - Distância até a praia
 
-### TÍTULO
-**Título do anúncio (PT)** · 47 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Duplex com 2 Camas King e Rooftop em Tatuamunha
+Duplex 2 camas king com rooftop no Naay Villas · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 286/500 caracteres
+**Descrição resumida** · 198 caracteres
 ```text
-Este apartamento duplex fica no Naay Villas Boutique, a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. Os 2 quartos têm cama king e ar-condicionado, e o rooftop tem espreguiçadeiras e cadeiras para o fim de tarde. Com o sofá-cama da sala, acomoda até 6 hóspedes.
+Duplex com 2 quartos de cama king e rooftop com espreguiçadeiras para até 6 pessoas no Naay Villas Boutique, perto da Praia de Tatuamunha, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Duplex, com escada interna.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 2 quartos com cama king e ar-condicionado
+• Rooftop com espreguiçadeiras e cadeiras
+• 2 banheiros; varanda com churrasqueira
+• Praia de Tatuamunha a ⟦100 m⟧ e ponte do peixe-boi a 500 m
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Dois casais que querem cama king, ou família de até 6 pessoas. O duplex tem escada interna. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama king
-- Quarto 2 com cama king
-- Sala climatizada com sofá-cama de casal
-- 2 banheiros
-- Cozinha completa com forno, micro-ondas, cafeteira e freezer
-- Varanda com churrasqueira
-- Rooftop com espreguiçadeiras e cadeiras
-- Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Dois casais que querem cama king, ou família de até 6 pessoas.
+Os quartos
+• Quarto 1: 1 cama king
+• Quarto 2: 1 cama king
+• Sala: 1 sofá-cama ⟦de casal — confirmar⟧
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, jardim, área de churrasco e parquinho.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: ~100 m
-- Ponte do Peixe-Boi: ~500 m
+Localização
+O Naay Villas Boutique fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, perto do Rio Tatuamunha, onde é feita a observação do peixe-boi.
+• Praia de Tatuamunha: ⟦100 m ou 150 m — padronizar⟧
+• Ponte do Peixe-Boi: 500 m
+• Farmácia: 750 m
+• Restaurantes: 1 km
+• Supermercado: 5,9 km
+• Praia de Lages: cerca de 4,5 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~120 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir a contradição do sofá-cama.
-- Foto do rooftop ao pôr do sol.
+• Aeroporto de Maceió: cerca de 120 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Duplex com 2 quartos de cama king, rooftop com espreguiçadeiras e 2 banheiros para até 6 hóspedes no Naay Villas, perto da Praia de Tatuamunha.
+Perguntas frequentes
+As camas são king?
+Sim, nos dois quartos.
+O sofá-cama é para quantas pessoas?
+⟦Confirmar⟧
+Tem escada?
+Sim, é duplex.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Etiqueta Tatuamunha, Porto de Pedras
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs26j"></a>
 ## HS26J · SMM Morada do Toque 30
 
-Na Stays: busque **HS26J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS26J
+Página: https://www.temporadamme.com.br/pt/apartment/HS26J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar⟧.
-> - Sobre o espaço: Mezanino com cama de solteiro ⟦confirmar como fica a capacidade⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância da Praia do Toque (o texto atual diz 450 m e 2 km)
+> - Mezanino: camas somam 7 lugares e a ficha diz 6
+> - Município/bairro: hoje a etiqueta diz Tatuamunha
 
-### TÍTULO
-**Título do anúncio (PT)** · 59 caracteres
+**Título do anúncio** · 59 caracteres
 ```text
-Casa 2 Suítes no Centro de Milagres, 2 km da Praia do Toque
+Casa 2 suítes no centro de Milagres, condomínio · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 362/500 caracteres
+**Descrição resumida** · 194 caracteres
 ```text
-Casa no condomínio Morada do Toque, na via principal de São Miguel dos Milagres, na Rota Ecológica dos Milagres. A Praia do Toque fica a 2 km, e mercadinhos, farmácias e lanchonetes ficam perto, o que facilita para quem vai cozinhar. Da posição central, as praias do Marceneiro, Riacho, Lages e Patacho ficam acessíveis de carro ou buggy. Acomoda até 6 hóspedes.
+Casa com 2 suítes, mezanino e 3 banheiros para até 6 pessoas no condomínio Morada do Toque, no centro de São Miguel dos Milagres, perto da Praia do Toque. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Localização central, com comércio na mesma rua
+• 2 suítes, mezanino e 3 banheiros
+• Condomínio com piscina, academia e playground
+• Varanda com vista para o jardim e a piscina do condomínio; churrasqueira
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias de até 6 pessoas que preferem ficar perto do comércio e circular de carro pelas praias. A casa não é pé na areia. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1 com cama de casal
-- Suíte 2 com cama de casal
-- Sala com sofá-cama de casal
-- Mezanino com cama de solteiro ⟦confirmar como fica a capacidade⟧
-- 3 banheiros completos
-- Cozinha completa com forno, micro-ondas, torradeira e cafeteira
-- Varanda com mesa, cadeiras e vista para o jardim e a piscina do condomínio
-- Churrasqueira, ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias de até 6 pessoas que preferem ficar perto do comércio e circular de carro pelas praias da Rota. Não é pé na areia.
+Os quartos
+• Suíte 1: 1 cama de casal
+• Suíte 2: 1 cama de casal
+• Sala: 1 sofá-cama de casal
+• Mezanino: 1 cama de solteiro ⟦conta na capacidade?⟧
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, playground e áreas de descanso.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Toque: 2 km
-- Comércio local (mercadinhos, farmácias, lanchonetes): na mesma via
+Localização
+O Morada do Toque fica na via principal de São Miguel dos Milagres, com mercadinhos, farmácias e lanchonetes na mesma rua.
+• Praia do Toque: ⟦2 km ou 450 m — confirmar⟧
+• Praias do Marceneiro, do Riacho, de Lages e do Patacho: acesso de carro ou buggy
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 97 km · Aeroporto do Recife: 220 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir o título (5 → 6) e tirar "5 min da praia".
-- Desmarcar "Piscina Privada" e "Academia (privativa)".
-- Medir a distância a pé e de carro até a Praia do Toque.
+• Aeroporto de Maceió: 97 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: 220 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa com 2 suítes, mezanino e 3 banheiros para até 6 hóspedes no centro de São Miguel dos Milagres, a 2 km da Praia do Toque. Piscina no condomínio.
+Perguntas frequentes
+É perto da praia?
+A Praia do Toque fica a ⟦X⟧. O carro é recomendado.
+A piscina é privativa?
+Não, é do condomínio.
+Quantas pessoas cabem?
+Até 6.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir o título (5 → 6 pessoas) e a etiqueta de bairro
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs27j"></a>
 ## HS27J · MCZ IBL EST A3 008
 
-Na Stays: busque **HS27J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS27J
+Página: https://www.temporadamme.com.br/pt/apartment/HS27J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Metragem e vaga
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Apto 3 Quartos Pé na Areia com Piscina Privativa em Maceió
+Apto 3 quartos com piscina privativa em Ipioca · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 328/500 caracteres
+**Descrição resumida** · 171 caracteres
 ```text
-Apartamento de 3 quartos no Ipioca Beach Life, condomínio pé na areia na Praia de Ipioca, em Maceió. A varanda tem piscina privativa e churrasqueira. São até 6 hóspedes com quartos separados: 2 quartos de casal e 1 quarto com 2 camas de solteiro. É uma boa configuração para dois casais com crianças ou para pais, filhos e avós.
+Apartamento de 3 quartos com piscina privativa na varanda, para até 6 pessoas, no Ipioca Beach Life, na Praia de Ipioca, em Maceió. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Não aceita grupos de jovens nem eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 3 quartos separados, 2 deles com cama de casal
+• Piscina e churrasqueira de uso exclusivo na varanda
+• 2 banheiros com água quente
+• Condomínio com acesso direto à Praia de Ipioca
+• Roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Dois casais com crianças ou famílias com avós. A unidade não aceita grupos de jovens nem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto 2 com cama de casal
-- Quarto 3 com 2 camas de solteiro
-- 2 banheiros com água quente
-- Sala de estar e jantar integradas
-- Cozinha completa com forno, micro-ondas e torradeira
-- Varanda com piscina privativa, churrasqueira, mesa e cadeiras
-- Ar-condicionado nos quartos, TV aberta e Wi-Fi
-- Roupa de cama e banho incluídas
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 1 cama de casal
+• Quarto 3: 2 camas de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Complexo: acesso à praia, piscina compartilhada, academia, bar, restaurante, lojas, salão de jogos, parquinho, aluguel de bicicletas e recepção 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ipioca: pé na areia
+Localização
+A Praia de Ipioca fica no litoral norte de Maceió, a cerca de 20 km do centro. O Ipioca Beach Life tem restaurante, bar e lojas de conveniência.
+• Praia de Ipioca: acesso pelo condomínio, ⟦X m⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Centro de Maceió: ~20 km · Aeroporto: ~39 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Definir o que é "grupo de jovens" (faixa etária) para evitar conflito na reserva.
-- Informar metragem e vaga.
+• Aeroporto de Maceió: cerca de 39 km, ⟦cerca de X min de carro⟧
+• Centro de Maceió: cerca de 20 km. Para sair do condomínio, o carro é a melhor opção.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento pé na areia com 3 quartos e piscina privativa em Ipioca, Maceió, para até 6 hóspedes. Duas camas de casal e churrasqueira.
+Perguntas frequentes
+Quantas camas de casal?
+Duas, em quartos separados.
+Aceita grupo de amigos jovens?
+Não. A unidade não aceita grupos de jovens.
+A piscina é privativa?
+Sim, na varanda da unidade.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Definir a faixa etária de "grupo de jovens" nas Regras
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs29j"></a>
 ## HS29J · SMM Naay Palms A2 - 110
 
-Na Stays: busque **HS29J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS29J
+Página: https://www.temporadamme.com.br/pt/apartment/HS29J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦privativa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Jacuzzi privativa e aquecida?
+> - Distância até a praia
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 54 caracteres
 ```text
-Duplex com Jacuzzi no Rooftop a 100 m da Praia, Tatuamunha
+Duplex com jacuzzi no rooftop, Naay Villas · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 277/500 caracteres
+**Descrição resumida** · 188 caracteres
 ```text
-O apartamento 110 é um duplex no Naay Villas Boutique, a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. O destaque é o rooftop com jacuzzi ⟦privativa — confirmar⟧ e cadeiras. Tem 2 quartos com cama king e sofá-cama de casal na sala, para até 6 hóspedes.
+Duplex com jacuzzi no rooftop e 2 quartos de cama king para até 6 pessoas no Naay Villas Boutique, perto da Praia de Tatuamunha, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Duplex, com escada interna.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Jacuzzi ⟦privativa⟧ no rooftop
+• 2 quartos com cama king e ar-condicionado
+• 2 banheiros; varanda com churrasqueira
+• Praia de Tatuamunha a ⟦100 m⟧ e ponte do peixe-boi a 500 m
+• Roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Casais em viagem especial ou dois casais que querem uma área privativa para relaxar. O duplex tem escada interna. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama king
-- Quarto 2 com cama king
-- Sala climatizada com sofá-cama de casal
-- 2 banheiros
-- Cozinha completa com forno, micro-ondas, cafeteira e freezer
-- Varanda com churrasqueira
-- Rooftop com jacuzzi e cadeiras
-- Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- Estacionamento no condomínio
-
-Para quem é:
-Casais em viagem especial ou dois casais que querem uma área privativa para relaxar à noite.
+Os quartos
+• Quarto 1: 1 cama king
+• Quarto 2: 1 cama king
+• Sala: 1 sofá-cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, jardim, área de churrasco e parquinho.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: ~100 m · Ponte do Peixe-Boi: ~500 m
+Localização
+O Naay Villas Boutique fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, perto do Rio Tatuamunha, onde é feita a observação do peixe-boi.
+• Praia de Tatuamunha: ⟦100 m ou 150 m — padronizar⟧
+• Ponte do Peixe-Boi: 500 m
+• Farmácia: 750 m
+• Restaurantes: 1 km
+• Supermercado: 5,9 km
+• Praia de Lages: cerca de 4,5 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~120 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Marcar "Banheira de hidromassagem/Jacuzzi privativa" nas comodidades.
-- Primeira foto: o rooftop com a jacuzzi.
+• Aeroporto de Maceió: cerca de 120 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Duplex com jacuzzi privativa no rooftop, 2 quartos de cama king e 2 banheiros para até 6 hóspedes no Naay Villas, perto da Praia de Tatuamunha.
+Perguntas frequentes
+A jacuzzi é só da unidade?
+⟦Confirmar⟧
+A jacuzzi é aquecida?
+⟦Confirmar⟧
+Tem escada?
+Sim, é duplex.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"; marcar "Jacuzzi privativa"
+- Fotos verticais geram barras brancas: usar horizontais
+- Etiqueta Tatuamunha, Porto de Pedras
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs31j"></a>
 ## HS31J · SMM Vila Atauá C5 - 03
 
-Na Stays: busque **HS31J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS31J
+Página: https://www.temporadamme.com.br/pt/apartment/HS31J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar limite de convidados e regras do condomínio⟧.
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Capacidade: 12 (ficha) ou 13 (título atual) — o texto novo usa 12
+> - Tempo a pé até a Capela (860 m em 7 min parece rápido)
 
-### TÍTULO
-**Título do anúncio (PT)** · 64 caracteres
+**Título do anúncio** · 63 caracteres
 ```text
-Casa Beira-Mar com 5 Suítes e Piscina em São Miguel dos Milagres
+Casa beira-mar com piscina na Vila Atauá, Milagres · 12 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 449/500 caracteres
+**Descrição resumida** · 191 caracteres
 ```text
-Casa no Condomínio Vila Atauá, de frente para a Praia de São Miguel dos Milagres, na Rota Ecológica dos Milagres, litoral norte de Alagoas. Tem 5 suítes, piscina privativa e acesso direto à praia; 2 das suítes têm vista para o mar. A Capela dos Milagres, um dos pontos mais conhecidos da cidade, fica a 860 m pela praia. Acomoda até 12 hóspedes e é indicada para famílias grandes e grupos que querem ficar juntos na mesma casa, de frente para o mar.
+Casa beira-mar com 5 suítes e piscina privativa para até 12 pessoas na Vila Atauá, na Praia de São Miguel dos Milagres, a 860 m da Capela dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Capacidade máxima: 12 hóspedes.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar limite de convidados e regras do condomínio⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• De frente para o mar, com acesso direto à Praia de São Miguel dos Milagres
+• 5 suítes, 2 com vista para o mar
+• Piscina privativa, varanda, jardim e churrasqueira
+• 860 m da Capela dos Milagres, ⟦cerca de 10 min⟧ a pé pela praia
+• Enxoval de cama, mesa e banho, Wi-Fi, TV a cabo e artigos de praia inclusos
+
+Ideal para
+Famílias multigeracionais e grupos de até 12 pessoas, com uma suíte por casal ou núcleo familiar. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1 (superior, vista mar): cama queen
-- Suíte 2 (superior, vista mar): cama queen + cama auxiliar
-- Suíte 3 (superior): cama queen + cama auxiliar
-- Suíte 4 (superior): cama queen + cama auxiliar
-- Suíte 5 (térrea): 2 camas de solteiro
-- 5 banheiros (1 por suíte)
-- Cozinha completa com forno, micro-ondas, torradeira e máquina de café
-- Área de refeições, varanda, jardim e churrasqueira
-- Piscina privativa
-- Ar-condicionado, TV a cabo, espaço para notebook e Wi-Fi em toda a casa
-- Enxoval completo de cama, mesa e banho, e artigos de praia
-- Estacionamento gratuito
-
-Para quem é:
-Famílias multigeracionais e grupos de até 12 pessoas. Com uma suíte por casal ou núcleo familiar, todos têm privacidade, e a piscina e a varanda reúnem o grupo.
+Os quartos
+• Suíte 1 (vista mar): 1 cama queen
+• Suíte 2 (vista mar): 1 cama queen e 1 cama auxiliar
+• Suíte 3: 1 cama queen e 1 cama auxiliar
+• Suíte 4: 1 cama queen e 1 cama auxiliar
+• Suíte 5 (térrea): 2 camas de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de São Miguel dos Milagres: em frente à casa
-- Capela dos Milagres: 860 m (cerca de 10 min a pé pela praia)
-- Restaurantes: 1 km · Mercados: 1,9 km · Padaria: 2 km
-- Vilinha do Marceneiro: 3,2 km
+Localização
+A Vila Atauá fica na beira-mar de São Miguel dos Milagres, na Rota Ecológica dos Milagres.
+• Capela dos Milagres: 860 m
+• Restaurantes: 1 km
+• Mercados: 1,9 km
+• Vilinha do Marceneiro: 3,2 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 94 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir o título para 12, ou mudar o sistema para 13 (as 3 camas auxiliares permitem 13; decidir).
-- Trocar "acesso exclusivo à praia" por "acesso direto à praia".
-- Preencher o campo bairro/região.
-- Revisar o preço exibido na busca: R$ 14.885/noite afasta cliques.
+• Aeroporto de Maceió: 94 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa beira-mar com 5 suítes, piscina privativa e vista para o mar em São Miguel dos Milagres, Alagoas. Até 12 hóspedes, a 860 m da Capela dos Milagres.
+Perguntas frequentes
+Quantas pessoas cabem?
+Até 12.
+Todas as suítes têm banheiro?
+Sim, são 5 suítes com banheiro.
+A piscina é privativa?
+Sim.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir o título e preencher o bairro (está vazio)
+- Revisar a tarifa mínima: aparece "a partir de R$ 15.544,55" na home
+- Trocar "acesso exclusivo à praia" por "acesso direto"
+- Capa repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs35j"></a>
 ## HS35J · SMM Villas do Rio C3 - 02
 
-Na Stays: busque **HS35J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS35J
+Página: https://www.temporadamme.com.br/pt/apartment/HS35J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar⟧.
-> - Sobre o espaço: Área gourmet com churrasqueira, piscina ⟦privativa — confirmar⟧ e varanda
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Piscina privativa?
+> - Metragem
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Casa para Família a 300 m da Praia de Tatuamunha, 3 Suítes
+Casa para família no Villas do Rio, Tatuamunha · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 294/500 caracteres
+**Descrição resumida** · 192 caracteres
 ```text
-A Casa 02 fica no condomínio Villas do Rio, em Tatuamunha, na Rota Ecológica dos Milagres, a 300 m da praia. Diferente das casas vizinhas, uma das 3 suítes tem 2 camas de solteiro, o que acomoda bem os filhos. A casa é térrea, com área gourmet, piscina e churrasqueira, e recebe até 6 hóspedes.
+Casa térrea com 3 suítes, uma delas com 2 camas de solteiro, piscina e área gourmet para até 6 pessoas no Villas do Rio, a 300 m da Praia de Tatuamunha. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Suíte com 2 camas de solteiro, boa para as crianças
+• 300 m da Praia de Tatuamunha, cerca de 4 min a pé
+• Área gourmet com churrasqueira e piscina ⟦privativa⟧
+• Casa térrea, sem escadas, com lavabo
+• Roupa de cama e banho, artigos de praia, kit de primeiros socorros e Wi-Fi inclusos
+
+Ideal para
+Família com 2 filhos e outro casal, ou dois casais com crianças. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1 com cama de casal
-- Suíte 2 com 2 camas de solteiro
-- Suíte 3 com cama de casal
-- 3 banheiros nas suítes + lavabo
-- Sala de estar integrada à cozinha e sala de jantar
-- Cozinha completa com forno, micro-ondas e freezer
-- Área gourmet com churrasqueira, piscina ⟦privativa — confirmar⟧ e varanda
-- Ar-condicionado, TV e Wi-Fi
-- Roupa de cama e banho, artigos de praia e kit de primeiros socorros
-- Casa térrea com entrada privativa
-- Estacionamento gratuito
-
-Para quem é:
-Família com 2 filhos e outro casal (avós, tios ou amigos), ou dois casais com crianças.
+Os quartos
+• Suíte 1: 1 cama de casal
+• Suíte 2: 2 camas de solteiro
+• Suíte 3: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: 300 m (≈4 min a pé)
-- Praia de Porto da Rua: 1 km
+Localização
+O Villas do Rio fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, entre o rio e o mar.
+• Praia de Tatuamunha: 300 m, cerca de 4 min a pé
+• Praia de Porto da Rua: 1 km
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~108 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Mudar o título (hoje idêntico ao de HS05J).
-- Trocar "Villa Kanui" por "Villas do Rio".
+• Aeroporto de Maceió: cerca de 108 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 187 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa térrea com 3 suítes, uma delas com 2 camas de solteiro, piscina e área gourmet a 300 m da Praia de Tatuamunha. Até 6 hóspedes.
+Perguntas frequentes
+Tem quarto para crianças?
+Sim, uma suíte com 2 camas de solteiro.
+A casa tem escadas?
+Não, é térrea.
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Villa Kanui" por "Villas do Rio"
+- Tirar o código "casa 02"
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs36j"></a>
 ## HS36J · SMM Casa OKA C3 - 27
 
-Na Stays: busque **HS36J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS36J
+Página: https://www.temporadamme.com.br/pt/apartment/HS36J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar⟧.
-> - Sobre o espaço: ⟦Piscina privativa da casa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Como chegar / Como se locomover: Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
+> **⚠️ Confirmar antes de salvar:**
+> - Quarto térreo tem cama auxiliar? Com as duas auxiliares seriam 8 lugares, e a ficha diz 7
+> - Piscina privativa e churrasqueira
+> - Metros até a areia, vagas, distâncias
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 60 caracteres
 ```text
-Casa 3 Quartos no Oka Milagres com Acesso à Praia, 7 Hósp.
+Casa com piscina no Oka Milagres, acesso à praia · 7 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 319/500 caracteres
+**Descrição resumida** · 210 caracteres
 ```text
-A Casa 27 fica no Oka Morada dos Milagres, condomínio com acesso direto à Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres. Acomoda até 7 hóspedes em 3 quartos, com 3 banheiros. A cozinha tem máquina de pão, liquidificador e mesa de jantar, útil para quem pretende fazer as refeições em casa.
+Casa com piscina para até 7 pessoas no condomínio Oka Morada dos Milagres, com acesso direto à Praia do Marceneiro, na Rota dos Milagres, em Alagoas. Aluguel por temporada com serviço de hotel da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Capacidade máxima: 7 hóspedes.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Acesso direto à Praia do Marceneiro pelo condomínio, a ⟦X m⟧ da casa
+• Piscina ⟦privativa⟧ no jardim ⟦e churrasqueira⟧
+• 3 quartos, sendo 2 suítes, e 3 banheiros, com ar-condicionado ⟦em todos os quartos⟧
+• Na maré baixa, formam-se piscinas naturais em frente ao condomínio
+• Enxoval de hotel, kit de amenities, Wi-Fi e TV inclusos
+
+Ideal para
+Famílias e grupos de até 7 pessoas que querem ir à praia a pé e ter a privacidade de uma casa. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte master com cama de casal
-- Suíte superior com 2 camas de solteiro + 1 cama auxiliar
-- Quarto térreo com 2 camas de solteiro
-- 3 banheiros
-- Cozinha completa com forno, micro-ondas, máquina de pão, liquidificador, cafeteira e mesa de jantar
-- Churrasqueira e jardim
-- ⟦Piscina privativa da casa — confirmar⟧
-- Ar-condicionado, TV, Wi-Fi e roupa de cama e banho
-- Estacionamento gratuito
-
-Para quem é:
-Famílias de até 7 pessoas com filhos, que querem ficar no Oka com uma diária mais baixa.
+Os quartos
+• Suíte master: 1 cama de casal
+• Suíte superior: 2 camas de solteiro e 1 cama auxiliar
+• Quarto térreo: 2 camas de solteiro ⟦e 1 cama auxiliar?⟧
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Oka: acesso direto à praia, área gourmet pé na areia, academia, redário, lavanderia compartilhada, parquinho e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: acesso direto; piscinas naturais na maré baixa
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Centro de São Miguel dos Milagres: ⟦X km⟧
+• Praia do Patacho: ⟦X km⟧
+• Santuário do Peixe-Boi, em Porto de Pedras: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir a configuração (tirar a auxiliar do quarto térreo ou mudar a capacidade para 8).
-- Mudar o título para não duplicar o de HS38J.
+• Aeroporto de Maceió: ⟦127 km — conferir⟧, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 208 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa de 3 quartos para até 7 hóspedes no Oka Milagres, condomínio com acesso direto à Praia do Marceneiro. Churrasqueira, jardim e cozinha completa.
+Perguntas frequentes
+A piscina é privativa?
+⟦Sim, é de uso exclusivo da casa.⟧
+Quantos metros até a areia?
+⟦X m, pelo acesso do condomínio.⟧
+Tem estacionamento?
+⟦Sim, X vagas gratuitas.⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- Mostrar a praia nas primeiras fotos
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs37j"></a>
 ## HS37J · SMM Villas do Rio C3 - 03
 
-Na Stays: busque **HS37J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS37J
+Página: https://www.temporadamme.com.br/pt/apartment/HS37J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦Acrescentar o diferencial próprio da Casa 03.⟧
-> - Sobre o espaço: Área gourmet com churrasqueira e piscina ⟦privativa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - O que esta casa tem de diferente das casas 01 e 02
+> - Piscina privativa?
 
-### TÍTULO
-**Título do anúncio (PT)** · 50 caracteres
+**Título do anúncio** · 56 caracteres
 ```text
-Casa 130 m² com 3 Suítes e Piscina, 300 m da Praia
+Casa de 130 m² com 3 suítes no Villas do Rio · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 347/500 caracteres
+**Descrição resumida** · 196 caracteres
 ```text
-A Casa 03 do condomínio Villas do Rio tem 130 m² e fica em Tatuamunha, na Rota Ecológica dos Milagres, a 300 m da praia e a 1 km da Praia de Porto da Rua. São 3 suítes com cama de casal, lavabo, área gourmet, piscina e churrasqueira. Acomoda até 6 hóspedes em uma casa térrea de arquitetura rústica. ⟦Acrescentar o diferencial próprio da Casa 03.⟧
+Casa térrea de 130 m² com 3 suítes de casal, piscina e área gourmet para até 6 pessoas no Villas do Rio, a 300 m da Praia de Tatuamunha, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 130 m² em casa térrea, sem escadas
+• 3 suítes com cama de casal e lavabo
+• 300 m da Praia de Tatuamunha
+• Área gourmet com churrasqueira e piscina ⟦privativa⟧
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Três casais ou família que quer espaço e suítes de casal. ⟦Diferencial próprio desta casa⟧ Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- 3 suítes com cama de casal e ar-condicionado
-- 3 banheiros nas suítes + lavabo
-- Sala de estar integrada à cozinha e sala de jantar
-- Cozinha completa com forno e torradeira
-- Área gourmet com churrasqueira e piscina ⟦privativa — confirmar⟧
-- Roupa de cama e banho, TV e Wi-Fi
-- Limpeza antes do check-out
-- Casa térrea com entrada privativa
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Três casais ou família que quer espaço (130 m²) e suítes de casal.
+Os quartos
+• Suíte 1: 1 cama de casal
+• Suíte 2: 1 cama de casal
+• Suíte 3: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Tatuamunha: 300 m · Praia de Porto da Rua: 1 km
+Localização
+O Villas do Rio fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, entre o rio e o mar.
+• Praia de Tatuamunha: 300 m, cerca de 4 min a pé
+• Praia de Porto da Rua: 1 km
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~108 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Medir e informar a metragem das Casas 01 e 02, para comparar.
-- Trocar "Villa Kanui" por "Villas do Rio".
+• Aeroporto de Maceió: cerca de 108 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 187 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa de 130 m² com 3 suítes de casal, piscina e churrasqueira no Villas do Rio, a 300 m da Praia de Tatuamunha. Até 6 hóspedes.
+Perguntas frequentes
+A casa é térrea?
+Sim.
+Qual a metragem?
+130 m².
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Villa Kanui" por "Villas do Rio"
+- Tirar o código "casa 03"
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs38j"></a>
 ## HS38J · SMM Casa OKA C3 - 16
 
-Na Stays: busque **HS38J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS38J
+Página: https://www.temporadamme.com.br/pt/apartment/HS38J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar regras⟧.
-> - Sobre o espaço: ⟦Piscina privativa da casa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Como chegar / Como se locomover: Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
+> **⚠️ Confirmar antes de salvar:**
+> - Piscina: privativa ou do condomínio
+> - Metros até a areia, vagas, distâncias
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 60 caracteres
 ```text
-Casa no Oka Milagres com 4 Banheiros, Pé na Areia, 7 Hósp.
+Casa 4 banheiros no Oka Milagres, acesso à praia · 7 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 324/500 caracteres
+**Descrição resumida** · 193 caracteres
 ```text
-A Casa 16 fica no Oka Morada dos Milagres, condomínio com acesso direto à Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres. São 3 quartos, sendo 2 com cama de casal, e 4 banheiros para até 7 hóspedes. Com essa proporção de banheiros, a rotina da manhã é mais tranquila para dois casais com filhos.
+Casa com 3 quartos e 4 banheiros para até 7 pessoas no condomínio Oka Morada dos Milagres, com acesso direto à Praia do Marceneiro, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Capacidade máxima: 7 hóspedes.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar regras⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 4 banheiros para 7 pessoas
+• 2 quartos com cama de casal
+• Acesso direto à Praia do Marceneiro pelo condomínio, a ⟦X m⟧ da casa
+• Máquina de lavar e secar, varanda, jardim e churrasqueira
+• Enxoval de hotel, kit de amenities, Wi-Fi, TV e artigos de praia inclusos
+
+Ideal para
+Dois casais com até 3 crianças, ou família com avós, que precisam de 2 camas de casal e banheiros suficientes. Capacidade máxima de 7 pessoas. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte master com cama de casal
-- Suíte superior com 2 camas de solteiro + 1 cama auxiliar
-- Quarto térreo com cama de casal
-- 4 banheiros
-- Cozinha completa com forno, micro-ondas e cafeteira
-- Varanda, jardim e churrasqueira
-- Máquina de lavar e secar
-- ⟦Piscina privativa da casa — confirmar⟧
-- Ar-condicionado, TV, Wi-Fi, roupa de cama e banho e artigos de praia
-- Estacionamento gratuito
-
-Para quem é:
-Dois casais com até 3 crianças, ou família com avós, que precisam de 2 camas de casal e banheiros suficientes.
+Os quartos
+• Suíte master: 1 cama de casal
+• Suíte superior: 2 camas de solteiro e 1 cama auxiliar
+• Quarto térreo: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Oka: acesso direto à praia, área gourmet pé na areia, academia, redário, lavanderia compartilhada, parquinho e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: acesso direto; piscinas naturais na maré baixa
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Centro de São Miguel dos Milagres: ⟦X km⟧
+• Praia do Patacho: ⟦X km⟧
+• Santuário do Peixe-Boi, em Porto de Pedras: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- **Corrigir "até 08 pessoas" no texto PT e "8 People" no título EN** (ou mudar o sistema para 8, se a capacidade real for essa).
-- Diferenciar o título de HS36J.
+• Aeroporto de Maceió: ⟦127 km — conferir⟧, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 208 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa com 3 quartos e 4 banheiros para até 7 hóspedes no Oka Milagres, com acesso direto à Praia do Marceneiro. Lava e seca e churrasqueira.
+Perguntas frequentes
+Quantas pessoas cabem?
+Até 7.
+Tem máquina de lavar?
+Sim, de lavar e secar.
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir "até 08 pessoas" no texto PT e "8 People" no título EN
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- 7 das 10 primeiras fotos são quartos: mostrar a praia antes
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs39j"></a>
 ## HS39J · BSM Iloa Residence A2 - 105 S
 
-Na Stays: busque **HS39J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS39J
+Página: https://www.temporadamme.com.br/pt/apartment/HS39J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre interação com anfitrião: Café da manhã servido no apartamento ⟦valor e horário⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Valor e horário do café da manhã
 
-### TÍTULO
-**Título do anúncio (PT)** · 58 caracteres
+**Título do anúncio** · 52 caracteres
 ```text
-Apto no Iloa Residence com Café da Manhã Opcional, 4 Hósp.
+Apto no Iloa Residence com café opcional · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 395/500 caracteres
+**Descrição resumida** · 197 caracteres
 ```text
-Apartamento de 46 m² no condomínio Iloa Residence, no bairro Piaçavas, em Barra de São Miguel, a 2 km da praia. Fica no 1º andar do bloco S, com elevador. O condomínio tem piscina com estrutura de resort, bar de piscina terceirizado e café da manhã que pode ser contratado e servido no apartamento. É uma opção econômica para casais e famílias pequenas que querem ter algum serviço à disposição.
+Apartamento com suíte queen para até 4 pessoas no Iloa Residence, em Barra de São Miguel, a 2 km da praia, com piscina de resort e café da manhã contratável. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 21h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Café da manhã contratável e servido no apartamento
+• Condomínio com piscina de resort e bar de piscina terceirizado
+• 46 m², suíte com cama queen e varanda voltada para a área verde
+• 1º andar com elevador
+• 1 vaga de garagem gratuita; roupa de cama e banho e Wi-Fi inclusos
+
+Ideal para
+Casais e famílias de até 4 pessoas que buscam diária acessível. A praia fica a 2 km, então o carro é recomendado. Não tem máquina de lavar. Silêncio das 21h às 8h. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama queen, ar-condicionado, guarda-roupa e cabides
-- Sala ampla com sofá-cama de casal e ar-condicionado, integrada à cozinha
-- Cozinha completa com micro-ondas e torradeira
-- 1 banheiro
-- Varanda com mesa e cadeiras, voltada para a área verde
-- Wi-Fi e roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-- Não tem máquina de lavar
-
-Para quem é:
-Casais e famílias de até 4 pessoas que buscam diária acessível, piscina no condomínio e a opção de não cozinhar no café da manhã. Como a praia fica a 2 km, é recomendável ter carro.
+Os quartos
+• Suíte: 1 cama queen, ar-condicionado e guarda-roupa
+• Sala: 1 sofá-cama de casal e ar-condicionado
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina com estrutura de resort, bar de piscina terceirizado, parquinho, jardim e elevador.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços opcionais (contratados à parte):
-- Café da manhã servido no apartamento ⟦valor e horário⟧
-- Pratos, petiscos e bebidas no bar da piscina (serviço terceirizado)
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
+No condomínio, o café da manhã pode ser contratado e servido no apartamento ⟦valor e horário⟧, e o bar da piscina (terceirizado) serve pratos, petiscos e bebidas.
 ```
 **Sobre a vizinhança**
 ```text
-- Praia da Barra de São Miguel: 2 km
-- Supermercado e restaurantes: 2,5 km
-- Praêro Beach Club: 2,5 km
-- Vila Niquim: 2,7 km
+Localização
+O Iloa Residence fica no bairro Piaçavas, em Barra de São Miguel, litoral sul de Alagoas.
+• Praia da Barra de São Miguel: 2 km
+• Supermercado e restaurantes: 2,5 km
+• Praêro Beach Club: 2,5 km
+• Vila Niquim: 2,7 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 50 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Desmarcar "Piscina Privada" e marcar "Café da manhã disponível (pago)" nas comodidades.
-- Informar valor e horário do café.
-- Foto da mesa de café montada no apartamento. É um diferencial visual forte.
+• Aeroporto de Maceió: 50 km, ⟦cerca de X min de carro⟧
+• O carro é recomendado para ir à praia e ao comércio.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento com suíte queen para até 4 hóspedes no Iloa Residence, Barra de São Miguel, a 2 km da praia. Piscina, bar e café da manhã contratável.
+Perguntas frequentes
+O café da manhã está incluído?
+Não. Pode ser contratado à parte e é servido no apartamento.
+A que distância fica da praia?
+2 km.
+Tem máquina de lavar?
+Não.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada"; marcar "Café da manhã disponível (pago)"
+- Trocar a capa
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="hs41j"></a>
 ## HS41J · SMM Morada do Toque C3 - 28
 
-Na Stays: busque **HS41J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/HS41J
+Página: https://www.temporadamme.com.br/pt/apartment/HS41J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Eventos permitidos ⟦confirmar⟧.
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância da Praia do Toque
+> - Município/bairro na etiqueta
 
-### TÍTULO
-**Título do anúncio (PT)** · 54 caracteres
+**Título do anúncio** · 57 caracteres
 ```text
-Casa 3 Quartos de Casal no Centro de Milagres, 6 Hósp.
+Casa 3 quartos de casal no centro de Milagres · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 312/500 caracteres
+**Descrição resumida** · 194 caracteres
 ```text
-A Casa 28 fica no condomínio Morada do Toque, na via principal de São Miguel dos Milagres, na Rota Ecológica dos Milagres. São 3 quartos, todos com cama de casal, e 3 banheiros para até 6 hóspedes. Para três casais, cada um fica com seu quarto. A Praia do Toque fica a 2 km, e o comércio local fica na mesma via.
+Casa com 3 quartos de casal e 3 banheiros para até 6 pessoas no condomínio Morada do Toque, no centro de São Miguel dos Milagres, perto da Praia do Toque. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Eventos permitidos ⟦confirmar⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 3 quartos, todos com cama de casal
+• 3 banheiros, um deles social no térreo
+• Localização central, com comércio na mesma rua
+• Condomínio com piscina, academia e playground
+• Roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Três casais ou família com filhos adultos que querem cama de casal para todos, gastando menos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte 1 com cama de casal
-- Suíte 2 com cama de casal
-- Quarto 3 com cama de casal
-- 2 banheiros nas suítes + banheiro social no térreo
-- Sala de estar
-- Cozinha completa com forno, micro-ondas e torradeira
-- Varanda com mesa, cadeiras e vista para o jardim e a piscina do condomínio
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- Estacionamento gratuito
-
-Para quem é:
-Três casais ou famílias com filhos adultos que querem cama de casal para todos, gastando menos.
+Os quartos
+• Suíte 1: 1 cama de casal
+• Suíte 2: 1 cama de casal
+• Quarto 3: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia e playground.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Serviços sob consulta: cozinheiro e garçom, com taxas à parte.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Toque: 2 km
-- Mercadinhos, farmácias e lanchonetes na mesma via
+Localização
+O Morada do Toque fica na via principal de São Miguel dos Milagres, com mercadinhos, farmácias e lanchonetes na mesma rua.
+• Praia do Toque: ⟦2 km ou 450 m — confirmar⟧
+• Praias do Marceneiro, do Riacho, de Lages e do Patacho: acesso de carro ou buggy
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: 97 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Trocar os termos PT-PT.
-- Desmarcar "Piscina Privada" e "Academia (privativa)".
+• Aeroporto de Maceió: 97 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: 220 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa com 3 quartos de casal e 3 banheiros para até 6 hóspedes no centro de São Miguel dos Milagres. Condomínio com piscina, academia e playground.
+Perguntas frequentes
+Todos os quartos têm cama de casal?
+Sim.
+A piscina é privativa?
+Não, é do condomínio.
+É perto da praia?
+A Praia do Toque fica a ⟦X⟧. O carro é recomendado.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Tirar o código "28" e os termos de Portugal do texto atual
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="ii02j"></a>
 ## II02J · Mansão Velho Chico
 
-Na Stays: busque **II02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/II02J
+Página: https://www.temporadamme.com.br/pt/apartment/II02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Capacidade máxima: 21 hóspedes ⟦ou 24 com camas extras — definir⟧.
-> - Sobre o espaço: Estacionamento privativo e gratuito ⟦número de vagas⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre interação com anfitrião: ⟦Incluído na diária ou cobrado à parte — confirmar. Insumos/alimentos: por conta do hóspede?⟧
-> - Como chegar / Como se locomover: Acesso por rodovia a partir dos aeroportos de Maceió (MCZ) e Aracaju (AJU) ⟦informar distâncias em km⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Capacidade: 21 (ficha e camas) ou 24 (texto atual) — o texto novo usa 21
+> - Equipe inclusa ou paga à parte
+> - Distâncias dos aeroportos
+> - Vagas
 
-### TÍTULO
-**Título do anúncio (PT)** · 59 caracteres
+**Título do anúncio** · 52 caracteres
 ```text
-Casa com 11 Suítes e Equipe às Margens do Rio São Francisco
+Casa com 11 suítes no Rio São Francisco · 21 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 438/500 caracteres
+**Descrição resumida** · 180 caracteres
 ```text
-Casa de 400 m² às margens do Rio São Francisco, em Piaçabuçu, no baixo São Francisco, em Alagoas. Tem 11 suítes climatizadas para até 21 hóspedes, piscina com área rasa, deck com espreguiçadeiras e acesso direto ao rio, com local para barco. A casa conta com uma equipe de 6 pessoas, entre cozinheiras, arrumadeiras, garçom e segurança. É uma das poucas opções em Alagoas para reunir um grupo grande sob o mesmo teto com serviço completo.
+Casa de 400 m² com 11 suítes, piscina e equipe de 6 funcionários para até 21 pessoas às margens do Rio São Francisco, em Piaçabuçu, Alagoas. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Capacidade máxima: 21 hóspedes ⟦ou 24 com camas extras — definir⟧.
-- Eventos e confraternizações maiores exigem consulta e aprovação prévia da equipe Temporada MME.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 11 suítes com ar-condicionado e 12 banheiros
+• Equipe de 6 pessoas: 2 cozinheiras, 2 arrumadeiras, 1 garçom e 1 segurança
+• Acesso ao rio com local para barco
+• Piscina com área rasa, deck com espreguiçadeiras e churrasqueira
+• Enxoval de hotel, toalhas de piscina, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias grandes, grupos de amigos, celebrações e retiros de empresa de até 21 pessoas. Eventos precisam de consulta e aprovação prévia. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- 11 suítes com ar-condicionado e enxoval padrão hotelaria MME: 10 com cama de casal e 1 com cama de solteiro
-- 12 banheiros (11 nas suítes + 1 social)
-- Salas de estar amplas e sala de jantar
-- Cozinha completa para grandes grupos, com forno, micro-ondas, freezer, liquidificador, cafeteira e utensílios de churrasco
-- Área externa com piscina (não aquecida, com área rasa), deck, espreguiçadeiras, churrasqueira e chuveiro externo
-- Acesso ao rio e local para barco
-- Smart TV e Wi-Fi
-- Toalhas de piscina
-- Estacionamento privativo e gratuito ⟦número de vagas⟧
-
-Para quem é:
-Famílias grandes, grupos de amigos, celebrações (aniversários, bodas) e retiros corporativos de até 21 pessoas.
+Os quartos
+• 10 suítes com 1 cama de casal
+• 1 suíte com 1 cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
-
-Equipe e serviços da casa:
-- 2 cozinheiras, 2 arrumadeiras, 1 garçom e 1 segurança
-- Sugestão de cardápio personalizado: café da manhã, petiscos, almoço e jantar
-- Serviço de compras e organização da despensa
-- ⟦Incluído na diária ou cobrado à parte — confirmar. Insumos/alimentos: por conta do hóspede?⟧
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
+Nesta casa, a equipe de 6 funcionários sugere um cardápio personalizado (café da manhã, petiscos, almoço e jantar) e faz as compras e a organização da despensa. ⟦Equipe inclusa na diária ou paga à parte? Alimentos por conta do hóspede?⟧
 ```
 **Sobre a vizinhança**
 ```text
-- Às margens do Rio São Francisco, em Piaçabuçu (AL)
-- Passeios de barco, lancha ou catamarã pelo rio a partir da região
+Localização
+A casa fica às margens do Rio São Francisco, em Piaçabuçu, no baixo São Francisco, em Alagoas.
+• Passeios de barco, lancha ou catamarã pelo rio a partir da região
+• ⟦2 ou 3 atrações da região com distância em km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Acesso por rodovia a partir dos aeroportos de Maceió (MCZ) e Aracaju (AJU) ⟦informar distâncias em km⟧
-- Carro próprio ou alugado recomendado; para grupos grandes, sugerimos transfer privativo (van ou micro-ônibus)
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Definir a capacidade (21 ou 24) e ajustar sistema, texto e regras.
-- Trocar "Lago" por "Rio" nas comodidades e desmarcar "Apartamento privado num edifício".
-- Criar uma **landing page "Casas para grupos e eventos em Alagoas"** apontando para II02J, HS31J e HS12J. Isso dá contexto a buscadores e IAs.
-- Fotos: equipe uniformizada, mesa posta, deck no pôr do sol, vista aérea com o rio.
+• Aeroporto de Maceió: ⟦X km, cerca de X h de carro⟧
+• Aeroporto de Aracaju: ⟦X km, cerca de X h de carro⟧
+• Carro próprio ou alugado; para grupos grandes, transfer privativo (van ou micro-ônibus)
+• Estacionamento privativo e gratuito ⟦X vagas⟧
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa com 11 suítes, piscina e equipe de cozinheiras, arrumadeiras e garçom às margens do Rio São Francisco, em Piaçabuçu, Alagoas. Até 21 hóspedes.
+Perguntas frequentes
+Quantas pessoas cabem?
+Até 21.
+A equipe está incluída na diária?
+⟦Confirmar⟧
+Posso fazer evento?
+Sim, mediante consulta e aprovação prévia.
+Como chegar com um grupo grande?
+Recomendamos transfer privativo de van ou micro-ônibus.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Lago" por "Rio" nas comodidades e desmarcar "Apartamento privado num edifício"
+- Conferir "Academia (privativa)"
+- Tirar os parágrafos repetidos do texto atual
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="im01j"></a>
 ## IM01J · SMM Naay Ocean A2 - 106
 
-Na Stays: busque **IM01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/IM01J
+Página: https://www.temporadamme.com.br/pt/apartment/IM01J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Metragem real
 
-### TÍTULO
-**Título do anúncio (PT)** · 49 caracteres
+**Título do anúncio** · 57 caracteres
 ```text
-Duplex com Rooftop a 150 m da Praia de Tatuamunha
+Duplex com rooftop no Naay Villas, Tatuamunha · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 330/500 caracteres
+**Descrição resumida** · 198 caracteres
 ```text
-O Ocean 106 é um apartamento duplex no Naay Villas Boutique, em Tatuamunha, na Rota Ecológica dos Milagres. Fica a 150 m da praia, a 78 m do Rio Tatuamunha e a 500 m da ponte de onde partem os passeios de observação do peixe-boi. Tem 2 quartos, 2 banheiros e rooftop com cadeiras e vista para o condomínio. Acomoda até 5 hóspedes.
+Apartamento duplex com rooftop para até 5 pessoas no Naay Villas Boutique, a 150 m da Praia de Tatuamunha e a 500 m da ponte do peixe-boi, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Duplex, com escada interna.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 150 m da Praia de Tatuamunha e 78 m do Rio Tatuamunha
+• 500 m da ponte de onde saem os passeios do peixe-boi
+• Duplex com rooftop e cadeiras
+• 2 quartos e 2 banheiros; varanda com churrasqueira
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e TV inclusos
+
+Ideal para
+Famílias com filhos que querem ver o peixe-boi e ir à praia a pé. O duplex tem escada interna. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama queen
-- Quarto 2 com 2 camas de solteiro
-- Sala com sofá-cama de solteiro
-- 2 banheiros
-- Cozinha completa com forno, micro-ondas, cafeteira e freezer
-- Varanda com churrasqueira
-- Rooftop com cadeiras
-- Ar-condicionado, TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias com filhos que querem ver o peixe-boi e ir à praia a pé.
+Os quartos
+• Quarto 1: 1 cama queen
+• Quarto 2: 2 camas de solteiro
+• Sala: 1 sofá-cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, academia, jardim, área de churrasco e parquinho.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Rio Tatuamunha: 78 m
-- Praia de Tatuamunha: 150 m
-- Ponte do Peixe-Boi: 500 m
-- Farmácia: 750 m · Restaurantes: 1 km · Supermercado: 5,9 km
+Localização
+O Naay Villas Boutique fica em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, perto do Rio Tatuamunha, onde é feita a observação do peixe-boi.
+• Rio Tatuamunha: 78 m
+• Praia de Tatuamunha: 150 m
+• Ponte do Peixe-Boi: 500 m
+• Farmácia: 750 m
+• Restaurantes: 1 km
+• Supermercado: 5,9 km
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~120 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Usar esta lista de distâncias em todas as unidades do Naay, padronizando a distância até a praia.
-- Este é um bom caso para o serviço de abastecimento de mercado, já que o supermercado fica a 5,9 km. Se a MME oferecer, destaque aqui.
+• Aeroporto de Maceió: cerca de 120 km, ⟦cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento duplex com rooftop para até 5 hóspedes no Naay Villas, a 150 m da Praia de Tatuamunha e 500 m da ponte de observação do peixe-boi.
+Perguntas frequentes
+Dá para ir a pé ver o peixe-boi?
+A ponte de saída dos passeios fica a 500 m.
+Tem supermercado perto?
+O mais próximo fica a 5,9 km; farmácia a 750 m.
+Tem escada?
+Sim, é duplex.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Etiqueta Tatuamunha, Porto de Pedras
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="iw01j"></a>
 ## IW01J · MCZ Versa A3 - 802
 
-Na Stays: busque **IW01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/IW01J
+Página: https://www.temporadamme.com.br/pt/apartment/IW01J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦no 8º andar — confirmar⟧ / ⟦com vista para o mar — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - A piscina da cobertura tem vista para o mar?
 
-### TÍTULO
-**Título do anúncio (PT)** · 54 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Apto 3 Quartos em Ponta Verde, 200 m da Praia, 6 Hósp.
+Apto 3 quartos a 200 m da praia de Ponta Verde · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 311/500 caracteres
+**Descrição resumida** · 170 caracteres
 ```text
-Apartamento de 72 m² ⟦no 8º andar — confirmar⟧ do Edifício Versa, em Ponta Verde, Maceió, a 200 m da Praia de Ponta Verde. São 3 quartos separados para até 6 hóspedes, o que dá privacidade a famílias com filhos maiores ou a grupos de amigos. O prédio tem piscina na cobertura ⟦com vista para o mar — confirmar⟧.
+Apartamento de 3 quartos para até 6 pessoas no Edifício Versa, em Ponta Verde, Maceió, a 200 m da praia, com piscina na cobertura. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 21h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 200 m da Praia de Ponta Verde; supermercado e restaurantes a 190 m
+• 72 m², 3 quartos separados (1 suíte), 2 banheiros e lavabo
+• Piscina na cobertura do prédio ⟦com vista para o mar⟧
+• Varanda com mobiliário e espaço para notebook
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias com filhos maiores ou grupos de até 6 pessoas que preferem quartos separados. Silêncio das 21h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto 2 com 2 camas de solteiro
-- Quarto 3 com 2 camas de solteiro
-- 2 banheiros e lavabo
-- Cozinha americana com micro-ondas, liquidificador, cafeteira e mesa de jantar
-- Varanda com mobiliário externo
-- Ar-condicionado, Smart TV, espaço para notebook e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias ou grupos de até 6 pessoas que querem quartos separados e ficar a uma caminhada curta da orla.
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 2 camas de solteiro
+• Quarto 3: 2 camas de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Prédio: piscina na cobertura, academia, salão de jogos, lavanderia e elevador.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ponta Verde: 200 m
-- Supermercado: 190 m
-- Restaurantes: 190 m
+Localização
+Ponta Verde é um dos bairros de orla mais procurados de Maceió.
+• Praia de Ponta Verde: 200 m
+• Supermercado: 190 m
+• Restaurantes: 190 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 24 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Padronizar a distância em 200 m (tirar o "150 m").
-- Só manter "Vista Mar" no título depois de confirmar e ter foto que mostre o mar a partir da piscina.
-- Cadastrar no quadro "Camas" a separação clara por quarto (hoje aparece "Duplo 1", "Duplo 2").
+• Aeroporto de Maceió: 24 km, ⟦cerca de X min de carro⟧
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 3 quartos em Ponta Verde, Maceió, a 200 m da praia, para até 6 hóspedes. Piscina na cobertura, varanda e vaga de garagem.
+Perguntas frequentes
+Quantos quartos tem?
+3: uma suíte de casal e dois quartos com 2 camas de solteiro cada.
+A piscina é do apartamento?
+Não. É a piscina do prédio, na cobertura.
+Pode fazer festa?
+Não. Eventos não são permitidos e o silêncio vai das 21h às 8h.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Capa: usar a vista para o mar; tirar foto repetida
+- O texto atual diz 150 m e 200 m da praia: usar 200 m em todos os lugares
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="iw02j"></a>
 ## IW02J · MCZ MF A3 - 601
 
-Na Stays: busque **IW02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/IW02J
+Página: https://www.temporadamme.com.br/pt/apartment/IW02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦no 6º andar — confirmar⟧
-> - Observações gerais: Silêncio a partir das ⟦18h — confirmar⟧ até as 8h. Não são permitidos eventos.
-> - Sobre o acesso ao espaço: Condomínio: piscina na cobertura ⟦com vista para o mar — confirmar⟧, elevador e lojas no térreo.
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Horário de silêncio: o cadastro diz 18h às 8h (parece erro)
+> - Andar
 
-### TÍTULO
-**Título do anúncio (PT)** · 54 caracteres
+**Título do anúncio** · 57 caracteres
 ```text
-Apto 3 Quartos em Ponta Verde com Lava e Seca, 5 Hósp.
+Apto 3 quartos com lava e seca em Ponta Verde · 5 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 302/500 caracteres
+**Descrição resumida** · 187 caracteres
 ```text
-Apartamento de 75 m² ⟦no 6º andar — confirmar⟧ do condomínio Maceió Facilities, em Ponta Verde, Maceió, a 350 m da Praia de Ponta Verde. São 3 quartos para até 5 hóspedes. Tem máquina de lavar e secar e grades de proteção para bebês, o que facilita estadias mais longas e viagens com crianças pequenas.
+Apartamento de 3 quartos para até 5 pessoas no Maceió Facilities, em Ponta Verde, Maceió, a 350 m da praia, com lava e seca e piscina na cobertura. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in das 14h às 19h. Check-out até 12h. Chegadas após as 19h devem ser combinadas antes.
-- Silêncio a partir das ⟦18h — confirmar⟧ até as 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 350 m da Praia de Ponta Verde; restaurantes a 100 m
+• 75 m², 3 quartos (1 suíte) e 2 banheiros
+• Máquina de lavar e secar e grades de proteção para bebês
+• Piscina na cobertura do prédio
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e TV a cabo inclusos
+
+Ideal para
+Famílias com crianças pequenas e estadias longas. O check-in vai só até as 19h. Não há berço, apenas grades de proteção.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto com 2 camas de solteiro
-- Quarto com 1 cama de solteiro
-- 2 banheiros
-- Cozinha americana com micro-ondas, torradeira, liquidificador e cafeteira
-- Varanda
-- Máquina de lavar e secar
-- Ar-condicionado, Smart TV com canais a cabo, espaço para notebook e Wi-Fi
-- Grades de proteção para bebês
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias com crianças, inclusive bebês, e hóspedes de estadias longas que precisam lavar roupa.
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 2 camas de solteiro
+• Quarto 3: 1 cama de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina na cobertura ⟦com vista para o mar — confirmar⟧, elevador e lojas no térreo.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ponta Verde: 350 m
-- Restaurantes: 100 m
-- Supermercado: 200 m
+Localização
+Ponta Verde é um dos bairros de orla mais procurados de Maceió.
+• Praia de Ponta Verde: 350 m
+• Restaurantes: 100 m
+• Supermercado: 200 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 25 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Corrigir o horário de silêncio (18h parece erro).
-- Tirar "Vista para o Mar" do título até confirmar.
-- Diferenciar de LO02J (mesmo prédio): IW02J = 3 quartos, família, lava e seca; LO02J = 2 quartos, casal/família pequena.
+• Aeroporto de Maceió: 25 km, ⟦cerca de X min de carro⟧
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 3 quartos para até 5 hóspedes em Ponta Verde, Maceió, a 350 m da praia. Máquina lava e seca, piscina na cobertura e vaga.
+Perguntas frequentes
+Até que horas posso fazer check-in?
+Das 14h às 19h. Check-out até 12h.
+Tem máquina de lavar?
+Sim, de lavar e secar.
+Serve para família com bebê?
+Tem grades de proteção para bebês, mas não oferece berço.
+Qual o horário de check-in e check-out?
+Check-in das 14h às 19h e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Corrigir o horário de silêncio nas Regras
+- Capa: usar a piscina da cobertura; galeria tem só 14 fotos
+- Tirar "Vista para o Mar" do título até confirmar
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="ji01j"></a>
 ## JI01J · SMM Casa Azuk Patacho A2 - A02
 
-Na Stays: busque **JI01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/JI01J
+Página: https://www.temporadamme.com.br/pt/apartment/JI01J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦~100 m — confirmar⟧
-> - Sobre o espaço: Ar-condicionado ⟦confirmar⟧, Smart TV e Wi-Fi
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Praia do Patacho: ⟦distância⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a Praia do Patacho
+> - É casa ou apartamento? (cadastro diz "CASA A02")
+> - Bandeira Azul: só citar se a certificação estiver válida nesta temporada
 
-### TÍTULO
-**Título do anúncio (PT)** · 56 caracteres
+**Título do anúncio** · 59 caracteres
 ```text
-Apto 2 Quartos para 6 no Azuk, Perto da Praia do Patacho
+Apto 2 quartos no Azuk Patacho, Porto de Pedras · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 326/500 caracteres
+**Descrição resumida** · 194 caracteres
 ```text
-A unidade A02 fica no condomínio Azuk Patacho, em Porto de Pedras, na Rota Ecológica dos Milagres, a ⟦~100 m — confirmar⟧ da Praia do Patacho, conhecida pelos coqueirais e pelas piscinas naturais na maré baixa. Tem 2 quartos e sofá-cama de casal, para até 6 hóspedes, e área externa com espreguiçadeiras e mesa para refeições.
+Apartamento de 2 quartos com área externa e espreguiçadeiras para até 6 pessoas no condomínio Azuk Patacho, perto da Praia do Patacho, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Área externa com espreguiçadeiras e mesa para refeições
+• 2 quartos (1 suíte) e 2 banheiros, um com bidê
+• Praia do Patacho a ⟦X m⟧
+• Condomínio com piscina com área rasa, academia, bicicletas e recepção 24 horas
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias de até 6 pessoas que querem ficar perto do Patacho com estrutura de condomínio. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto com 2 camas de solteiro
-- Sofá-cama de casal na sala
-- 2 banheiros (um com bidê)
-- Cozinha completa com liquidificador e mesa de jantar
-- Varanda com vista para a piscina e o jardim, área de refeições externa e espreguiçadeiras
-- Ar-condicionado ⟦confirmar⟧, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias de até 6 pessoas que querem ficar perto do Patacho com estrutura de condomínio.
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 2 camas de solteiro
+• Sala: 1 sofá-cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Azuk: piscina com área rasa, academia, bicicletas, recepção 24 horas e carregador para carro elétrico.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Patacho: ⟦distância⟧
-- Piscinas naturais do Patacho: passeio de jangada na maré baixa
-- Praia de Lages: vizinha ao Patacho, acessível caminhando pela areia
-- Beach club Sonhos do Patacho e restaurante Ninoan nos arredores
+Localização
+O Azuk Patacho fica em Porto de Pedras, na Rota Ecológica dos Milagres, perto da Praia do Patacho, conhecida pelos coqueirais e pelas piscinas naturais na maré baixa.
+• Praia do Patacho: ⟦X m⟧
+• Praia de Lages: vizinha ao Patacho, acessível pela areia
+• Santuário do Peixe-Boi, em Tatuamunha: ⟦X km⟧
+• Beach club Sonhos do Patacho e restaurante Ninoan: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Observação do peixe-boi no Rio Tatuamunha: de carro
-- Aeroporto de Maceió: ~100 km · Aeroporto do Recife: ~150 km
-- Carro recomendado para circular pela Rota. Para trajetos curtos, use as bicicletas do condomínio.
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Confirmar o selo Bandeira Azul antes de citar.
-- Trocar "restaurantes premiados" pelo nome do prêmio ou retirar.
-- Medir a distância real da unidade até a areia.
+• Aeroporto de Maceió: cerca de 100 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 150 km
+• Carro recomendado para a região; para trajetos curtos, use as bicicletas do condomínio.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 2 quartos para até 6 hóspedes no Azuk Patacho, em Porto de Pedras, perto da Praia do Patacho. Piscina, academia e bicicletas.
+Perguntas frequentes
+Precisa de carro?
+Para conhecer a Rota, sim. Perto do Patacho dá para usar as bicicletas do condomínio.
+Tem estacionamento?
+Sim, 1 vaga por unidade.
+A que distância fica a praia?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Cidade: Porto de Pedras
+- Tirar "restaurantes premiados" ou citar o prêmio
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="km01j"></a>
 ## KM01J · SMM Casa OKA C2 - 02
 
-Na Stays: busque **KM01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/KM01J
+Página: https://www.temporadamme.com.br/pt/apartment/KM01J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: ⟦Sofá-cama — confirmar local e se conta na capacidade⟧
-> - Sobre o espaço: Cozinha americana com forno, frigobar, liquidificador, torradeira, cafeteira e mesa de jantar ⟦confirmar se há geladeira de tamanho normal⟧
-> - Sobre o espaço: ⟦Piscina privativa da casa — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Como chegar / Como se locomover: Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
+> **⚠️ Confirmar antes de salvar:**
+> - Segunda suíte com 2 camas de casal (a ficha diz 3 camas no total)
+> - Sofá-cama
+> - Geladeira ou frigobar
+> - Cozinheiro e garçom valem para esta casa?
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 53 caracteres
 ```text
-Casa no Oka Milagres com 3 Camas de Casal, 6 Hóspedes
+Casa com 3 camas de casal no Oka Milagres · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 275/500 caracteres
+**Descrição resumida** · 197 caracteres
 ```text
-A Casa 02 fica no Oka Morada dos Milagres, condomínio com acesso direto à Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres. São 2 suítes e 3 banheiros para até 6 hóspedes, com 3 camas de casal no total. É uma configuração adequada para três casais.
+Casa com 2 suítes e 3 camas de casal para até 6 pessoas no condomínio Oka Morada dos Milagres, com acesso direto à Praia do Marceneiro, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 3 camas de casal em 2 suítes
+• 3 banheiros para 6 pessoas
+• Acesso direto à Praia do Marceneiro pelo condomínio, a ⟦X m⟧ da casa
+• Churrasqueira com utensílios e jardim
+• Enxoval de hotel, kit de amenities, Wi-Fi, Smart TV e artigos de praia inclusos
+
+Ideal para
+Três casais de amigos ou casal com filhos adolescentes que preferem cama de casal. Eventos não são permitidos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte master com cama de casal
-- Segunda suíte com 2 camas de casal
-- ⟦Sofá-cama — confirmar local e se conta na capacidade⟧
-- 3 banheiros
-- Cozinha americana com forno, frigobar, liquidificador, torradeira, cafeteira e mesa de jantar ⟦confirmar se há geladeira de tamanho normal⟧
-- Churrasqueira com utensílios e jardim
-- ⟦Piscina privativa da casa — confirmar⟧
-- Ar-condicionado, Smart TV, Wi-Fi, roupa de cama e banho e artigos de praia
-- Estacionamento gratuito
-
-Para quem é:
-Três casais de amigos ou casal com filhos adolescentes que preferem cama de casal.
+Os quartos
+• Suíte master: 1 cama de casal
+• Segunda suíte: 2 camas de casal ⟦confirmar⟧
+• ⟦Sofá-cama: onde fica e se conta na capacidade⟧
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Oka: acesso direto à praia, área gourmet pé na areia, academia, redário, lavanderia compartilhada, parquinho e portaria 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: acesso direto; piscinas naturais na maré baixa
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Centro de São Miguel dos Milagres: ⟦X km⟧
+• Praia do Patacho: ⟦X km⟧
+• Santuário do Peixe-Boi, em Porto de Pedras: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Confirmar se duas camas de casal na mesma suíte é a configuração real (foto do quarto).
-- O texto atual não cita cozinheiro/garçom, diferente das outras casas Oka. Confirmar se o serviço vale também para esta casa.
+• Aeroporto de Maceió: ⟦127 km — conferir⟧, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 208 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Casa de 2 suítes com 3 camas de casal e 3 banheiros para até 6 hóspedes no Oka Milagres, com acesso direto à Praia do Marceneiro.
+Perguntas frequentes
+Serve para 3 casais?
+Sim. São 3 camas de casal em 2 suítes.
+Pode fazer evento?
+Não.
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- Capa repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="lo02j"></a>
 ## LO02J · MCZ MF B A2 - 609
 
-Na Stays: busque **LO02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/LO02J
+Página: https://www.temporadamme.com.br/pt/apartment/LO02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: ⟦Vaga de garagem: confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Tem vaga de garagem? (cadastro mostra 0)
 
-### TÍTULO
-**Título do anúncio (PT)** · 60 caracteres
+**Título do anúncio** · 55 caracteres
 ```text
-Apto 2 Quartos e 2 Banheiros a 350 m da Praia de Ponta Verde
+Apto 2 quartos e 2 banheiros em Ponta Verde · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 270/500 caracteres
+**Descrição resumida** · 171 caracteres
 ```text
-Apartamento na Torre B do condomínio Maceió Facilities, em Ponta Verde, Maceió, a 350 m da Praia de Ponta Verde. Tem 78 m² para até 4 hóspedes, com 2 quartos e 2 banheiros. Os hóspedes têm mais espaço e não precisam dividir banheiro. A varanda dá para uma rua tranquila.
+Apartamento de 78 m² com 2 quartos e 2 banheiros para até 4 pessoas no Maceió Facilities, em Ponta Verde, Maceió, a 350 m da praia. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in das 14h às 19h. Check-out até 12h.
-- Silêncio das 21h às 6h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 350 m da Praia de Ponta Verde; restaurantes a 100 m
+• 78 m² para 4 pessoas, com 2 banheiros (um com chuveiro acessível)
+• Varanda voltada para rua tranquila
+• Piscina na cobertura do prédio
+• Roupa de cama e banho, Wi-Fi, ar-condicionado e ventilador de teto inclusos
+
+Ideal para
+Casais, famílias de até 4 pessoas ou dois casais que querem banheiros separados. O check-in vai só até as 19h. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama de casal
-- Quarto 2 com 2 camas de solteiro
-- 2 banheiros, um deles com chuveiro acessível
-- Cozinha americana completa com forno, liquidificador, cafeteira e mesa de jantar
-- Varanda com vista para rua tranquila
-- Ar-condicionado e ventilador de teto
-- Wi-Fi, roupa de cama e banho incluídas
-- ⟦Vaga de garagem: confirmar⟧
-
-Para quem é:
-Casais, famílias de até 4 pessoas ou dois casais de amigos que querem dois banheiros.
+Os quartos
+• Quarto 1: 1 cama de casal
+• Quarto 2: 2 camas de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina na cobertura, elevador, lojas e restaurante no térreo.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ponta Verde: 350 m
-- Restaurantes: 100 m
-- Supermercado: 200 m
+Localização
+Ponta Verde é um dos bairros de orla mais procurados de Maceió.
+• Praia de Ponta Verde: 350 m
+• Restaurantes: 100 m
+• Supermercado: 200 m
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: 25 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Confirmar a vaga (o cadastro mostra 0).
-- Fotos: banheiro com chuveiro acessível e a piscina da cobertura.
+• Aeroporto de Maceió: 25 km, ⟦cerca de X min de carro⟧
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 78 m² com 2 quartos e 2 banheiros para até 4 hóspedes em Ponta Verde, Maceió, a 350 m da praia. Varanda e piscina na cobertura.
+Perguntas frequentes
+Tem estacionamento?
+⟦Confirmar⟧
+Até que horas posso chegar?
+Check-in das 14h às 19h.
+Quantos banheiros?
+Dois.
+Qual o horário de check-in e check-out?
+Check-in das 14h às 19h e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Fotos 7 a 10 repetem as fotos 1 a 5; galeria tem só 15 fotos
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="mi02j"></a>
 ## MI02J · SMM Casa Azuk Patacho A2 - B03
 
-Na Stays: busque **MI02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/MI02J
+Página: https://www.temporadamme.com.br/pt/apartment/MI02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Observações gerais: Silêncio das ⟦22h às 8h — corrigir no cadastro⟧. Não são permitidos eventos.
-> - Observações gerais: ⟦Proibido fumar — corrigir no cadastro⟧.
-> - Sobre o espaço: Famílias com até 4 filhos, grupos de amigos e hóspedes que precisam de banheiro adaptado ⟦confirmar acesso sem degraus até a unidade⟧.
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Praia do Patacho: ⟦distância⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Acesso sem degraus até a unidade
+> - Distância até a Praia do Patacho
 
-### TÍTULO
-**Título do anúncio (PT)** · 55 caracteres
+**Título do anúncio** · 60 caracteres
 ```text
-Apto 82 m² para 6 no Azuk Patacho com Banheiro Adaptado
+Apto 82 m² com banheiro adaptado no Azuk Patacho · 6 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 275/500 caracteres
+**Descrição resumida** · 210 caracteres
 ```text
-A unidade B03 fica no condomínio Azuk Patacho, em Porto de Pedras, na Rota Ecológica dos Milagres, perto da Praia do Patacho. Tem 82 m², suíte com cama queen e um segundo quarto com 4 camas de solteiro, para até 6 hóspedes. O banheiro tem ducha adaptada e chuveiro acessível.
+Apartamento de 82 m² com suíte queen, quarto com 4 camas e banheiro adaptado para até 6 pessoas no condomínio Azuk Patacho, perto da Praia do Patacho, em Porto de Pedras. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das ⟦22h às 8h — corrigir no cadastro⟧. Não são permitidos eventos.
-- ⟦Proibido fumar — corrigir no cadastro⟧.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais.
+Destaques
+• Banheiro com ducha adaptada e chuveiro acessível
+• 82 m², 2 quartos e 2 banheiros
+• Quarto com 4 camas de solteiro
+• Condomínio com piscina, academia, bicicletas e recepção 24 horas
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias com até 4 filhos, grupos de amigos e hóspedes que precisam de banheiro adaptado. Sem eventos. Proibido fumar. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama queen
-- Quarto com 2 camas de solteiro + 2 camas auxiliares de solteiro
-- 2 banheiros, com ducha adaptada e chuveiro acessível
-- Cozinha completa com forno e micro-ondas
-- Jardim com vista para a piscina
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Famílias com até 4 filhos, grupos de amigos e hóspedes que precisam de banheiro adaptado ⟦confirmar acesso sem degraus até a unidade⟧.
+Os quartos
+• Suíte: 1 cama queen
+• Quarto 2: 2 camas de solteiro e 2 camas auxiliares de solteiro
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Azuk: piscina, academia, bicicletas, recepção 24 horas e carregador para carro elétrico.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Patacho: ⟦distância⟧
-- Piscinas naturais, Praia de Lages e observação do peixe-boi na região
+Localização
+O Azuk Patacho fica em Porto de Pedras, na Rota Ecológica dos Milagres, perto da Praia do Patacho, conhecida pelos coqueirais e pelas piscinas naturais na maré baixa.
+• Praia do Patacho: ⟦X m⟧
+• Praia de Lages: vizinha ao Patacho, acessível pela areia
+• Santuário do Peixe-Boi, em Tatuamunha: ⟦X km⟧
+• Beach club Sonhos do Patacho e restaurante Ninoan: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~100 km · Aeroporto do Recife: ~150 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- **Corrigir já** as regras de fumo e o horário de silêncio.
-- Fotografar o banheiro adaptado.
+• Aeroporto de Maceió: cerca de 100 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 150 km
+• Carro recomendado para a região; para trajetos curtos, use as bicicletas do condomínio.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 82 m² para até 6 hóspedes no Azuk Patacho, em Porto de Pedras: suíte queen, quarto com 4 camas de solteiro e banheiro adaptado.
+Perguntas frequentes
+É acessível para cadeira de rodas?
+O banheiro tem ducha adaptada. ⟦Confirmar o acesso até a unidade.⟧
+Pode fumar?
+Não.
+Quantas camas tem?
+Uma queen e 4 de solteiro.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- CORRIGIR JÁ nas Regras: "Permitido fumar: sim" e "silêncio das 6h às 4h"
+- Trocar "Academia (privativa)" por "Academia (área comum)"
+- Cidade: Porto de Pedras
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="my02j"></a>
 ## MY02J · MCZ IBL COQ A3 - 005
 
-Na Stays: busque **MY02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/MY02J
+Página: https://www.temporadamme.com.br/pt/apartment/MY02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦piscina privativa na varanda — confirmar a localização⟧
-> - Sobre o espaço: Quarto 2 com 3 camas de solteiro ⟦confirmar se fixas ou auxiliares⟧
-> - Sobre o espaço: Quarto 3 com 3 camas de solteiro ⟦idem⟧
-> - Sobre o espaço: Varanda ⟦com piscina privativa⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Onde fica a piscina privativa e o tamanho
+> - Camas de solteiro: fixas ou auxiliares
+> - Metragem e vista
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 53 caracteres
 ```text
-Apto 3 Quartos para 8 com Piscina Privativa em Ipioca
+Apto 3 quartos para 8 com piscina privativa em Ipioca
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 374/500 caracteres
+**Descrição resumida** · 186 caracteres
 ```text
-Apartamento de 3 quartos e 3 banheiros no Ipioca Beach Life, condomínio pé na areia na Praia de Ipioca, no litoral norte de Maceió. É a unidade da Temporada MME no condomínio com maior capacidade: até 8 hóspedes. Tem ⟦piscina privativa na varanda — confirmar a localização⟧. Atende famílias grandes e grupos que precisam de mais camas sem abrir mão de banheiros suficientes.
+Apartamento de 3 quartos e 3 banheiros para até 8 pessoas no Ipioca Beach Life, na Praia de Ipioca, em Maceió, ⟦com piscina privativa na varanda⟧. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Até 8 pessoas, a maior capacidade da Temporada MME no Ipioca
+• 3 quartos (1 suíte) e 3 banheiros
+• ⟦Piscina privativa na varanda⟧
+• Condomínio com acesso direto à Praia de Ipioca
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Famílias grandes e grupos que precisam de muitas camas e banheiros suficientes. Sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Suíte com cama de casal
-- Quarto 2 com 3 camas de solteiro ⟦confirmar se fixas ou auxiliares⟧
-- Quarto 3 com 3 camas de solteiro ⟦idem⟧
-- 3 banheiros
-- Sala de estar e jantar integradas
-- Cozinha completa com forno, micro-ondas e cafeteira
-- Varanda ⟦com piscina privativa⟧
-- Ar-condicionado nos quartos, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
+Os quartos
+• Suíte: 1 cama de casal
+• Quarto 2: 3 camas de solteiro ⟦fixas ou auxiliares⟧
+• Quarto 3: 3 camas de solteiro ⟦fixas ou auxiliares⟧
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Complexo: acesso à praia, piscina compartilhada, academia, bar, restaurante, lojas, salão de jogos, parquinho, aluguel de bicicletas e recepção 24 horas.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia de Ipioca: pé na areia
+Localização
+A Praia de Ipioca fica no litoral norte de Maceió, a cerca de 20 km do centro. O Ipioca Beach Life tem restaurante, bar e lojas de conveniência.
+• Praia de Ipioca: acesso pelo condomínio, ⟦X m⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Centro de Maceió: ~20 km · Aeroporto: ~39 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Preencher os campos "O espaço", "Acesso do hóspede", "Vizinhança" e "Regras", hoje vazios.
-- Fotografar cada quarto mostrando todas as camas.
+• Aeroporto de Maceió: cerca de 39 km, ⟦cerca de X min de carro⟧
+• Centro de Maceió: cerca de 20 km. Para sair do condomínio, o carro é a melhor opção.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 3 quartos e 3 banheiros para até 8 hóspedes no Ipioca Beach Life, pé na areia em Maceió, com piscina privativa.
+Perguntas frequentes
+Quantas pessoas cabem?
+Até 8.
+Quantos banheiros?
+Três.
+A piscina é privativa?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Capa repetida na galeria
+- Descrição atual tem só 76 palavras e não lista as camas
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="nf02j"></a>
 ## NF02J · SMM Azuk Patacho A1 - F01
 
-Na Stays: busque **NF02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/NF02J
+Página: https://www.temporadamme.com.br/pt/apartment/NF02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦~100 m — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Praia do Patacho: ⟦distância — confirmar⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a Praia do Patacho
 
-### TÍTULO
-**Título do anúncio (PT)** · 54 caracteres
+**Título do anúncio** · 61 caracteres
 ```text
-Studio Térreo no Azuk Patacho, Perto da Praia, 4 Hósp.
+Studio no Azuk Patacho, perto da Praia do Patacho · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 317/500 caracteres
+**Descrição resumida** · 183 caracteres
 ```text
-Studio no condomínio Azuk Patacho, em Porto de Pedras, na Rota Ecológica dos Milagres, a ⟦~100 m — confirmar⟧ da Praia do Patacho. A unidade é térrea e tem ducha sem degraus e porta ampla. O condomínio tem piscina, academia e bicicletas para os hóspedes. Acomoda até 4 pessoas e é indicado principalmente para casais.
+Studio térreo e sem degraus para até 4 pessoas no condomínio Azuk Patacho, perto da Praia do Patacho, em Porto de Pedras, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Unidade térrea, com ducha sem degraus e porta ampla
+• Praia do Patacho a ⟦X m⟧
+• Condomínio com piscina, academia, bicicletas e recepção 24 horas
+• Carregador para carro elétrico no condomínio
+• 1 vaga de garagem gratuita; roupa de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Casais, ou casal com 2 filhos, e quem prefere uma unidade sem escadas. Todos dormem no mesmo ambiente. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Cama queen
-- Sofá-cama de casal
-- 1 banheiro com ducha sem degraus
-- Cozinha americana com forno, micro-ondas, liquidificador e cafeteira
-- Ar-condicionado, Smart TV e Wi-Fi
-- Roupa de cama e banho incluídas
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Casais, ou casal com 2 filhos, que querem ficar perto do Patacho gastando menos. Também atende quem prefere uma unidade sem escadas.
+Os quartos
+• Ambiente único: 1 cama queen e 1 sofá-cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio Azuk: piscina, academia, bicicletas, jardim, recepção 24 horas e carregador para carro elétrico.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Patacho: ⟦distância — confirmar⟧
-- Na região: jangada às piscinas naturais do Patacho, Praia de Lages, observação do peixe-boi e beach clubs
+Localização
+O Azuk Patacho fica em Porto de Pedras, na Rota Ecológica dos Milagres, perto da Praia do Patacho, conhecida pelos coqueirais e pelas piscinas naturais na maré baixa.
+• Praia do Patacho: ⟦X m⟧
+• Praia de Lages: vizinha ao Patacho, acessível pela areia
+• Santuário do Peixe-Boi, em Tatuamunha: ⟦X km⟧
+• Beach club Sonhos do Patacho e restaurante Ninoan: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ~100 km · Aeroporto do Recife: ~150 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Desmarcar "Piscina na Cobertura", "Vista para a Cidade" e "Academia (privativa)".
-- Corrigir a cidade para Porto de Pedras.
+• Aeroporto de Maceió: cerca de 100 km, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 150 km
+• Carro recomendado para a região; para trajetos curtos, use as bicicletas do condomínio.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Studio térreo e sem degraus para até 4 hóspedes no condomínio Azuk Patacho, em Porto de Pedras, perto da Praia do Patacho. Piscina e bicicletas.
+Perguntas frequentes
+Tem escadas?
+Não, a unidade é térrea.
+Tem bicicleta?
+Sim, o condomínio oferece.
+A que distância fica a praia?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina na Cobertura", "Vista para a Cidade" e trocar "Academia (privativa)" por "Academia (área comum)"
+- Cidade: Porto de Pedras
+- Foto repetida na galeria
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="nf04j"></a>
 ## NF04J · SMM Studio Villas Manatee A1 - 104
 
-Na Stays: busque **NF04J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/NF04J
+Página: https://www.temporadamme.com.br/pt/apartment/NF04J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Descrição resumida: ⟦distância⟧ / ⟦com vista para a praia/jardim — confirmar⟧
-> - Sobre o espaço: Varanda com mobiliário externo e churrasqueira ⟦confirmar se é da unidade⟧
-> - Sobre o espaço: Estacionamento ⟦confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: Praia do Patacho: ⟦distância⟧
-> - Como chegar / Como se locomover: Aeroporto de Maceió: ⟦distância⟧
+> **⚠️ Confirmar antes de salvar:**
+> - Distância até a praia e o aeroporto
+> - Vista da varanda
+> - O condomínio tem spa? (texto diz sim, cadastro diz não)
+> - Vaga de garagem
 
-### TÍTULO
-**Título do anúncio (PT)** · 57 caracteres
+**Título do anúncio** · 56 caracteres
 ```text
-Studio para Casal com Varanda no Patacho, Porto de Pedras
+Studio para casal no Villas Manatee, Patacho · 2 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 284/500 caracteres
+**Descrição resumida** · 176 caracteres
 ```text
-Studio para 2 pessoas no condomínio Villas Manatee Patacho, em Porto de Pedras, na Rota Ecológica dos Milagres, a ⟦distância⟧ da Praia do Patacho. Tem cama queen e varanda ⟦com vista para a praia/jardim — confirmar⟧. O condomínio tem piscina, hidromassagem, sauna e academia compacta.
+Studio para casal com cama queen e varanda no condomínio Villas Manatee Patacho, em Porto de Pedras, com piscina, hidromassagem e sauna. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Capacidade máxima: 2 hóspedes.
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Exclusivo para 2 pessoas
+• Cama queen e varanda ⟦com vista para a praia ou jardim⟧
+• Condomínio com piscina, hidromassagem, sauna e academia compacta
+• Praia do Patacho a ⟦X m⟧
+• Enxoval de cama e banho, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Casais que querem um studio compacto perto do Patacho. Silêncio das 22h às 8h e sem eventos.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Cama queen
-- 1 banheiro privativo
-- Cozinha equipada com micro-ondas, liquidificador e cafeteira
-- Varanda com mobiliário externo e churrasqueira ⟦confirmar se é da unidade⟧
-- Ar-condicionado, Smart TV e Wi-Fi
-- Enxoval completo de cama e banho
-- Estacionamento ⟦confirmar⟧
-
-Para quem é:
-Casais que querem um studio compacto perto do Patacho, com sauna e hidromassagem no condomínio.
+Os quartos
+• Studio: 1 cama queen, ar-condicionado e banheiro privativo
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
-
-Áreas comuns que os hóspedes podem usar, respeitando o regulamento interno:
-- Condomínio: piscina, hidromassagem, sauna, academia compacta, área de convivência, parquinho, recepção 24 horas e carregador para carro elétrico.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Patacho: ⟦distância⟧
+Localização
+O Villas Manatee Patacho fica em Porto de Pedras, na Rota Ecológica dos Milagres.
+• Praia do Patacho: ⟦X m⟧
+• Santuário do Peixe-Boi: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ⟦distância⟧
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Preencher "Vizinhança" e "Como se locomover" (hoje vazios).
-- Desmarcar "Quartos para famílias".
+• Aeroporto de Maceió: ⟦X km, cerca de X h de carro⟧
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Studio para casal com cama queen e varanda no Villas Manatee Patacho, em Porto de Pedras. Condomínio com piscina, hidromassagem, sauna e academia.
+Perguntas frequentes
+Quantas pessoas cabem?
+Duas.
+A que distância fica a praia?
+⟦Confirmar⟧
+Tem estacionamento?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Quartos para famílias"
+- Galeria tem só 19 fotos
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="pb02j"></a>
 ## PB02J · SMM Villa Maui A2 - 105
 
-Na Stays: busque **PB02J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/PB02J
+Página: https://www.temporadamme.com.br/pt/apartment/PB02J
 
-> **⚠️ Confirmar antes de salvar** (está entre ⟦ ⟧ no texto; ajuste e apague os colchetes):
-> - Sobre o espaço: Toalhas de piscina ⟦roupa de cama e banho: incluídas ou com taxa — confirmar⟧
-> - Sobre o espaço: ⟦Piscina privativa ou do condomínio — confirmar⟧
-> - Sobre interação com anfitrião: ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ / ⟦confirmar⟧
-> - Sobre a vizinhança: ⟦informar distâncias⟧
-> - Como chegar / Como se locomover: Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
+> **⚠️ Confirmar antes de salvar:**
+> - Piscina: privativa ou do condomínio
+> - Roupa de cama inclusa ou com taxa
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 58 caracteres
 ```text
-Apto 2 Suítes a 250 m da Praia do Marceneiro, 4 Hósp.
+Apto 2 quartos no Villa Mauí, a 250 m da praia · 4 pessoas
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 273/500 caracteres
+**Descrição resumida** · 187 caracteres
 ```text
-Apartamento no condomínio Villa Mauí, em Passo de Camaragibe, a 250 m da Praia do Marceneiro, na Rota Ecológica dos Milagres. São 2 quartos com cama de casal e 2 banheiros para até 4 hóspedes. Atende bem dois casais que viajam juntos e querem cada um seu quarto e banheiro.
+Apartamento com 2 quartos de casal e 2 banheiros para até 4 pessoas no condomínio Villa Mauí, a 250 m da Praia do Marceneiro, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Silêncio das 22h às 8h. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• 250 m da Praia do Marceneiro
+• 2 quartos com cama de casal e 2 banheiros
+• Varanda com vista para a piscina e churrasqueira
+• Máquina de lavar e fechadura eletrônica
+• 1 vaga de garagem gratuita; ⟦roupa de cama e banho⟧, toalhas de piscina, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Dois casais ou família de 4 pessoas. O acesso é só por escadas, então não é indicado para quem tem mobilidade reduzida. Silêncio das 22h às 8h e sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama de casal
-- Quarto 2 com cama de casal
-- 2 banheiros com secador de cabelo
-- Cozinha completa com micro-ondas, torradeira, liquidificador, cafeteira e mesa de jantar
-- Varanda com mobiliário externo e vista para a piscina
-- Grill e utensílios de churrasco
-- Máquina de lavar roupa
-- Ar-condicionado, Smart TV, espaço para notebook e Wi-Fi
-- Toalhas de piscina ⟦roupa de cama e banho: incluídas ou com taxa — confirmar⟧
-- Fechadura eletrônica (entrada autônoma)
-- 1 vaga de garagem gratuita
-- ⟦Piscina privativa ou do condomínio — confirmar⟧
-
-Para quem é:
-Dois casais ou família de 4 pessoas. Como o acesso é apenas por escadas, não é indicado para quem tem mobilidade reduzida.
+Os quartos
+• Quarto 1: 1 cama de casal
+• Quarto 2: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-Este imóvel é administrado pela Temporada MME, empresa de aluguel por temporada do Grupo MME, que atua em hotelaria em Alagoas há mais de 30 anos. A equipe atende os hóspedes ⟦por WhatsApp e telefone, das __h às __h — confirmar⟧ para tirar dúvidas antes e durante a estadia, e envia as instruções de acesso antes da chegada ⟦confirmar⟧.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: 250 m
-- Na região: passeios de jangada às piscinas naturais na maré baixa, Santuário do Peixe-Boi no Rio Tatuamunha e Capela dos Milagres ⟦informar distâncias⟧
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Praia do Marceneiro: 250 m
+• Santuário do Peixe-Boi, em Porto de Pedras: ⟦X km⟧
+• Capela de São Miguel dos Milagres: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto de Maceió: ⟦~127 km⟧ · Aeroporto do Recife: ~208 km
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- **Remover a frase do Oka** ("acesso direto à praia e área gourmet pé na areia").
-- Definir se é casa ou apartamento.
-- Confirmar enxoval e desmarcar "Toalhas/Lençóis com sobretaxa" se estiver incluído.
+• Aeroporto de Maceió: ⟦127 km — conferir⟧, ⟦cerca de X h de carro⟧
+• Aeroporto do Recife: cerca de 208 km
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento com 2 quartos de casal e 2 banheiros para até 4 hóspedes no Villa Mauí, a 250 m da Praia do Marceneiro, na Rota dos Milagres.
+Perguntas frequentes
+É pé na areia?
+Não. Fica a 250 m da praia.
+Tem escadas?
+Sim, o acesso é só por escadas.
+Roupa de cama está incluída?
+⟦Confirmar⟧
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Desmarcar "Piscina Privada" (segundo o PDF)
+- Apagar o texto copiado do Oka e o parágrafo repetido
+- Desmarcar "Toalhas/Lençóis com sobretaxa" se o enxoval for incluso
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
 
 <a id="pj01j"></a>
 ## PJ01J · SMM Villa Anahi A2 - 004
 
-Na Stays: busque **PJ01J** em "Ir para outro anúncio" → **Conteúdo descritivo**.  
-Página pública: https://www.temporadamme.com.br/pt/apartment/PJ01J
+Página: https://www.temporadamme.com.br/pt/apartment/PJ01J
 
-### TÍTULO
-**Título do anúncio (PT)** · 53 caracteres
+**Título do anúncio** · 59 caracteres
 ```text
-Apto 2 Quartos com Piscina Privativa a 300 m da Praia
+Apto com piscina privativa no Villa Anahí, a 300 m da praia
 ```
-### DESCRIÇÃO
-**Descrição resumida** · 310/500 caracteres
+**Descrição resumida** · 190 caracteres
 ```text
-Apartamento no Condomínio Villa Anahí, na Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres. A Praia do Marceneiro fica a 300 m, uma caminhada curta. O destaque é a área de lazer privativa, com piscina e churrasqueira de uso exclusivo dos hóspedes. Acomoda até 4 pessoas em 2 quartos.
+Apartamento com piscina e churrasqueira privativas para até 4 pessoas no Condomínio Villa Anahí, a 300 m da Praia do Marceneiro, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
 **Observações gerais**
 ```text
-- 1 banheiro para 4 hóspedes.
-- Instruções de check-in enviadas próximo da chegada. Check-in a partir das 14h (15h entre 21/12 e 31/01). Check-out até 12h.
-- Respeitar o regulamento interno do Condomínio Villa Anahí. Não são permitidos eventos.
-- Aceita crianças e bebês. Não há berço disponível.
-- Não aceita animais. Proibido fumar.
+Destaques
+• Piscina (não aquecida) e churrasqueira de uso exclusivo
+• 300 m da Praia do Marceneiro, a pé
+• 2 quartos com cama de casal e 1 banheiro
+• Carrinho de praia e máscaras de mergulho
+• Enxoval de cama e banho, toalhas de piscina, Wi-Fi e Smart TV inclusos
+
+Ideal para
+Casais com filhos pequenos ou 2 casais que querem piscina só para o grupo. Há 1 banheiro para 4 pessoas. Sem eventos. Não há berço disponível.
 ```
 **Sobre o espaço**
 ```text
-Ambientes e estrutura:
-- Quarto 1 com cama de casal
-- Quarto 2 com cama de casal
-- 1 banheiro
-- Cozinha americana completa com forno, micro-ondas, liquidificador, cafeteira e mesa de jantar
-- Área de lazer privativa com piscina (não aquecida) e churrasqueira
-- Varanda com vista para o jardim
-- Ar-condicionado, Smart TV e Wi-Fi
-- Enxoval completo de cama e banho e toalhas de piscina
-- Carrinho de praia e máscaras de mergulho
-- Acesso sem degraus nas áreas do hóspede
-- 1 vaga de garagem gratuita
-
-Para quem é:
-Casais com filhos pequenos ou 2 casais que querem piscina só para o grupo, sem dividir com o condomínio.
+Os quartos
+• Quarto 1: 1 cama de casal
+• Quarto 2: 1 cama de casal
 ```
 **Sobre o acesso ao espaço**
 ```text
-Os hóspedes têm acesso exclusivo a todos os ambientes do imóvel durante a estadia.
+Os hóspedes têm uso exclusivo de todo o imóvel durante a estadia. As áreas comuns do condomínio podem ser usadas conforme o regulamento interno.
 ```
 **Sobre interação com anfitrião**
 ```text
-A equipe da Temporada MME atende por mensagem e telefone desde antes do check-in até depois da saída: tira dúvidas, envia as instruções de acesso e dá dicas locais. Você tem a autonomia de um apartamento inteiro e alguém a quem recorrer quando precisar.
+Serviço Temporada MME
+Concierge 7 dias por semana. Sob demanda: camareira, mercado abastecido na chegada, cozinheiro e garçom (pagos à parte).
 ```
 **Sobre a vizinhança**
 ```text
-- Praia do Marceneiro: 300 m a pé
+Localização
+A Praia do Marceneiro fica em Passo de Camaragibe, na Rota Ecológica dos Milagres, vizinha a São Miguel dos Milagres.
+• Praia do Marceneiro: 300 m
+• Centro de São Miguel dos Milagres: ⟦X km⟧
 ```
-**Como chegar / Como se locomover**
+**Como chegar**
 ```text
-- Aeroporto Internacional Zumbi dos Palmares: ~105 km (1h30 a 2h de carro)
-- Na região: passeios de jangada aos recifes, buggy e restaurantes de frutos do mar. Carro é recomendado para explorar as praias vizinhas.
-```
-### Fora da tela de Conteúdo descritivo
-**Ajustes de cadastro** (Amenities, Cômodos, Regras ou Localização):
-- Unificar "35 anos" x "30 anos".
-- Tirar o "•" do título.
-- Usar o bloco "Interação com o hóspede" deste anúncio como base do bloco padrão MME nos outros anúncios.
+• Aeroporto de Maceió: cerca de 105 km, de 1h30 a 2h de carro
+• O carro é a melhor forma de circular pela região.
 
-**SEO do site** (se a Stays tiver o campo SEO):
-```text
-Apartamento de 2 quartos com piscina e churrasqueira privativas no Villa Anahí, a 300 m da Praia do Marceneiro. Até 4 hóspedes, com carrinho de praia.
+Perguntas frequentes
+A piscina é só nossa?
+Sim, é de uso exclusivo da unidade.
+Dá para ir a pé à praia?
+Sim, são 300 m.
+A piscina é aquecida?
+Não.
+Qual o horário de check-in e check-out?
+Check-in a partir das 14h (15h entre 21/12 e 31/01) e check-out até 12h.
+Aceita animais de estimação?
+Não.
 ```
+**Fora desta tela** (Amenities, Cômodos, Regras, Localização, Fotos):
+- Tirar "mais de 35 anos", o rótulo "Sobre interação com anfitrião" e o parágrafo repetido do texto atual
 
-[↑ voltar ao índice](#indice)
+[↑ índice](#indice)
 
 ---
+
+<a id="condominios"></a>
+# Textos dos condomínios
+
+Cole no campo de descrição do **empreendimento/prédio** na Stays, uma vez por condomínio. A Stays mostra esse texto abaixo da descrição de cada unidade, por isso ele não se repete nos textos acima.
+
+### Oka Morada dos Milagres (HS06J, HS36J, HS38J, KM01J)
+```text
+Condomínio de casas com acesso direto à Praia do Marceneiro, em Passo de Camaragibe, na Rota Ecológica dos Milagres. Na maré baixa, formam-se piscinas naturais em frente ao condomínio.
+
+No condomínio
+• Acesso direto à praia
+• Área gourmet na areia
+• Academia
+• Redário
+• Lavanderia compartilhada
+• Parquinho
+• Portaria 24 horas
+```
+
+### Naay Villas Boutique (HS16J, HS18J, HS22J, HS29J, IM01J)
+```text
+Condomínio em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres, a ⟦100 m⟧ da Praia de Tatuamunha e a 500 m da ponte de onde saem os passeios de observação do peixe-boi.
+
+No condomínio
+• Piscina
+• Academia
+• Área de churrasco
+• Jardim
+• Parquinho
+• Estacionamento
+```
+
+### Ipioca Beach Life (HS13J, HS20J, HS27J, MY02J)
+```text
+Condomínio com acesso direto à Praia de Ipioca, no litoral norte de Maceió, a cerca de 20 km do centro e 39 km do aeroporto.
+
+No condomínio
+• Acesso direto à praia
+• Piscina compartilhada
+• Restaurante, bar e lojas de conveniência
+• Academia e salão de jogos
+• Parquinho
+• Aluguel de bicicletas
+• Recepção 24 horas
+```
+
+### Condomínio Barra Bali (HS03J, HS07J)
+```text
+Condomínio com acesso direto à praia em Barra de São Miguel, a 29 km de Maceió e a 300 m do Praêro Beach Club.
+
+No condomínio
+• Acesso direto à praia
+• Piscina de borda infinita com área rasa
+• Campo de futebol
+• Sala de jogos com sinuca e pingue-pongue
+• Academia e sauna
+• Parquinho
+• Elevador e portaria 24 horas
+```
+
+### Villas do Rio (HS05J, HS35J, HS37J)
+```text
+Condomínio de casas térreas de arquitetura rústica em Tatuamunha, Porto de Pedras, entre o rio e o mar, a 300 m da Praia de Tatuamunha e a 1 km da Praia de Porto da Rua.
+
+No condomínio
+• Jardim
+• Estacionamento
+⟦Completar com a estrutura comum, se houver⟧
+```
+
+### Villa Kanui (HS09J, HS12J)
+```text
+Condomínio de casas em Tatuamunha, Porto de Pedras, na Rota Ecológica dos Milagres.
+
+No condomínio
+• Jacuzzi de uso comum ⟦confirmar⟧
+• Jardim e área de churrasco
+⟦Completar com a estrutura comum e a distância até a praia⟧
+```
+
+### Morada do Toque (HS26J, HS41J)
+```text
+Condomínio de casas na via principal de São Miguel dos Milagres, com mercadinhos, farmácias e lanchonetes na mesma rua, a ⟦X⟧ da Praia do Toque.
+
+No condomínio
+• Piscina
+• Academia
+• Playground
+• Áreas de descanso
+• Estacionamento
+```
+
+### Azuk Patacho (JI01J, MI02J, NF02J)
+```text
+Condomínio em Porto de Pedras, perto da Praia do Patacho, na Rota Ecológica dos Milagres.
+
+No condomínio
+• Piscina com área rasa
+• Academia
+• Bicicletas para os hóspedes
+• Recepção 24 horas
+• Carregador para carro elétrico
+• 1 vaga por unidade
+```
+
+### Villas Manatee Patacho (NF04J)
+```text
+Condomínio em Porto de Pedras, na Rota Ecológica dos Milagres.
+
+No condomínio
+• Piscina
+• Hidromassagem
+• Sauna
+• Academia compacta
+• Área de convivência
+• Recepção 24 horas
+```

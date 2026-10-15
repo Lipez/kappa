@@ -1,5 +1,7 @@
 # Temporada MME — Descritivos otimizados para SEO e GEO
 
+> **Atualização:** os textos para publicar agora estão em `stays-copiar-e-colar.md` (versão 2), que segue o padrão do PDF "Site Temporada MME: auditoria e plano de correções". Este arquivo continua valendo como diagnóstico e referência de palavras-chave, mas os descritivos dele são anteriores ao PDF.
+
 **Escopo:** 36 imóveis ativos em https://www.temporadamme.com.br/pt/search
 **Coleta dos dados:** 15/10/2026, direto do site (títulos, descrições, camas, regras, comodidades e coordenadas de cada anúncio).
 **Status:** rascunho para revisão humana. Nada foi alterado no site.
