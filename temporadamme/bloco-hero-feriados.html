@@ -1,9 +1,9 @@
 <!-- ============================================================================ -->
-<!-- TEMPORADA MME · HERO PROMOCIONAL · feriadões de novembro + carrossel          -->
+<!-- TEMPORADA MME · HERO PROMOCIONAL · novembro + carrossel                       -->
 <!-- Substitui o Bloco HTML nº 1. Trocar fotos: edite os <img> de .mmehero__slides. -->
 <!-- Trocar a tag: edite o src de .mmehero__promo.                                 -->
 <!-- ============================================================================ -->
-<section class="mmehero" aria-label="Feriadões de novembro na Temporada MME">
+<section class="mmehero" aria-label="Promoção de novembro na Temporada MME">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500;1,600&display=swap">
@@ -41,8 +41,8 @@
     .mmehero__shade {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background:
-        radial-gradient(ellipse 75% 85% at 50% 45%, rgba(12,52,50,0.82) 0%, rgba(12,52,50,0.62) 55%, rgba(12,52,50,0.38) 100%),
-        linear-gradient(180deg, rgba(12,52,50,0) 55%, rgba(8,40,44,0.75) 100%);
+        radial-gradient(ellipse 70% 80% at 50% 45%, rgba(12,52,50,0.62) 0%, rgba(12,52,50,0.42) 55%, rgba(12,52,50,0.20) 100%),
+        linear-gradient(180deg, rgba(12,52,50,0) 60%, rgba(8,40,44,0.60) 100%);
     }
 
     /* ---- Conteúdo central ---- */
@@ -89,7 +89,7 @@
       text-shadow: 0 1px 18px rgba(16,48,46,0.8), 0 1px 3px rgba(16,48,46,0.6);
     }
 
-    /* datas dos feriadões */
+    /* datas */
     .mmehero__dates { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 18px; }
     .mmehero__date {
       display: flex; align-items: center; gap: 12px;
@@ -196,7 +196,7 @@
     }
     @media (max-width: 860px) {
       .mmehero { min-height: auto; }
-      .mmehero__shade { background: linear-gradient(180deg, rgba(12,52,50,0.80) 0%, rgba(12,52,50,0.92) 100%); }
+      .mmehero__shade { background: linear-gradient(180deg, rgba(12,52,50,0.62) 0%, rgba(12,52,50,0.80) 100%); }
       .mmehero__arrow { display: none; }
       .mmehero__inner { padding: 40px 18px 22px; }
       .mmehero__promo { max-height: 92px; }
@@ -231,23 +231,23 @@
 
   <div class="mmehero__inner">
     <!-- tag da promoção -->
-    <img class="mmehero__promo" src="https://i.imgur.com/KlT4Ey6.png" alt="Promoção feriadões de novembro" onerror="this.style.display='none'">
+    <img class="mmehero__promo" src="https://i.imgur.com/KlT4Ey6.png" alt="Promoção de novembro" onerror="this.style.display='none'">
 
     <p class="mmehero__eyebrow">Novembro com dois feriadões</p>
-    <h1 class="mmehero__title">Feriadão é na praia,<em>com serviço de hotel.</em></h1>
+    <h1 class="mmehero__title">Sua casa na praia,<em>com serviço de hotel.</em></h1>
     <p class="mmehero__sub">
       Casas inspecionadas uma a uma na Rota dos Milagres e no litoral alagoano.
-      Datas de feriado são as primeiras a esgotar: garanta a sua.
+      Escolha suas datas e deixe o resto com a gente.
     </p>
 
     <div class="mmehero__dates">
       <div class="mmehero__date">
         <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
-        <div><small>1º feriadão</small><strong>31/10 a 02/11</strong><span>sábado a segunda</span></div>
+        <div><small>sábado a segunda</small><strong>31/10 a 02/11</strong></div>
       </div>
       <div class="mmehero__date">
         <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
-        <div><small>2º feriadão</small><strong>20 a 22/11</strong><span>sexta a domingo</span></div>
+        <div><small>sexta a domingo</small><strong>20 a 22/11</strong></div>
       </div>
     </div>
 
@@ -259,9 +259,9 @@
     <div class="mmehero__ctas">
       <button type="button" class="mmehero__cta mmehero__cta--main" id="mmeGoSearch">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        Ver casas para o feriado
+        Ver casas disponíveis
       </button>
-      <a class="mmehero__cta mmehero__cta--ghost" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=5582999470628&text=Ol%C3%A1!%20Quero%20reservar%20uma%20casa%20para%20o%20feriad%C3%A3o%20de%20novembro.">
+      <a class="mmehero__cta mmehero__cta--ghost" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=5582999470628&text=Ol%C3%A1!%20Quero%20reservar%20uma%20casa%20para%20novembro.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
         Reservar pelo WhatsApp
       </a>
@@ -273,7 +273,7 @@
     <li><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><div><b>Serviço de hotel</b>30 anos de hotelaria</div></li>
     <li><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Inspecionados</b>imóvel por imóvel</div></li>
     <li><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.6H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.6h6.1z"/></svg><div><b>Concierge</b>suporte na estadia</div></li>
-    <li><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><div><b>Camareira e mercado</b>sob demanda</div></li>
+    <li><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><div><b>Serviços extras</b>sob demanda</div></li>
     <li><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg><div><b>Confirmação</b>imediata</div></li>
   </ul>
 
@@ -281,7 +281,7 @@
   (function () {
     var root = document.querySelector('.mmehero'); if (!root) return;
 
-    // "Ver casas para o feriado": rola até a barra de busca e abre o calendário
+    // "Ver casas disponíveis": rola até a barra de busca e abre o calendário
     var go = root.querySelector('#mmeGoSearch');
     if (go) go.addEventListener('click', function () {
       var bar = document.getElementById('block-simple-search');
