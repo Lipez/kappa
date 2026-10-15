@@ -50,7 +50,7 @@ O Stays junta vários campos na página do imóvel. Por isso hoje os mesmos par�
 | [HS16J](#hs16j) | Apto Cond. Acesso a Praia Para 05 Pessoas | Naay Villas Boutique | Tatuamunha | 5 | 🟠 |
 | [HS18J](#hs18j) | Studio Cond. Acesso a Praia Para 04 Pessoas | Naay Villas Boutique (007) | Tatuamunha | 4 | 🟠 |
 | [HS20J](#hs20j) | Apto Pé na Areia em Resort com Piscina Privativa | Ipioca Beach Life (003) | Ipioca, Maceió | 6 | 🟢 |
-| [HS22J](#hs22j) | Apto Duplex Acesso a Praia Para 06 Pessoas | Naay Villas Boutique (101) | Tatuamunha | 6 | 🔴 |
+| [HS22J](#hs22j) | Apto Duplex Acesso a Praia Para 06 Pessoas | Naay Villas Boutique (Nature 103) | Tatuamunha | 6 | 🔴 |
 | [HS26J](#hs26j) | Casa em condomínio até 05 pessoas a 5min da Praia | Morada do Toque | São Miguel dos Milagres | 6 | 🔴 |
 | [HS27J](#hs27j) | Apto 03 Quartos Pé na Areia com Piscina Privativa | Ipioca Beach Life (008) | Ipioca, Maceió | 6 | 🟢 |
 | [HS29J](#hs29j) | Apto com Hidro Acesso a Praia Para 06 Pessoas | Naay Villas Boutique (110) | Tatuamunha | 6 | 🟠 |
@@ -2285,7 +2285,7 @@ Imóvel ✅ · Destino ⚠️ · Capacidade ✅ · Ambientes ✅ · Comodidades 
 > | HS18J | 007 | studio | 4 | menor diária, casal |
 > | HS16J | — | apto 2 quartos | 5 | 2 quartos de casal |
 > | IM01J | Ocean 106 | duplex | 5 | rooftop + distâncias detalhadas |
-> | HS22J | 101 | duplex | 6 | 2 camas king + rooftop com espreguiçadeiras |
+> | HS22J | Nature 103 | duplex | 6 | 2 camas king + rooftop com espreguiçadeiras |
 > | HS29J | 110 | duplex | 6 | 2 camas king + **jacuzzi no rooftop** |
 >
 > Todas as unidades do Naay mostram a mesma metragem (117,98 m²), o que precisa ser revisto. A distância até a praia varia entre 100 m e 150 m conforme o anúncio, então padronize.
@@ -2520,7 +2520,7 @@ Imóvel ✅ · Destino ✅ · Capacidade ✅ · Ambientes ✅ · Comodidades ⚠
 ---
 
 <a id="hs22j"></a>
-## HS22J — Naay Villas Boutique, Duplex 101
+## HS22J — Naay Villas Boutique, Duplex (Nature 103)
 
 **Link:** https://www.temporadamme.com.br/pt/apartment/HS22J
 **Cadastro:** duplex · 2 quartos · 2 banheiros · 6 hóspedes · 1 vaga · Tatuamunha
@@ -2532,7 +2532,7 @@ Imóvel ✅ · Destino ✅ · Capacidade ✅ · Ambientes ✅ · Comodidades ⚠
 
 ### 2. Título otimizado
 - **Recomendado:** `Duplex com 2 Camas King e Rooftop em Tatuamunha`
-- Alternativa 1: `Naay 101: Duplex para 2 Casais a 100 m da Praia`
+- Alternativa 1: `Naay Villas: Duplex para 2 Casais a 100 m da Praia`
 - Alternativa 2: `Duplex com Rooftop e Espreguiçadeiras, Rota dos Milagres`
 - **Meta description:** Duplex com 2 quartos de cama king, rooftop com espreguiçadeiras e 2 banheiros para até 6 hóspedes no Naay Villas, perto da Praia de Tatuamunha.
 
@@ -2540,7 +2540,7 @@ Imóvel ✅ · Destino ✅ · Capacidade ✅ · Ambientes ✅ · Comodidades ⚠
 
 **Duplex com 2 camas king e rooftop perto da Praia de Tatuamunha**
 
-O apartamento 101 é um duplex no Naay Villas Boutique, a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. Os 2 quartos têm cama king e ar-condicionado, e o rooftop tem espreguiçadeiras e cadeiras para o fim de tarde. Com o sofá-cama da sala, acomoda até 6 hóspedes.
+Este apartamento duplex fica no Naay Villas Boutique, a cerca de 100 m da Praia de Tatuamunha, na Rota Ecológica dos Milagres. Os 2 quartos têm cama king e ar-condicionado, e o rooftop tem espreguiçadeiras e cadeiras para o fim de tarde. Com o sofá-cama da sala, acomoda até 6 hóspedes.
 
 **Ambientes e estrutura**
 - Quarto 1 com cama king
