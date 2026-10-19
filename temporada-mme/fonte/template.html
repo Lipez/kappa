@@ -185,14 +185,16 @@ tr.done td{background:var(--ok-soft)}
 </div>
 
 <script type="application/json" id="data">__DATA__</script>
+<script type="application/json" id="progress">__PROGRESS__</script>
+<script type="text/plain" id="page-src">__SRC__</script>
 <script>
 (function(){
   const UNITS = JSON.parse(document.getElementById('data').textContent);
   const STEPS = [["descritivo","Conteúdo descritivo"],["seo","SEO"],["cadastro","Ajustes de cadastro"]];
   const SECS = {titulo:["Título","tela Conteúdo descritivo › Título"],desc:["Descrição","tela Conteúdo descritivo › Descrição"],seo:["SEO","tela Conteúdo descritivo › SEO"]};
-  let progress = {};          // code -> {descritivo,seo,cadastro}
-  let col = null;             // db collection, or null
-  let dbState = "loading";    // loading | ready | off
+  let progress = JSON.parse(document.getElementById('progress').textContent || '{}');  // code -> {descritivo,seo,cadastro,atualizadoEm}
+  let art = null;             // artifact namespace (publish), or null
+  let dbState = "loading";    // loading | ready | readonly | saving
   const pending = new Set();
   let current = UNITS[0].code;
   let readOnly = false;
@@ -226,7 +228,7 @@ tr.done td{background:var(--ok-soft)}
     $('list').innerHTML = html || '<p class="notice" style="padding:8px">Nenhum imóvel encontrado.</p>';
   }
   function stepBoxes(code, cls){
-    const dis = dbState!=='ready' || readOnly;
+    const dis = dbState!=='ready';
     return STEPS.map(([k,l])=>{
       const on = !!st(code)[k], busy = pending.has(code);
       return '<label class="'+cls+(on?' on':'')+(dis||busy?' disabled':'')+'"><input type="checkbox" data-code="'+code+'" data-step="'+k+'" '+(on?'checked ':'')+(dis||busy?'disabled ':'')+'aria-label="'+l+' — '+code+'"> '+(cls==='step'?l:'')+'</label>';
@@ -267,7 +269,8 @@ tr.done td{background:var(--ok-soft)}
     $('s-pct').textContent = pct+'%';
     $('s-line').textContent = done.length+' de '+UNITS.length+' imóveis concluídos';
     const doing = UNITS.filter(u=>!isDone(u.code)&&nDone(u.code)>0);
-    $('s-sub').textContent = doing.length+' em andamento · '+(UNITS.length-done.length-doing.length)+' não iniciados';
+    const last = Object.values(progress).map(v=>v&&v.atualizadoEm).filter(Boolean).sort().pop();
+    $('s-sub').textContent = doing.length+' em andamento · '+(UNITS.length-done.length-doing.length)+' não iniciados'+(last?' · última atualização em '+fmt(last):'');
     const groups = [];
     UNITS.forEach(u=>{ let g=groups.find(x=>x.name===u.group); if(!g){g={name:u.group,t:0,d:0};groups.push(g);} g.t++; if(isDone(u.code)) g.d++; });
     $('s-groups').innerHTML = groups.map(g=>'<div class="row" title="'+esc(g.name)+': '+g.d+' de '+g.t+' concluídos"><span class="lbl">'+esc(g.name)+'</span><span class="meter"><i style="width:'+(g.d/g.t*100)+'%"></i></span><span class="v mono">'+g.d+'/'+g.t+'</span></div>').join('');
@@ -280,21 +283,41 @@ tr.done td{background:var(--ok-soft)}
 
   function setStatus(msg, err){ const s=$('status'); s.textContent=msg; s.classList.toggle('err',!!err); }
 
-  async function toggle(code, step, value){
-    if (!col || pending.has(code)) return;
-    const prev = Object.assign({}, st(code));
-    const next = Object.assign({descritivo:false,seo:false,cadastro:false}, prev, {[step]:value, atualizadoEm:new Date().toISOString()});
-    progress[code] = next; pending.add(code); renderAll();
-    try { await col.doc(code).set(next); setStatus('Salvo: '+code+' › '+STEPS.find(s=>s[0]===step)[1]+(value?' marcado.':' desmarcado.')); }
+  const SKEL = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body>';
+  const TOK_P = '__PROG'+'RESS__', TOK_S = '__S'+'RC__';
+  function buildDoc(){
+    const b64 = $('page-src').textContent.trim();
+    const src = new TextDecoder().decode(Uint8Array.from(atob(b64), c=>c.charCodeAt(0)));
+    const pj = JSON.stringify(progress).replace(/</g,'\\u003c');
+    return SKEL + src.replace(TOK_S, ()=>b64).replace(TOK_P, ()=>pj) + '</body></html>';
+  }
+  const SAVED = JSON.parse(document.getElementById('progress').textContent || '{}');
+  let timer = null;
+  function toggle(code, step, value){
+    if (dbState!=='ready') return;
+    const prev = Object.assign({descritivo:false,seo:false,cadastro:false}, st(code));
+    progress[code] = Object.assign(prev, {[step]:value, atualizadoEm:new Date().toISOString()});
+    pending.add(code);
+    setStatus('Salvando… (aguarde alguns segundos antes de fechar)');
+    renderAll();
+    clearTimeout(timer); timer = setTimeout(save, 1500);
+  }
+  async function save(){
+    dbState='saving'; renderAll();
+    try { await art.publish(buildDoc()); setStatus('Salvo. A página vai recarregar com a versão nova.'); }
     catch(e){
-      progress[code] = prev;
       const c = e && e.code;
-      setStatus(c==='permission_denied'||c==='not_granted' ? 'Você não tem permissão para marcar. Peça acesso de edição a quem compartilhou o painel.' : 'Não foi possível salvar '+code+'. Tente de novo.', true);
+      progress = JSON.parse(JSON.stringify(SAVED)); pending.clear();
+      if (c==='not_writer' || c==='not_granted'){ dbState='readonly'; setStatus('Você está vendo o progresso. Para marcar etapas, é preciso acesso de edição ao painel.', true); }
+      else if (c==='conflict'){ dbState='readonly'; setStatus('Outra pessoa salvou ao mesmo tempo. A página vai recarregar com a versão mais nova; marque de novo se precisar.', true); }
+      else if (c==='rate_limited'){ dbState='ready'; setStatus('Muitas alterações em pouco tempo. Espere um minuto e marque de novo.', true); }
+      else { dbState='ready'; setStatus('Não foi possível salvar agora. Tente marcar de novo.', true); }
+      renderAll();
     }
-    finally { pending.delete(code); renderAll(); }
   }
 
   function showTab(name){
+    try{localStorage.setItem('mme-tab',name)}catch(e){}
     ['progresso','textos','checklist'].forEach(n=>{ $('tab-'+n).setAttribute('aria-selected', n===name); $('view-'+n).hidden = n!==name; });
   }
   function openUnit(code){
@@ -319,30 +342,22 @@ tr.done td{background:var(--ok-soft)}
   });
   $('q').addEventListener('input', renderList);
   $('f').addEventListener('change', renderList);
-  const h = location.hash.slice(1); if (['progresso','textos','checklist'].includes(h)) showTab(h);
+  const TABS=['progresso','textos','checklist'];
+  let h = location.hash.slice(1);
+  if (!TABS.includes(h)) { try { h = localStorage.getItem('mme-tab'); } catch(e){ h=null; } }
+  showTab(TABS.includes(h) ? h : 'progresso');
 
   renderAll();
 
+  const RO = 'Você está vendo o progresso. Para marcar etapas, entre no claude.ai com acesso de edição ao painel.';
   const cl = window.claude;
-  if (!cl || !cl.use){ dbState='off'; setStatus('Abra este painel no claude.ai para marcar e salvar o progresso.', true); renderAll(); return; }
-  cl.use('user').then(u=> u && typeof u.can==='function' ? u.can('data.write') : null).then(w=>{
-    if (w===false){
-      readOnly = true;
-      if (!['textos','checklist'].includes(location.hash.slice(1))) showTab('progresso');
-      if (dbState==='ready') setStatus('Você está vendo o progresso. Só quem tem acesso de edição pode marcar as etapas.');
-      renderAll();
-    }
-  });
-  cl.use('db').then(db=>{
-    if (!db){ dbState='off'; setStatus('O progresso não está disponível nesta visualização. Entre no claude.ai com sua conta para marcar os itens.', true); renderAll(); return; }
-    col = db.collection('progresso');
-    col.onSnapshot(snap=>{
-      const m = {}; snap.docs.forEach(d=>{ if(d.exists) m[d.id]=d.data(); });
-      pending.forEach(c=>{ if(progress[c]) m[c]=progress[c]; });
-      progress = m; dbState='ready';
-      setStatus(readOnly ? 'Você está vendo o progresso. Só quem tem acesso de edição pode marcar as etapas.' : snap.empty ? 'Nenhum imóvel marcado ainda. Marque as etapas conforme for concluindo.' : 'Progresso sincronizado com a equipe.');
-      renderAll();
-    }, err=>{ dbState='off'; setStatus('A conexão com o progresso caiu. Recarregue a página.', true); renderAll(); });
+  if (!cl || !cl.use){ dbState='readonly'; setStatus(RO); renderAll(); }
+  else Promise.all([cl.use('artifact'), cl.use('user')]).then(async ([a,u])=>{
+    let can = false;
+    try { can = !!(a && u && await u.canEdit()); } catch(e){ can = false; }
+    art = a; dbState = can ? 'ready' : 'readonly';
+    setStatus(can ? 'Marque as etapas conforme concluir. Cada marcação salva o painel para toda a equipe.' : RO);
+    renderAll();
   });
 })();
 </script>
