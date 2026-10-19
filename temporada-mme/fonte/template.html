@@ -1,0 +1,295 @@
+<title>Anúncios Temporada MME</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: ferramenta de trabalho — barra de progresso no topo, lista de imóveis à esquerda, campos da Stays à direita; aba Checklist em tabela. */
+:root{
+  --bg:#f3f6f6; --surface:#ffffff; --ink:#122a2c; --muted:#58706f; --line:#d5e0df;
+  --accent:#0b6f6c; --accent-soft:#dcefed; --pend:#9a4a07; --pend-soft:#fbead6;
+  --ok:#1f7a3d; --ok-soft:#dcf2e2; --warn:#b42318;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1819; --surface:#142325; --ink:#e3eeed; --muted:#93aaa8; --line:#26393b;
+  --accent:#4cc3bd; --accent-soft:#16393a; --pend:#f2b36b; --pend-soft:#3a2711;
+  --ok:#6fd38f; --ok-soft:#163222; --warn:#ff8a7a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1819; --surface:#142325; --ink:#e3eeed; --muted:#93aaa8; --line:#26393b;
+  --accent:#4cc3bd; --accent-soft:#16393a; --pend:#f2b36b; --pend-soft:#3a2711;
+  --ok:#6fd38f; --ok-soft:#163222; --warn:#ff8a7a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--f-body)}
+.wrap{max-width:1280px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:1.75rem}
+h2{font-size:1.35rem}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--f-body);font-weight:700}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between}
+.top p{margin:4px 0 0;color:var(--muted);max-width:62ch}
+.progress{display:grid;gap:6px;min-width:min(320px,100%)}
+.progress .num{font-family:var(--f-display);font-size:1.4rem}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.notice{font-size:.9rem;color:var(--muted)}
+.notice.err{color:var(--warn)}
+
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;cursor:pointer;font-weight:700;color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--ink);border-color:var(--accent)}
+
+.textos{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+aside{position:sticky;top:12px;display:grid;gap:10px;max-height:calc(100vh - 24px);min-height:0}
+.filters{display:grid;gap:8px}
+.filters input,.filters select{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.list{overflow:auto;display:grid;gap:2px;padding-right:4px;min-height:0}
+.grp{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:10px 8px 4px;font-weight:700}
+.item{display:grid;grid-template-columns:auto 1fr auto;gap:2px 10px;align-items:center;text-align:left;background:none;border:0;border-radius:8px;padding:8px;cursor:pointer}
+.item:hover{background:var(--accent-soft)}
+.item[aria-current="true"]{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent)}
+.item .c{font-family:var(--f-mono);font-weight:600;font-size:.85rem}
+.item .n{font-size:.85rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dots{display:flex;gap:3px}
+.dots b{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.dots b.on{background:var(--ok)}
+
+main{display:grid;gap:18px;min-width:0}
+.unit-head{display:grid;gap:8px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--muted);font-size:.9rem}
+.meta a{color:var(--accent)}
+.steps{display:flex;flex-wrap:wrap;gap:8px}
+.step{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:var(--surface);cursor:pointer;font-size:.92rem}
+.step input{width:18px;height:18px;accent-color:var(--ok);margin:0}
+.step.on{background:var(--ok-soft);border-color:var(--ok)}
+.step.disabled{opacity:.55;cursor:not-allowed}
+.pend{background:var(--pend-soft);border-radius:10px;padding:12px 14px;display:grid;gap:6px}
+.pend strong{color:var(--pend)}
+.pend ul,.cad ul{margin:0;padding-left:20px;display:grid;gap:4px}
+section.block{display:grid;gap:10px}
+.sec-title{display:flex;align-items:baseline;gap:10px;padding-top:6px;border-top:1px solid var(--line)}
+.sec-title span{color:var(--muted);font-size:.9rem}
+.field{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+.field header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid var(--line)}
+.field header b{font-size:.95rem}
+.count{font-size:.78rem;color:var(--muted)}
+.count.over{color:var(--warn);font-weight:600}
+.copy{border:1px solid var(--accent);background:var(--accent);color:var(--surface);border-radius:7px;padding:5px 12px;cursor:pointer;font-weight:700;font-size:.85rem}
+.copy.done{background:var(--ok);border-color:var(--ok)}
+.field pre{margin:0;padding:12px;white-space:pre-wrap;word-break:break-word;font:15px/1.55 var(--f-body)}
+mark{background:var(--pend-soft);color:var(--pend);border-radius:4px;padding:0 3px;font-weight:700}
+.cad{background:var(--surface);border:1px dashed var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:8px}
+
+.table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.92rem}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.ck{text-align:center} th.ck{text-align:center}
+td.ck input{width:20px;height:20px;accent-color:var(--ok);cursor:pointer}
+tr.done td{background:var(--ok-soft)}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font-family:var(--f-mono);font-weight:600;cursor:pointer;text-decoration:underline}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.mid{background:var(--accent-soft);color:var(--accent)} .pill.no{background:var(--line);color:var(--muted)}
+.howto{color:var(--muted);font-size:.92rem;max-width:80ch;margin:0}
+
+@media (max-width:860px){
+  .textos{grid-template-columns:minmax(0,1fr)}
+  aside{position:static;max-height:none}
+  .list{max-height:38vh;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:4px}
+}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Anúncios Temporada MME</h1>
+      <p>Textos dos 36 imóveis para colar na Stays: Conteúdo descritivo e SEO. Marque cada etapa quando terminar. O progresso fica salvo para toda a equipe.</p>
+    </div>
+    <div class="progress" aria-live="polite">
+      <div><span class="num mono" id="pnum">0 de 36</span> <span class="notice">imóveis concluídos</span></div>
+      <div class="bar" aria-hidden="true"><i id="pbar"></i></div>
+      <div class="notice" id="status">Carregando o progresso salvo…</div>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-textos" aria-selected="true" aria-controls="view-textos">Textos</button>
+    <button class="tab" role="tab" id="tab-checklist" aria-selected="false" aria-controls="view-checklist">Checklist</button>
+  </div>
+
+  <div id="view-textos" class="textos" role="tabpanel" aria-labelledby="tab-textos">
+    <aside>
+      <div class="filters">
+        <label class="notice" for="q">Buscar por código, nome interno ou condomínio</label>
+        <input id="q" type="search" placeholder="Ex.: HS03J, Oka, Ipioca">
+        <select id="f" aria-label="Filtrar por status">
+          <option value="all">Todos os imóveis</option>
+          <option value="todo">Só os não concluídos</option>
+          <option value="done">Só os concluídos</option>
+        </select>
+      </div>
+      <nav class="list" id="list" aria-label="Imóveis"></nav>
+    </aside>
+    <main id="unit"></main>
+  </div>
+
+  <div id="view-checklist" role="tabpanel" aria-labelledby="tab-checklist" hidden>
+    <div style="display:grid;gap:12px">
+      <p class="howto">Um imóvel fica <b>concluído</b> quando as três etapas estão marcadas: Conteúdo descritivo (título e os 7 campos de Descrição), SEO (URL, título da página, palavras-chave e descrição) e Ajustes de cadastro (Amenities, Regras, fotos). Clique no código para abrir os textos.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Código</th><th>Nome interno na Stays</th><th>Destino</th><th class="ck">Conteúdo descritivo</th><th class="ck">SEO</th><th class="ck">Ajustes de cadastro</th><th>Pendências ⟦ ⟧</th><th>Status</th></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+(function(){
+  const UNITS = JSON.parse(document.getElementById('data').textContent);
+  const STEPS = [["descritivo","Conteúdo descritivo"],["seo","SEO"],["cadastro","Ajustes de cadastro"]];
+  const SECS = {titulo:["Título","tela Conteúdo descritivo › Título"],desc:["Descrição","tela Conteúdo descritivo › Descrição"],seo:["SEO","tela Conteúdo descritivo › SEO"]};
+  let progress = {};          // code -> {descritivo,seo,cadastro}
+  let col = null;             // db collection, or null
+  let dbState = "loading";    // loading | ready | off
+  const pending = new Set();
+  let current = UNITS[0].code;
+  try { const s = localStorage.getItem('mme-current'); if (s && UNITS.some(u=>u.code===s)) current = s; } catch(e){}
+
+  const $ = id => document.getElementById(id);
+  const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const marked = s => esc(s).replace(/⟦([^⟧]*)⟧/g, '<mark>⟦$1⟧</mark>');
+  const st = code => progress[code] || {};
+  const isDone = code => STEPS.every(([k]) => st(code)[k]);
+  const nDone = code => STEPS.filter(([k]) => st(code)[k]).length;
+  const nPend = u => u.fields.reduce((a,f)=>a+(f.text.match(/⟦/g)||[]).length,0);
+
+  function renderProgress(){
+    const d = UNITS.filter(u=>isDone(u.code)).length;
+    $('pnum').textContent = d + ' de ' + UNITS.length;
+    $('pbar').style.width = (d/UNITS.length*100)+'%';
+  }
+  function renderList(){
+    const q = $('q').value.trim().toLowerCase(), f = $('f').value;
+    let html = '', last = '';
+    UNITS.forEach(u=>{
+      if (q && !(u.code+' '+u.name+' '+u.group).toLowerCase().includes(q)) return;
+      if (f==='done' && !isDone(u.code)) return;
+      if (f==='todo' && isDone(u.code)) return;
+      if (u.group !== last){ html += '<div class="grp">'+esc(u.group)+'</div>'; last = u.group; }
+      html += '<button class="item" data-code="'+u.code+'" aria-current="'+(u.code===current)+'">'
+        + '<span class="c">'+u.code+'</span><span class="n">'+esc(u.name)+'</span>'
+        + '<span class="dots" title="'+nDone(u.code)+' de 3 etapas">'+STEPS.map(([k])=>'<b class="'+(st(u.code)[k]?'on':'')+'"></b>').join('')+'</span></button>';
+    });
+    $('list').innerHTML = html || '<p class="notice" style="padding:8px">Nenhum imóvel encontrado.</p>';
+  }
+  function stepBoxes(code, cls){
+    const dis = dbState!=='ready';
+    return STEPS.map(([k,l])=>{
+      const on = !!st(code)[k], busy = pending.has(code);
+      return '<label class="'+cls+(on?' on':'')+(dis||busy?' disabled':'')+'"><input type="checkbox" data-code="'+code+'" data-step="'+k+'" '+(on?'checked ':'')+(dis||busy?'disabled ':'')+'aria-label="'+l+' — '+code+'"> '+(cls==='step'?l:'')+'</label>';
+    });
+  }
+  function renderUnit(){
+    const u = UNITS.find(x=>x.code===current);
+    let h = '<div class="unit-head"><h2><span class="mono">'+u.code+'</span> · '+esc(u.name)+'</h2>'
+      + '<div class="meta"><span>'+esc(u.group)+'</span><a href="https://www.temporadamme.com.br/pt/apartment/'+u.code+'" target="_blank" rel="noopener">Ver página no site ↗</a><span>Na Stays: “Ir para outro anúncio” › '+u.code+'</span></div>'
+      + '<div class="steps">'+stepBoxes(u.code,'step').join('')+'</div></div>';
+    if (u.pend.length) h += '<div class="pend"><strong>Confirmar antes de salvar</strong><ul>'+u.pend.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul><span class="notice">No texto, esses pontos aparecem destacados entre ⟦ ⟧. Ajuste e apague os colchetes antes de salvar.</span></div>';
+    ['titulo','desc','seo'].forEach(sec=>{
+      const fs = u.fields.filter(f=>f.sec===sec);
+      h += '<section class="block"><div class="sec-title"><h3>'+SECS[sec][0]+'</h3><span>'+SECS[sec][1]+'</span></div>';
+      fs.forEach(f=>{
+        const i = u.fields.indexOf(f), n = [...f.text].length;
+        const cnt = f.max ? n+' / '+f.max : n+' caracteres';
+        h += '<div class="field"><header><b>'+esc(f.label)+'</b><span style="display:flex;gap:10px;align-items:center"><span class="count mono'+(f.max&&n>f.max?' over':'')+'">'+cnt+'</span><button class="copy" data-i="'+i+'">Copiar</button></span></header><pre id="t'+i+'">'+marked(f.text)+'</pre></div>';
+      });
+      if (sec==='seo') h += '<p class="howto">Link canônico: deixe como está (<span class="mono">/apartment/'+u.code+'</span>). Palavras-chave são hipóteses, sem dados de volume de busca.</p>';
+      h += '</section>';
+    });
+    h += '<div class="cad"><h3>Fora desta tela</h3><span class="notice">Amenities, Cômodos, Regras, Localização e Fotos</span><ul>'+u.cad.map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul></div>';
+    $('unit').innerHTML = h;
+  }
+  function renderTable(){
+    $('tbody').innerHTML = UNITS.map(u=>{
+      const n = nDone(u.code), p = nPend(u);
+      const pill = n===3?'<span class="pill ok">Concluído</span>':n?'<span class="pill mid">'+n+' de 3</span>':'<span class="pill no">Não iniciado</span>';
+      const boxes = stepBoxes(u.code,'');
+      return '<tr class="'+(n===3?'done':'')+'"><td><button class="linkbtn" data-open="'+u.code+'">'+u.code+'</button></td><td>'+esc(u.name)+'</td><td>'+esc(u.group)+'</td>'
+        + boxes.map(b=>'<td class="ck">'+b+'</td>').join('')+'<td class="mono">'+(p||'—')+'</td><td>'+pill+'</td></tr>';
+    }).join('');
+  }
+  function renderAll(){ renderProgress(); renderList(); renderUnit(); renderTable(); }
+
+  function setStatus(msg, err){ const s=$('status'); s.textContent=msg; s.classList.toggle('err',!!err); }
+
+  async function toggle(code, step, value){
+    if (!col || pending.has(code)) return;
+    const prev = Object.assign({}, st(code));
+    const next = Object.assign({descritivo:false,seo:false,cadastro:false}, prev, {[step]:value, atualizadoEm:new Date().toISOString()});
+    progress[code] = next; pending.add(code); renderAll();
+    try { await col.doc(code).set(next); setStatus('Salvo: '+code+' › '+STEPS.find(s=>s[0]===step)[1]+(value?' marcado.':' desmarcado.')); }
+    catch(e){
+      progress[code] = prev;
+      const c = e && e.code;
+      setStatus(c==='permission_denied'||c==='not_granted' ? 'Você não tem permissão para marcar. Peça acesso de edição a quem compartilhou o painel.' : 'Não foi possível salvar '+code+'. Tente de novo.', true);
+    }
+    finally { pending.delete(code); renderAll(); }
+  }
+
+  function showTab(name){
+    const t = name==='checklist';
+    $('tab-textos').setAttribute('aria-selected', !t); $('tab-checklist').setAttribute('aria-selected', t);
+    $('view-textos').hidden = t; $('view-checklist').hidden = !t;
+  }
+  function openUnit(code){
+    current = code; try{localStorage.setItem('mme-current',code)}catch(e){}
+    showTab('textos'); renderList(); renderUnit(); window.scrollTo({top:0});
+  }
+
+  document.addEventListener('click', e=>{
+    const it = e.target.closest('.item'); if (it){ openUnit(it.dataset.code); return; }
+    const op = e.target.closest('[data-open]'); if (op){ openUnit(op.dataset.open); return; }
+    const tb = e.target.closest('.tab'); if (tb){ showTab(tb.id==='tab-checklist'?'checklist':'textos'); return; }
+    const cp = e.target.closest('.copy');
+    if (cp){
+      const u = UNITS.find(x=>x.code===current), text = u.fields[+cp.dataset.i].text;
+      const ok = ()=>{ cp.textContent='Copiado'; cp.classList.add('done'); setTimeout(()=>{cp.textContent='Copiar';cp.classList.remove('done')},1600); };
+      const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents($('t'+cp.dataset.i)); const s=getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent='Selecionado: use Ctrl+C'; };
+      try { navigator.clipboard.writeText(text).then(ok, fallback); } catch(err){ fallback(); }
+    }
+  });
+  document.addEventListener('change', e=>{
+    const cb = e.target.closest('input[data-step]'); if (cb) toggle(cb.dataset.code, cb.dataset.step, cb.checked);
+  });
+  $('q').addEventListener('input', renderList);
+  $('f').addEventListener('change', renderList);
+  if (location.hash==='#checklist') showTab('checklist');
+
+  renderAll();
+
+  const cl = window.claude;
+  if (!cl || !cl.use){ dbState='off'; setStatus('Abra este painel no claude.ai para marcar e salvar o progresso.', true); renderAll(); return; }
+  cl.use('db').then(db=>{
+    if (!db){ dbState='off'; setStatus('O progresso não está disponível nesta visualização. Entre no claude.ai com sua conta para marcar os itens.', true); renderAll(); return; }
+    col = db.collection('progresso');
+    col.onSnapshot(snap=>{
+      const m = {}; snap.docs.forEach(d=>{ if(d.exists) m[d.id]=d.data(); });
+      pending.forEach(c=>{ if(progress[c]) m[c]=progress[c]; });
+      progress = m; dbState='ready';
+      setStatus(snap.empty ? 'Nenhum imóvel marcado ainda. Marque as etapas conforme for concluindo.' : 'Progresso sincronizado com a equipe.');
+      renderAll();
+    }, err=>{ dbState='off'; setStatus('A conexão com o progresso caiu. Recarregue a página.', true); renderAll(); });
+  });
+})();
+</script>
