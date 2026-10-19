@@ -96,6 +96,21 @@ tr.done td{background:var(--ok-soft)}
 .linkbtn{background:none;border:0;padding:0;color:var(--accent);font-family:var(--f-mono);font-weight:600;cursor:pointer;text-decoration:underline}
 .pill{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:700;white-space:nowrap}
 .pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.mid{background:var(--accent-soft);color:var(--accent)} .pill.no{background:var(--line);color:var(--muted)}
+.sum{display:grid;gap:18px}
+.hero{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.big{font-family:var(--f-display);font-size:3rem;line-height:1;color:var(--ok)}
+.sum-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.rows{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 120px 3.2em;gap:10px;align-items:center;font-size:.92rem}
+.row .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.meter{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ok);border-radius:4px}
+.row .v{text-align:right;color:var(--muted)}
+.feed{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:.92rem}
+.feed li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.feed .when{color:var(--muted);font-size:.82rem}
+@media (max-width:860px){.sum-grid{grid-template-columns:minmax(0,1fr)}.row{grid-template-columns:minmax(0,1fr) 80px 3.2em}}
 .howto{color:var(--muted);font-size:.92rem;max-width:80ch;margin:0}
 
 @media (max-width:860px){
@@ -120,8 +135,24 @@ tr.done td{background:var(--ok-soft)}
   </div>
 
   <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-progresso" aria-selected="false" aria-controls="view-progresso">Progresso</button>
     <button class="tab" role="tab" id="tab-textos" aria-selected="true" aria-controls="view-textos">Textos</button>
     <button class="tab" role="tab" id="tab-checklist" aria-selected="false" aria-controls="view-checklist">Checklist</button>
+  </div>
+
+  <div id="view-progresso" role="tabpanel" aria-labelledby="tab-progresso" hidden>
+    <div class="sum">
+      <div class="hero">
+        <div class="big mono" id="s-pct">0%</div>
+        <div><b id="s-line">0 de 36 imóveis concluídos</b><div class="notice" id="s-sub"></div></div>
+      </div>
+      <div class="sum-grid">
+        <section class="panel"><h3>Por destino</h3><div id="s-groups" class="rows"></div></section>
+        <section class="panel"><h3>Concluídos</h3><ol id="s-done" class="feed"></ol>
+          <h3 style="margin-top:14px">Em andamento</h3><ol id="s-doing" class="feed"></ol></section>
+      </div>
+      <p class="howto">Etapas de cada imóvel: Conteúdo descritivo, SEO e Ajustes de cadastro. Esta página atualiza sozinha quando alguém marca uma etapa.</p>
+    </div>
   </div>
 
   <div id="view-textos" class="textos" role="tabpanel" aria-labelledby="tab-textos">
@@ -164,6 +195,7 @@ tr.done td{background:var(--ok-soft)}
   let dbState = "loading";    // loading | ready | off
   const pending = new Set();
   let current = UNITS[0].code;
+  let readOnly = false;
   try { const s = localStorage.getItem('mme-current'); if (s && UNITS.some(u=>u.code===s)) current = s; } catch(e){}
 
   const $ = id => document.getElementById(id);
@@ -194,7 +226,7 @@ tr.done td{background:var(--ok-soft)}
     $('list').innerHTML = html || '<p class="notice" style="padding:8px">Nenhum imóvel encontrado.</p>';
   }
   function stepBoxes(code, cls){
-    const dis = dbState!=='ready';
+    const dis = dbState!=='ready' || readOnly;
     return STEPS.map(([k,l])=>{
       const on = !!st(code)[k], busy = pending.has(code);
       return '<label class="'+cls+(on?' on':'')+(dis||busy?' disabled':'')+'"><input type="checkbox" data-code="'+code+'" data-step="'+k+'" '+(on?'checked ':'')+(dis||busy?'disabled ':'')+'aria-label="'+l+' — '+code+'"> '+(cls==='step'?l:'')+'</label>';
@@ -229,7 +261,22 @@ tr.done td{background:var(--ok-soft)}
         + boxes.map(b=>'<td class="ck">'+b+'</td>').join('')+'<td class="mono">'+(p||'—')+'</td><td>'+pill+'</td></tr>';
     }).join('');
   }
-  function renderAll(){ renderProgress(); renderList(); renderUnit(); renderTable(); }
+  const fmt = iso => { try { return new Date(iso).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}); } catch(e){ return ''; } };
+  function renderSummary(){
+    const done = UNITS.filter(u=>isDone(u.code)), pct = Math.round(done.length/UNITS.length*100);
+    $('s-pct').textContent = pct+'%';
+    $('s-line').textContent = done.length+' de '+UNITS.length+' imóveis concluídos';
+    const doing = UNITS.filter(u=>!isDone(u.code)&&nDone(u.code)>0);
+    $('s-sub').textContent = doing.length+' em andamento · '+(UNITS.length-done.length-doing.length)+' não iniciados';
+    const groups = [];
+    UNITS.forEach(u=>{ let g=groups.find(x=>x.name===u.group); if(!g){g={name:u.group,t:0,d:0};groups.push(g);} g.t++; if(isDone(u.code)) g.d++; });
+    $('s-groups').innerHTML = groups.map(g=>'<div class="row" title="'+esc(g.name)+': '+g.d+' de '+g.t+' concluídos"><span class="lbl">'+esc(g.name)+'</span><span class="meter"><i style="width:'+(g.d/g.t*100)+'%"></i></span><span class="v mono">'+g.d+'/'+g.t+'</span></div>').join('');
+    const byDate = (a,b)=>String(st(b.code).atualizadoEm||'').localeCompare(String(st(a.code).atualizadoEm||''));
+    const item = u=>'<li><button class="linkbtn" data-open="'+u.code+'">'+u.code+'</button><span>'+esc(u.name)+'</span><span class="when">'+(st(u.code).atualizadoEm?fmt(st(u.code).atualizadoEm):'')+'</span></li>';
+    $('s-done').innerHTML = done.sort(byDate).map(item).join('') || '<li class="notice">Nenhum imóvel concluído ainda.</li>';
+    $('s-doing').innerHTML = doing.sort(byDate).map(u=>item(u).replace('</li>','<span class="pill mid">'+nDone(u.code)+' de 3</span></li>')).join('') || '<li class="notice">Nada em andamento.</li>';
+  }
+  function renderAll(){ renderProgress(); renderList(); renderUnit(); renderTable(); renderSummary(); }
 
   function setStatus(msg, err){ const s=$('status'); s.textContent=msg; s.classList.toggle('err',!!err); }
 
@@ -248,9 +295,7 @@ tr.done td{background:var(--ok-soft)}
   }
 
   function showTab(name){
-    const t = name==='checklist';
-    $('tab-textos').setAttribute('aria-selected', !t); $('tab-checklist').setAttribute('aria-selected', t);
-    $('view-textos').hidden = t; $('view-checklist').hidden = !t;
+    ['progresso','textos','checklist'].forEach(n=>{ $('tab-'+n).setAttribute('aria-selected', n===name); $('view-'+n).hidden = n!==name; });
   }
   function openUnit(code){
     current = code; try{localStorage.setItem('mme-current',code)}catch(e){}
@@ -260,7 +305,7 @@ tr.done td{background:var(--ok-soft)}
   document.addEventListener('click', e=>{
     const it = e.target.closest('.item'); if (it){ openUnit(it.dataset.code); return; }
     const op = e.target.closest('[data-open]'); if (op){ openUnit(op.dataset.open); return; }
-    const tb = e.target.closest('.tab'); if (tb){ showTab(tb.id==='tab-checklist'?'checklist':'textos'); return; }
+    const tb = e.target.closest('.tab'); if (tb){ showTab(tb.id.slice(4)); return; }
     const cp = e.target.closest('.copy');
     if (cp){
       const u = UNITS.find(x=>x.code===current), text = u.fields[+cp.dataset.i].text;
@@ -274,12 +319,20 @@ tr.done td{background:var(--ok-soft)}
   });
   $('q').addEventListener('input', renderList);
   $('f').addEventListener('change', renderList);
-  if (location.hash==='#checklist') showTab('checklist');
+  const h = location.hash.slice(1); if (['progresso','textos','checklist'].includes(h)) showTab(h);
 
   renderAll();
 
   const cl = window.claude;
   if (!cl || !cl.use){ dbState='off'; setStatus('Abra este painel no claude.ai para marcar e salvar o progresso.', true); renderAll(); return; }
+  cl.use('user').then(u=> u && typeof u.can==='function' ? u.can('data.write') : null).then(w=>{
+    if (w===false){
+      readOnly = true;
+      if (!['textos','checklist'].includes(location.hash.slice(1))) showTab('progresso');
+      if (dbState==='ready') setStatus('Você está vendo o progresso. Só quem tem acesso de edição pode marcar as etapas.');
+      renderAll();
+    }
+  });
   cl.use('db').then(db=>{
     if (!db){ dbState='off'; setStatus('O progresso não está disponível nesta visualização. Entre no claude.ai com sua conta para marcar os itens.', true); renderAll(); return; }
     col = db.collection('progresso');
@@ -287,7 +340,7 @@ tr.done td{background:var(--ok-soft)}
       const m = {}; snap.docs.forEach(d=>{ if(d.exists) m[d.id]=d.data(); });
       pending.forEach(c=>{ if(progress[c]) m[c]=progress[c]; });
       progress = m; dbState='ready';
-      setStatus(snap.empty ? 'Nenhum imóvel marcado ainda. Marque as etapas conforme for concluindo.' : 'Progresso sincronizado com a equipe.');
+      setStatus(readOnly ? 'Você está vendo o progresso. Só quem tem acesso de edição pode marcar as etapas.' : snap.empty ? 'Nenhum imóvel marcado ainda. Marque as etapas conforme for concluindo.' : 'Progresso sincronizado com a equipe.');
       renderAll();
     }, err=>{ dbState='off'; setStatus('A conexão com o progresso caiu. Recarregue a página.', true); renderAll(); });
   });
