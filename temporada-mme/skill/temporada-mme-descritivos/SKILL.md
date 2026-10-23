@@ -219,12 +219,12 @@ Informe a contagem de caracteres do título, da descrição resumida e dos campo
 
 ## 9. Exemplo completo (unidade PJ01J, Villa Anahí)
 
-**Título do anúncio** (52)
+**Título do anúncio** (53)
 ```text
 Apto com piscina privativa no Villa Anahí · 4 pessoas
 ```
 
-**Descrição resumida** (196)
+**Descrição resumida** (190)
 ```text
 Apartamento com piscina e churrasqueira privativas para até 4 pessoas no Condomínio Villa Anahí, a 300 m da Praia do Marceneiro, na Rota dos Milagres. Aluguel por temporada da Temporada MME.
 ```
@@ -289,9 +289,9 @@ Não.
 **SEO**
 ```text
 URL amigável: /apto-com-piscina-privativa-no-villa-anahi
-Título da página (56): Apto com piscina privativa no Villa Anahí | Temporada MME
+Título da página (57): Apto com piscina privativa no Villa Anahí | Temporada MME
 Palavras-chave (51): apartamento piscina privativa Milagres, Villa Anahí
-Descrição (196): (a mesma Descrição resumida)
+Descrição (190): (a mesma Descrição resumida)
 ```
 
 **Pendências**
